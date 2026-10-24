@@ -1,5 +1,6 @@
 \begin{figure}[t]
 \centering
+\begin{publicationdiagram}
 \begin{tikzpicture}[
   box/.style={draw=accent!55,fill=pale,rounded corners=2pt,align=center,
     text width=4.9cm,minimum height=13mm,inner sep=5pt,font=\small},
@@ -23,6 +24,7 @@
 \node[box] (u2) at (14.2,-4.55) {Causal student update\\then solve different tasks};
 \draw[arrow] (s2)--(h2); \draw[arrow] (h2)--(u2);
 \end{tikzpicture}
+\end{publicationdiagram}
 \caption{Learning teaching value and amortizing its policy effect. Validation measures the student with PI absent. Queries compare the fixed procedure. The application path eliminates additional \emph{target-generation sampling}, not scoring, optimization or the original source rollout.}
 \label{fig:loop}
 \end{figure}

@@ -11,7 +11,7 @@ This source package builds the October 2026 technical report **Scalable Meta-Lea
 From this directory:
 
 ```sh
-python3 build.py
+python3 build-publication.py learning-from-hindsight.tex --output build
 ```
 
 Or compile directly:
@@ -21,6 +21,12 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error learning-from-hindsight.tex
 ```
 
 The convenience builder writes the PDF, build log and input/output hash manifest into `build/`. It checks the final LaTeX log for unresolved references, missing glyphs and layout warnings. Rendering and visually inspecting the pages remains a separate acceptance step.
+
+The pinned `angel-publication.sty` supplies the common typography. The
+24 October 2026 presentation revision preserves the report date and scientific
+content. See [presentation notes](README-PRESENTATION.md) and
+[input hashes](presentation-manifest.json). The original `build.py` remains as
+historical build support; the command above includes the style in its manifest.
 
 ## What the figures represent
 

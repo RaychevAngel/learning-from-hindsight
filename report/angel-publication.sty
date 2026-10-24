@@ -1,0 +1,130 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{angel-publication}[2026/10/24 v1.0 shared manuscript presentation]
+% Layout package only. Keep scientific notation and document-specific macros in
+% the manuscript. For existing articles, load this package last in the preamble.
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+\RequirePackage{geometry}
+\geometry{letterpaper,margin=1in,headheight=15pt,headsep=18pt,footskip=28pt}
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx,xcolor}
+\RequirePackage{booktabs,array,tabularx,longtable}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage{placeins}
+\RequirePackage{xurl}
+\RequirePackage{hyperref}
+\RequirePackage{etoolbox}
+\RequirePackage[nameinlink,noabbrev]{cleveref}
+
+\definecolor{publicationink}{HTML}{183E53}
+\definecolor{publicationaccent}{HTML}{17668B}
+\definecolor{publicationmuted}{HTML}{555F65}
+% One title treatment for manual front matter and the standard article title.
+\newcommand{\PublicationTitleFont}{\LARGE\bfseries\color{publicationink}}
+\@ifclassloaded{article}{%
+  \patchcmd{\@maketitle}{\LARGE \@title}{\PublicationTitleFont \@title}{}{%
+    \PackageError{angel-publication}{Cannot style the article title block}%
+      {Use the standard article title block or apply PublicationTitleFont explicitly.}}%
+}{}
+\hypersetup{colorlinks=true,linkcolor=publicationaccent,
+  citecolor=publicationaccent,urlcolor=publicationaccent,
+  bookmarksopen=true,pdfcreator={LaTeX with angel-publication v1.0}}
+\urlstyle{same}
+
+% Latin Modern supplies the text and mathematical alphabets. Do not mix this
+% package with a second font package unless the document has a documented need.
+\renewcommand{\familydefault}{\rmdefault}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt plus .3pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.15}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\allowdisplaybreaks[1]
+\setcounter{secnumdepth}{3}
+\titleformat{\section}{\large\bfseries\color{publicationink}}{\thesection}{.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{publicationink}}{\thesubsection}{.65em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{.65em}{}
+\titlespacing*{\section}{0pt}{2.3ex plus .7ex minus .2ex}{1.1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.8ex plus .5ex minus .2ex}{.8ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1.5ex plus .4ex minus .2ex}{.6ex plus .2ex}
+\setlist{leftmargin=1.6em,itemsep=2pt,parsep=0pt,topsep=5pt}
+\captionsetup{font=small,labelfont=bf,labelsep=period,
+  justification=justified,singlelinecheck=true,skip=7pt}
+\captionsetup[table]{position=top}
+\renewcommand{\topfraction}{.92}
+\renewcommand{\bottomfraction}{.85}
+\renewcommand{\textfraction}{.08}
+\renewcommand{\floatpagefraction}{.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\setlength{\textfloatsep}{14pt plus 3pt minus 3pt}
+\setlength{\floatsep}{12pt plus 3pt minus 2pt}
+\setlength{\intextsep}{12pt plus 3pt minus 2pt}
+
+% Use shared theorem numbering within sections, while preserving environments
+% already defined by an adopting manuscript. No scientific macros are redefined.
+\@ifundefined{theorem}{\theoremstyle{plain}\newtheorem{theorem}{Theorem}[section]}{}
+\@ifundefined{lemma}{\theoremstyle{plain}\newtheorem{lemma}[theorem]{Lemma}\AtBeginEnvironment{lemma}{\crefalias{theorem}{lemma}}}{}
+\@ifundefined{proposition}{\theoremstyle{plain}\newtheorem{proposition}[theorem]{Proposition}\AtBeginEnvironment{proposition}{\crefalias{theorem}{proposition}}}{}
+\@ifundefined{corollary}{\theoremstyle{plain}\newtheorem{corollary}[theorem]{Corollary}\AtBeginEnvironment{corollary}{\crefalias{theorem}{corollary}}}{}
+\@ifundefined{definition}{\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}\AtBeginEnvironment{definition}{\crefalias{theorem}{definition}}}{}
+\@ifundefined{example}{\theoremstyle{definition}\newtheorem{example}[theorem]{Example}\AtBeginEnvironment{example}{\crefalias{theorem}{example}}}{}
+\@ifundefined{remark}{\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}\AtBeginEnvironment{remark}{\crefalias{theorem}{remark}}}{}
+\theoremstyle{plain}
+\crefname{theorem}{theorem}{theorems}
+\crefname{lemma}{lemma}{lemmas}
+\crefname{proposition}{proposition}{propositions}
+\crefname{corollary}{corollary}{corollaries}
+\crefname{definition}{definition}{definitions}
+\crefname{example}{example}{examples}
+\crefname{remark}{remark}{remarks}
+
+% A declared wrapper for an oversized diagram. It only shrinks, never enlarges.
+% Put the wrapper around the diagram, with the caption outside it.
+\newsavebox{\publication@diagram}
+\newenvironment{publicationdiagram}
+  {\begin{lrbox}{\publication@diagram}}
+  {\end{lrbox}%
+   \ifdim\wd\publication@diagram>\linewidth
+     \resizebox{\linewidth}{!}{\usebox{\publication@diagram}}%
+   \else
+     \usebox{\publication@diagram}%
+   \fi}
+
+\newcommand{\publication@title}{}
+\newcommand{\publication@author}{}
+\newcommand{\publication@status}{}
+\newcommand{\PublicationRunningTitle}[1]{\renewcommand{\publication@title}{#1}}
+\newcommand{\PublicationRunningAuthor}[1]{\renewcommand{\publication@author}{#1}}
+\newcommand{\PublicationStatus}[1]{\renewcommand{\publication@status}{#1}}
+% Omit unavailable resources, including their separator. Argument order:
+% \PublicationLinks[Lean URL]{Overview URL}{Code URL}. Empty URLs are omitted.
+\newcommand{\PublicationLinks}[3][]{{\small\normalfont%
+  \def\publication@separator{}%
+  \ifstrempty{#2}{}{\href{#2}{\underline{Overview}}%
+    \def\publication@separator{\quad\textperiodcentered\quad}}%
+  \ifstrempty{#3}{}{\publication@separator\href{#3}{\underline{Code}}%
+    \def\publication@separator{\quad\textperiodcentered\quad}}%
+  \ifstrempty{#1}{}{\publication@separator\href{#1}{\underline{Lean}}}}}
+\newcommand{\publication@pagestyle}{%
+  \fancyhf{}%
+  \fancyhead[L]{\small\color{publicationmuted}\publication@title}%
+  \fancyhead[R]{\small\color{publicationmuted}\publication@author}%
+  \fancyfoot[L]{\scriptsize\color{publicationmuted}\publication@status}%
+  \fancyfoot[R]{\small\color{publicationmuted}\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}}
+\AtBeginDocument{%
+  \pagestyle{fancy}\publication@pagestyle
+  \fancypagestyle{plain}{\publication@pagestyle\fancyhead{}}}
+\endinput

@@ -1,0 +1,42 @@
+{
+  "identity": "Presentation revision, 24 October 2026",
+  "scientific_revision": false,
+  "original_report_date": "24 October 2026",
+  "style_version": "angel-publication 1.0 (2026-10-24)",
+  "style_sha256": "b9d8c4d865e43d8f4b32ee6bd5e7515f26b7deee7c9680c1f9441210830db94e",
+  "original_source_zip_sha256": "e23ab251032b26e6f3cd7877571750c5debd753fe9de84fa4a445f9bb0196d31",
+  "original_main_source_sha256": "e68485c48ebc0548952a36436f99f7980ff2774e205a82511bf7ee48120b95e1",
+  "revised_main_source_sha256": "4025da4b19f663d399981ed50892494081b22844f0a3cdadeb4fb55f9597b93c",
+  "revised_pdf_sha256": "1d8ec62441ee2ee94728ed59e01e9a1efcdec7124060d0d48834b05a97be93c7",
+  "pages": 13,
+  "scientific_body_equal_after_declared_layout_wrappers": true,
+  "original_preamble_and_scientific_macros_preserved": true,
+  "all_other_original_files_byte_identical": true,
+  "render_review": {
+    "all_pages_reviewed": true,
+    "render_dpi": 100,
+    "visual_defects_observed": 0
+  },
+  "final_latex_warnings": [],
+  "broken_internal_pdf_links": [],
+  "all_fonts_embedded": true,
+  "new_experiments": 0,
+  "presentation_changes": [
+    "shared title typography",
+    "Overview then Code links",
+    "dated presentation-revision footer; original report date retained",
+    "publicationdiagram around native TikZ diagrams",
+    "search only: newline between the second and third source-path links"
+  ],
+  "input_sha256": {
+    "angel-publication.sty": "b9d8c4d865e43d8f4b32ee6bd5e7515f26b7deee7c9680c1f9441210830db94e",
+    "figures/context-fidelity-transfer.png": "4c2cc348c8cdbddc19b7c3074311bf940ff423c4bb0a6fd66010ea582bbe962a",
+    "figures/context-fidelity-transfer.svg": "a2a5bfad6c9abb97eb82723e247ee0249f52dfba96db0c8c62b089ef4179af49",
+    "figures/learning-loop.svg": "f14865b2b6e373f8168a84ec6d7f48e75b236bca7f19ba2be83c1f1817fbdf10",
+    "figures/learning-loop.tex": "0d6462649810cf8395f9a629be73a785534a93830914b571a7924645887d8ec6",
+    "figures/source-fidelity-localization.png": "98bd14c4b25ae3cf02d07017c86a0da6b35c9feea2fe33b26a0b7dee76ca6b08",
+    "figures/source-fidelity-localization.svg": "bb876eaad00a6cb3250eefa50913c1fdbe0dd0ae24d89f08a94c1d111fc8f77e",
+    "learning-from-hindsight.tex": "4025da4b19f663d399981ed50892494081b22844f0a3cdadeb4fb55f9597b93c",
+    "references.bib": "117f19a9e5a73a2eee3503923251d18058f038cd0926f7e42222969d8185ce97"
+  }
+}

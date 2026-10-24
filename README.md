@@ -14,9 +14,15 @@ without receiving the lesson or completed experience in its evaluation prompt.
 By **Angel Raychev**. The implementation and historical experiments were developed
 in September 2026; this is a curated public research release.
 
-[Article and research report](https://angelraychev.com/scalable-meta-learning-from-hindsight/)
-· [PDF](report/learning-from-hindsight.pdf) · [Quickstart](QUICKSTART.md)
-· [Evidence scope](docs/evidence.md)
+[Overview](https://angelraychev.com/scalable-meta-learning-from-hindsight/)
+· [PDF](report/learning-from-hindsight.pdf)
+
+The report uses the shared manuscript style as a 24 October 2026 presentation
+revision. Its scientific content, original results, figures and date are
+unchanged; no new experiments were performed. [Resources](https://angelraychev.com/scalable-meta-learning-from-hindsight/#resources)
+collects the standalone LaTeX package, code release and version record. Start with
+the [Quickstart](QUICKSTART.md) to exercise the implementation or the
+[evidence guide](docs/evidence.md) to inspect the historical findings.
 
 ## The method in one view
 
