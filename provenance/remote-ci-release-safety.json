@@ -1,0 +1,26 @@
+{
+  "schema": "hindsight-remote-verification-v1",
+  "verified_at_utc": "2026-10-24T10:17:11Z",
+  "code_commit": "d839ca178ebf3589918393e39875fad3ec2f9af5",
+  "workflow_url": "https://github.com/RaychevAngel/learning-from-hindsight/actions/runs/40085168185",
+  "conclusion": "success",
+  "evidence_job": {
+    "runner": "ubuntu-latest",
+    "python": "3.11",
+    "checks": ["saved evidence regrading", "six integrity rejection tests", "source compilation"]
+  },
+  "cpu_job": {
+    "runner": "macos-latest",
+    "python": "3.11",
+    "fresh_scientific_dependency_installation": true,
+    "installed_from": "requirements-qwen35.lock",
+    "editable_project_installation": true,
+    "tests_passed": 348,
+    "tests_intentionally_deselected": 4,
+    "test_elapsed_seconds": 36.33,
+    "standalone_CPU_mechanism_demo": "passed",
+    "model_downloads": false,
+    "provider_calls": false
+  },
+  "interpretation": "The repaired coordinator boundary passes a clean remote package installation, tiny random-model CPU suite, standalone API example and saved-evidence verification. This is not a new scientific result or a 4B model rerun. remote-ci.json preserves the initial release qualification separately."
+}

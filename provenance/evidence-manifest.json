@@ -686,7 +686,7 @@
       "sha256": "df15c6090dc8391887909bc1a9ad6a164c0864f57a3725fbeb3eed6b4e3cfe87"
     }
   ],
-  "generated_at_utc": "2026-10-24T10:12:43.364700+00:00",
+  "generated_at_utc": "2026-10-24T10:20:27.460768+00:00",
   "purpose": "Exact compact historical inputs; no inference or training was rerun",
   "schema": "hindsight-public-evidence-v1",
   "source_commit": "0116d67f869453c2ba4086b4be9db963284da3f8"

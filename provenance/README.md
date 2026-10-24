@@ -59,3 +59,11 @@ No saved model outputs, stored scores, scientific numerical modules or historica
 evidence texts were edited to improve a result. The source manifest distinguishes
 each unchanged historical file, release edit and addition. Publication did not
 rerun the experiments.
+
+## Verification receipts
+
+`verification.json` and `remote-ci.json` preserve the initial local/remote
+qualification. `release-safety.json` records the independent contract repairs and
+expanded local tests; `remote-ci-release-safety.json` pins their fresh remote
+installation and CPU proof to the exact repaired code commit. A later metadata-only
+commit may carry those receipts without rerunning a scientific experiment.
