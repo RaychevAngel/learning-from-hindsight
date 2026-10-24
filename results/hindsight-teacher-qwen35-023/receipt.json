@@ -1,0 +1,124 @@
+{
+  "actual_observations": 512,
+  "completed_at": "2026-09-06T05:07:31.987464+00:00",
+  "completed_episode_ids": [
+    "b5146ba4da8c49d8068f68b6",
+    "b0701b945b9e0648f9007b52",
+    "208831d7e726ae9462d2bb3a",
+    "807d250dfae0d05ec41bda0f",
+    "b3a7a8f892234e68d05c5e72",
+    "eb2e08ce9a30ca1da12fc3f8",
+    "1f0ce06ab612b9becebf1c71",
+    "36e2d68fa834e3c42e64fee7"
+  ],
+  "core_work": {
+    "generation_sequences": 512,
+    "scoring_forwards": 56,
+    "student_optimizer_steps": 160,
+    "teacher_example_exposures": 256,
+    "teacher_optimizer_steps": 64
+  },
+  "evaluation_episode_ids": [
+    "b5146ba4da8c49d8068f68b6",
+    "b0701b945b9e0648f9007b52",
+    "208831d7e726ae9462d2bb3a",
+    "807d250dfae0d05ec41bda0f",
+    "b3a7a8f892234e68d05c5e72",
+    "eb2e08ce9a30ca1da12fc3f8",
+    "1f0ce06ab612b9becebf1c71",
+    "36e2d68fa834e3c42e64fee7"
+  ],
+  "expected_observations": 512,
+  "fit_episode_ids": [
+    "dcc1c0469362d914334b57d2",
+    "c809ff4848444c6de85cd495",
+    "ac6b2de62c40d6f673532fda",
+    "05ae14f9dbb94e16b6dce525",
+    "e32c4301e05862b7009381f9",
+    "e737bbca8688acc619de8f73",
+    "dcc1e8857b4987447cdee528",
+    "cb754aa135b5da6786857755"
+  ],
+  "fit_identity_sha256": "3bbb717b5341dfe2713e92c3efdc7cd1fd2aee455144b245ff6eec9095aad572",
+  "fit_lessons_sha256": "fb1798c5f13df26665fc71cbdc933021dc1a681aef38e65bf57d4f9c5a244cd5",
+  "fit_observations_sha256": "86cd094dd5ce293d5527b6ea878cb19a7e8fbd77fe1c419de5f5057d362b0416",
+  "fit_selections": {
+    "05ae14f9dbb94e16b6dce525": {
+      "adapted_successes": 4,
+      "baseline_successes": 1,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    },
+    "ac6b2de62c40d6f673532fda": {
+      "adapted_successes": 5,
+      "baseline_successes": 1,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    },
+    "c809ff4848444c6de85cd495": {
+      "adapted_successes": 6,
+      "baseline_successes": 0,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    },
+    "cb754aa135b5da6786857755": {
+      "adapted_successes": 7,
+      "baseline_successes": 7,
+      "derived_from": "post_update_V",
+      "selected_candidate": null
+    },
+    "dcc1c0469362d914334b57d2": {
+      "adapted_successes": 4,
+      "baseline_successes": 0,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    },
+    "dcc1e8857b4987447cdee528": {
+      "adapted_successes": 8,
+      "baseline_successes": 8,
+      "derived_from": "post_update_V",
+      "selected_candidate": null
+    },
+    "e32c4301e05862b7009381f9": {
+      "adapted_successes": 6,
+      "baseline_successes": 4,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    },
+    "e737bbca8688acc619de8f73": {
+      "adapted_successes": 4,
+      "baseline_successes": 3,
+      "derived_from": "post_update_V",
+      "selected_candidate": 0
+    }
+  },
+  "lessons_sha256": "3810766140284b967ce11e28e5872f2725d3132393f4063b5e47e01e16b6fee9",
+  "missing_observations": 0,
+  "planned_work": {
+    "generation_sequences": 512,
+    "scoring_forwards": 61,
+    "student_optimizer_steps": 160,
+    "teacher_example_exposures": 258,
+    "teacher_optimizer_steps": 66
+  },
+  "qualification_script_sha256": "27648f35011ef741d1c4c86d8b441c5e3566d8b55262b7f9dfb1af8e6a0da7b8",
+  "qualification_work": {
+    "generation_sequences": 0,
+    "scoring_forwards": 5,
+    "student_optimizer_steps": 0,
+    "teacher_example_exposures": 2,
+    "teacher_optimizer_steps": 2
+  },
+  "script_sha256": "437d88b2109259891153216a38f1d87d232c3ef9a34e80eda79053c33578997a",
+  "source_identity_sha256": "13378c99d3b5ccd0f8f11dfdd90a790e2c814bceb960220859436053b5d4eb85",
+  "started_at": "2026-09-06T04:20:50.353377+00:00",
+  "status": "completed",
+  "teacher_checkpoint_sha256": "06850dd85a9af0fff111883d86191826f21e3ef2e3268a294234a82e842f00a7",
+  "work": {
+    "generation_sequences": 512,
+    "scoring_forwards": 61,
+    "student_optimizer_steps": 160,
+    "teacher_example_exposures": 258,
+    "teacher_optimizer_steps": 66
+  }
+}

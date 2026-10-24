@@ -1,0 +1,7 @@
+# Separate Qwen3.5 qualification stack; preserves the original uv.lock and venv.
+torch==2.9.1
+transformers @ https://github.com/huggingface/transformers/archive/c93057d4835cd31752bb56f59989dd27696eb45b.zip
+peft==0.20.0
+numpy>=2,<3
+pytest>=8,<9
+ruff==0.15.12

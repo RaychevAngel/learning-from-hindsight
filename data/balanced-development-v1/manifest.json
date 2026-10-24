@@ -1,0 +1,66 @@
+{
+  "version": "arc1d-balanced-development-v1",
+  "protocol_version": "balanced-development-v1",
+  "seed": 2026090601,
+  "status": "development_only_outcome_blind",
+  "episodes": 8,
+  "tasks": 136,
+  "calibration_tasks": 0,
+  "partition_episodes": {
+    "development": 8
+  },
+  "role_counts": {
+    "source": 1,
+    "validation": 8,
+    "queries": 8
+  },
+  "declared_families": [
+    "translation",
+    "denoising",
+    "size_recoloring",
+    "gravity"
+  ],
+  "source_per_episode": 1,
+  "validation_per_episode": 8,
+  "queries_per_episode": 8,
+  "demonstrations_per_task": 4,
+  "aliases": {
+    "translation": "move_2pix_colorful_right",
+    "denoising": "block_and_noise_remove",
+    "size_recoloring": "recolor_blocks_by_size",
+    "gravity": "gravity_right"
+  },
+  "strata": {
+    "length": "short=16..19; long=20..24",
+    "translation": "small=nonzero block length <=7; large=>=8",
+    "denoising": "small=longest nonzero run <=7; large=>=8",
+    "size_recoloring": "small=longer block on left; large=longer block on right",
+    "gravity": "small=nonzero count <=10; large=>=11"
+  },
+  "tasks_per_role_per_stratum": 2,
+  "model_calls": 0,
+  "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+  "parent_manifest_sha256": "9554c4a805967ed7f7fb52edbb94c5c246512a20c70ff673be6d812ca9552065",
+  "excluded_canonical_inputs": 7289,
+  "new_unique_inputs": 680,
+  "rejections": {
+    "canonical_input_overlap": 102,
+    "query_outside_predeclared_stratum": 169,
+    "canonical_pair_overlap": 2,
+    "empty_or_identity": 52
+  },
+  "assignment": "Common independent four-task pool per stratum; seeded 2V/2Q split",
+  "limitations": [
+    "Strata balance observable query features, not exact task difficulty.",
+    "Global uniqueness filtering means tasks are not strictly IID.",
+    "Separate development replication; not an untouched final test."
+  ],
+  "script_sha256": "bcde80c3b209831dd365816803e71048dc6cdd819d2be8ed22cfa6567ef20e19",
+  "files": {
+    "tasks.public.jsonl": "286a9e6f8c36130d0baabd3bace6f4c556b63de3963cea9dbba43eb30feef485",
+    "tasks.private.jsonl": "12f9f5a03efde6005939b0196e8ea071770153d98ca72cc11ad85969ae5aed37",
+    "episodes.jsonl": "9d96987d4ef35dd79380077960a00fc8dc3a51d3f20d965d635327821b32fb91",
+    "assignment.jsonl": "489ec511721e75d33483298e2faa2c12124fb12438260e263b5516deba24dcfe"
+  }
+}

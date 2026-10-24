@@ -1,0 +1,239 @@
+{
+  "audited_at": "2026-09-06T11:38:58.569052+00:00",
+  "first_wrong_source_probability_means": {
+    "B": 0.07757667877889192,
+    "C": 0.14345670763882132,
+    "old_PI": 0.09926116953760458
+  },
+  "first_wrong_values": [
+    {
+      "arms": {
+        "B": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.03730269834192655
+        },
+        "C": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.03288317314461577
+        },
+        "old_PI": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.0850307618636364
+        }
+      },
+      "array_index": 2,
+      "correct_value_offline": 0,
+      "episode_id": "b5146ba4da8c49d8068f68b6",
+      "observed_value": 8,
+      "response_position": 21
+    },
+    {
+      "arms": {
+        "B": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.053359466347817595
+        },
+        "C": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.4370364653231036
+        },
+        "old_PI": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.04205745680443295
+        }
+      },
+      "array_index": 5,
+      "correct_value_offline": 0,
+      "episode_id": "b0701b945b9e0648f9007b52",
+      "observed_value": 3,
+      "response_position": 30
+    },
+    {
+      "arms": {
+        "B": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.03727184123046261
+        },
+        "C": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.008573166910616525
+        },
+        "old_PI": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.047349555840764015
+        }
+      },
+      "array_index": 6,
+      "correct_value_offline": 2,
+      "episode_id": "b3a7a8f892234e68d05c5e72",
+      "observed_value": 1,
+      "response_position": 39
+    },
+    {
+      "arms": {
+        "B": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.18237270919536092
+        },
+        "C": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.09533402517694936
+        },
+        "old_PI": {
+          "argmax_is_correct": false,
+          "argmax_is_observed": true,
+          "correct_scalar_probability": 0.22260690364158497
+        }
+      },
+      "array_index": 4,
+      "correct_value_offline": 2,
+      "episode_id": "eb2e08ce9a30ca1da12fc3f8",
+      "observed_value": 1,
+      "response_position": 29
+    }
+  ],
+  "frozen_input_files_verified": 36,
+  "hashes": {
+    "audit_script": "8d1d57919748cf1e2b1bab573e17e8cefee36d4b57e432a29af15914c64a8c13",
+    "completed_analysis": "673a191145a22a84086de6921c7fc892a4af771639a84b7c4dcc2842e3a84633",
+    "plan": "88c9cdfbb6e66f9fa79aad639f10788fde3f9ef75a573f1e4d6036d74e274d23",
+    "premature_failed_analysis_preserved": "cf4a859a860b38bdb889785504bcec497aef3333aaacf4162b96d41960e6b7a0",
+    "receipt": "300134790a023be16ea440d47fe1c5ad85ea3885e2eba14aa11975c4d25247a3"
+  },
+  "independently_mapped_native_scalar_values": 150,
+  "interpretation": [
+    "All four first-wrong positions still have the historical observed token as argmax in old_PI, B and C.",
+    "C raises mean correct-token probability at those four positions; B lowers it. These means do not establish answer accuracy or transfer.",
+    "B adds source-fallibility framing to the unchanged lesson; C additionally exposes the complete recorded attempt and binary feedback. This does not isolate consistency bias.",
+    "Earlier array values are correct at each first-error position, but the preceding original rule sentence can still be wrong.",
+    "Across all arrays, source-equal correct-token probability is slightly lower under both B and C than old_PI; do not cherry-pick the first-error average as global improvement.",
+    "Gold was used only by this offline audit, not supplied to029 model inputs. Tokens are correlated; no token-level inference is claimed.",
+    "No model forward, generation, optimization or active experiment-code change occurred in this independent audit."
+  ],
+  "max_FP64_vs_recorded_metric_difference": 9.974229548959102e-07,
+  "native_action_positions_verified": 576,
+  "per_source": [
+    {
+      "action_positions": 78,
+      "array_values": 21,
+      "correct_probability_means": {
+        "B": 0.47736602652771726,
+        "C": 0.4756935939477935,
+        "old_PI": 0.4793271620290982
+      },
+      "episode_id": "b5146ba4da8c49d8068f68b6",
+      "framed_tensor_sha256": "ceb399be92e164bd31b2ed4a4b6450661dd4fc703ef474ce327bbf3db3d08694",
+      "old_tensor_sha256": "36f0ffabbdf51d477c6b3642837eeeb1f1fdc157348b997a828c9e1f4996e8a3"
+    },
+    {
+      "action_positions": 72,
+      "array_values": 19,
+      "correct_probability_means": {
+        "B": 0.3681190223018694,
+        "C": 0.3906736965055332,
+        "old_PI": 0.3651988092305215
+      },
+      "episode_id": "b0701b945b9e0648f9007b52",
+      "framed_tensor_sha256": "0965cb56bc425251c568c48bfb6d196574d425da74f50982fe446360013d232b",
+      "old_tensor_sha256": "e1ce18a23a7e970117e268e2890ae863365a2f17644a4915a62d39cc307d9ca7"
+    },
+    {
+      "action_positions": 74,
+      "array_values": 20,
+      "correct_probability_means": {
+        "B": 0.9042576953346038,
+        "C": 0.902702964832913,
+        "old_PI": 0.9207576305239621
+      },
+      "episode_id": "208831d7e726ae9462d2bb3a",
+      "framed_tensor_sha256": "eb08e02aa112467467e58cd22262ba4665cf515f7251e171b6682be638ab8293",
+      "old_tensor_sha256": "469c33bfc2e44da60ee77d498467abb862dfd2b97e0c10c5b97bca7eacb97af1"
+    },
+    {
+      "action_positions": 62,
+      "array_values": 16,
+      "correct_probability_means": {
+        "B": 0.9976565440767211,
+        "C": 0.99871083747473,
+        "old_PI": 0.9983592452588108
+      },
+      "episode_id": "807d250dfae0d05ec41bda0f",
+      "framed_tensor_sha256": "f428e6b0d887ddc1a947555060e1eaad90be4d7f714b46b8dca02c8f6b87403d",
+      "old_tensor_sha256": "71746ceb8114ad6f90ce0ba03165a0c0513e4fd80e747d571f0164cc123a7452"
+    },
+    {
+      "action_positions": 75,
+      "array_values": 18,
+      "correct_probability_means": {
+        "B": 0.44747529299393846,
+        "C": 0.4462255136439532,
+        "old_PI": 0.4476772932512384
+      },
+      "episode_id": "b3a7a8f892234e68d05c5e72",
+      "framed_tensor_sha256": "6ca16cacf05f2dd4ab0dd20e6a16fe37cbf5c876bcde302b43e30478aea9d6dc",
+      "old_tensor_sha256": "57b9f2d73ce166d6a33e43133ecdaecf84366778b6839984b7c974e1f28c7e6a"
+    },
+    {
+      "action_positions": 80,
+      "array_values": 21,
+      "correct_probability_means": {
+        "B": 0.5310229046955094,
+        "C": 0.5298400491799705,
+        "old_PI": 0.53466842523901
+      },
+      "episode_id": "eb2e08ce9a30ca1da12fc3f8",
+      "framed_tensor_sha256": "044dfe452c337fee576c150826eb01385fcf164cbbbe14b37f9d21d69b191e26",
+      "old_tensor_sha256": "92582364a3e1d95a6e7b728db9221348c33b93ae72e996aa71affacae139f730"
+    },
+    {
+      "action_positions": 72,
+      "array_values": 19,
+      "correct_probability_means": {
+        "B": 0.9998953057056056,
+        "C": 0.9998481448401366,
+        "old_PI": 0.9999220370677105
+      },
+      "episode_id": "1f0ce06ab612b9becebf1c71",
+      "framed_tensor_sha256": "6300a8ad26e5af8712ea370f20d7fa64946b50138f2f8685226632a5984883ef",
+      "old_tensor_sha256": "2097bfc1a3aa10f7db15d14ba04c305818ae534ff606dc5038afb2b9ba11e152"
+    },
+    {
+      "action_positions": 63,
+      "array_values": 16,
+      "correct_probability_means": {
+        "B": 0.9997900798988432,
+        "C": 0.9998368008566283,
+        "old_PI": 0.9997589359337731
+      },
+      "episode_id": "36e2d68fa834e3c42e64fee7",
+      "framed_tensor_sha256": "0a408c396df725a908c0fd27311e9789f7882e0d064940b29499e40bf8ae2b91",
+      "old_tensor_sha256": "7bb0991fa0054f9b7758edfe578b86bea3e966afdb2b7090f2e685c6bd3bb24a"
+    }
+  ],
+  "runtime_seconds": 27.813603942049667,
+  "source_count": 8,
+  "source_equal_array_probability_means": {
+    "B": 0.715697858941851,
+    "C": 0.7179414501602073,
+    "old_PI": 0.7182086923167655
+  },
+  "status": "passed_independent_completed_scoring_audit",
+  "work": {
+    "generation_sequences": 0,
+    "scoring_forwards": 16,
+    "student_optimizer_steps": 0,
+    "teacher_example_exposures": 0,
+    "teacher_optimizer_steps": 0
+  }
+}

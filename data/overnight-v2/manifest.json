@@ -1,0 +1,75 @@
+{
+  "protocol_version": "hindsight-cohort-v1",
+  "episodes": 80,
+  "partition_episodes": {
+    "meta_train": 32,
+    "development": 16,
+    "confirmation": 32
+  },
+  "unique_inputs": 6800,
+  "role_counts": {
+    "source": 1,
+    "validation": 8,
+    "queries": 8
+  },
+  "chunks": [
+    {
+      "path": "chunk-00",
+      "partition": "meta_train",
+      "sha256": "233d9ad880c51596db517fcf101dc98a921bb58590d564fe5c8beacceac705bc"
+    },
+    {
+      "path": "chunk-01",
+      "partition": "meta_train",
+      "sha256": "9efcd2d7dd739b3bc1fd8ccb4b6856578c97ab1e051cf2d73b1192f1e4b672db"
+    },
+    {
+      "path": "chunk-02",
+      "partition": "meta_train",
+      "sha256": "f557e9ec17270c23452e98532fc74578cb7f9e21b389963bbbe7195cce122a9c"
+    },
+    {
+      "path": "chunk-03",
+      "partition": "meta_train",
+      "sha256": "125af52a695056ee77e63eac359176f84afb243dad97101e9a08393d8c175f6a"
+    },
+    {
+      "path": "chunk-04",
+      "partition": "development",
+      "sha256": "b041c3c3cf6aea5de1e69ee0d9298e36c91fd77354f4bafee47e1488c238ac07"
+    },
+    {
+      "path": "chunk-05",
+      "partition": "development",
+      "sha256": "726334220e52d931b31aac514b7028a40c6332c3fc85e18dcc72b09a3a3b733b"
+    },
+    {
+      "path": "chunk-06",
+      "partition": "confirmation",
+      "sha256": "4608a9f24cededb0dbfe304fc3af68a75c1a0f1405f4e82206060d6bfd68abe2"
+    },
+    {
+      "path": "chunk-07",
+      "partition": "confirmation",
+      "sha256": "0ace7a4fabd811aa8f6008aa0caa85fbec8b41f2ef5294d9e8cc3f144a1e2f7d"
+    },
+    {
+      "path": "chunk-08",
+      "partition": "confirmation",
+      "sha256": "14ea692523a9eb3bc3b5c4b0b8721a9a2f46d53ffad75ad4089c54da3569a1d8"
+    },
+    {
+      "path": "chunk-09",
+      "partition": "confirmation",
+      "sha256": "0bcb527273464a5d81b81fea9a7795e961a9a161b4f350fa56d4ebcfae494c3c"
+    }
+  ],
+  "model_calls": 0,
+  "partition_authority": "This collection assigns fresh chunks before any model outcomes; child development labels are legacy storage format only.",
+  "confirmation_rule": "No confirmation outcomes may select model, recipe, checkpoint, proposer or global hyperparameters.",
+  "limitations": [
+    "Four familiar operator families; not unseen-family generalization.",
+    "Global exclusion means not strictly IID; fixed strata do not guarantee equal difficulty."
+  ],
+  "script_sha256": "eacfe7ccd61d658242931ec9cfe76de3e98ed050f56a5bcf030c307d087194ca"
+}

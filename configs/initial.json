@@ -1,0 +1,21 @@
+{
+  "protocol_version": "initial-v1",
+  "model_name": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "seed": 7301,
+  "source_tokens": 128,
+  "pi_tokens": 80,
+  "evaluation_tokens": 160,
+  "generation_batch_size": 8,
+  "candidate_count": 3,
+  "student_steps": 4,
+  "learning_rate": 0.0001,
+  "teacher_epochs": 4,
+  "teacher_batch_size": 4,
+  "max_context_tokens": 1536,
+  "max_teacher_context_tokens": 4096,
+  "absolute_deadline_utc": "2026-09-06T05:45:00+00:00",
+  "max_invocation_seconds": 7200,
+  "initial_cost_cap_usd": 35,
+  "max_gpu_hours": 6
+}

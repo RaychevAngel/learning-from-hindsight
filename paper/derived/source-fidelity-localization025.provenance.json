@@ -1,0 +1,12 @@
+{
+  "input": "paper/derived/source-fidelity025-independent.json",
+  "input_sha256": "1dccd57ae65bb5ed58f665e06cf7421685a037de230ef8815446b26b7eb785f7",
+  "matplotlib_version": "3.11.1",
+  "new_model_calls": 0,
+  "source_order_panel_b": [
+    "b5146ba4da8c49d8068f68b6",
+    "b0701b945b9e0648f9007b52",
+    "b3a7a8f892234e68d05c5e72",
+    "eb2e08ce9a30ca1da12fc3f8"
+  ]
+}

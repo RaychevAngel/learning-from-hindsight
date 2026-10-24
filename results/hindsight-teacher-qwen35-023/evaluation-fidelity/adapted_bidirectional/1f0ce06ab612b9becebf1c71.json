@@ -1,0 +1,33 @@
+{
+  "pi_reference": {
+    "action_positions": 72,
+    "bidirectional_historical_mass_on_disagreement": 0.5837995409965515,
+    "bidirectional_historical_token_mass": 0.9549458026885986,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.1700650155544281,
+    "reference_disagreement_positions": 2,
+    "reference_historical_mass_on_disagreement": 0.10965358465909958,
+    "reference_historical_token_mass": 0.9468239545822144
+  },
+  "provenance": {
+    "derived_from": "post_update_V",
+    "episode_id": "1f0ce06ab612b9becebf1c71",
+    "family": "gravity",
+    "identity_digest": "efd7267460fb5734d9c383c24112f4b59f4aaebf062b1a2f2ab56b4a41d56f32",
+    "partition": "development",
+    "reference_kind": "frozen_causal_no_update",
+    "selected_candidate": null,
+    "source_digest": "b09f4cb0c632eed473fe6524a79cc488f19b89b43bc838484b0090966405f334"
+  },
+  "selected_reference": {
+    "action_positions": 72,
+    "bidirectional_historical_mass_on_disagreement": null,
+    "bidirectional_historical_token_mass": 0.9549458026885986,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.019021091982722282,
+    "reference_disagreement_positions": 0,
+    "reference_historical_mass_on_disagreement": null,
+    "reference_historical_token_mass": 0.9668397903442383
+  },
+  "teacher_checkpoint_sha256": "06850dd85a9af0fff111883d86191826f21e3ef2e3268a294234a82e842f00a7"
+}

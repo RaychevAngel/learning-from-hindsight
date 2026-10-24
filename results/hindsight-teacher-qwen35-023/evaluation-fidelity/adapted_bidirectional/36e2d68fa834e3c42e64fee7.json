@@ -1,0 +1,33 @@
+{
+  "pi_reference": {
+    "action_positions": 63,
+    "bidirectional_historical_mass_on_disagreement": 0.4749845862388611,
+    "bidirectional_historical_token_mass": 0.9378370642662048,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.28196871280670166,
+    "reference_disagreement_positions": 5,
+    "reference_historical_mass_on_disagreement": 0.10621460527181625,
+    "reference_historical_token_mass": 0.8927302956581116
+  },
+  "provenance": {
+    "derived_from": "post_update_V",
+    "episode_id": "36e2d68fa834e3c42e64fee7",
+    "family": "gravity",
+    "identity_digest": "efd7267460fb5734d9c383c24112f4b59f4aaebf062b1a2f2ab56b4a41d56f32",
+    "partition": "development",
+    "reference_kind": "frozen_causal_no_update",
+    "selected_candidate": null,
+    "source_digest": "3d6dd935946c69dee848175fd4ade649a5be0f0a7f89773e87e57c4cce4b65b6"
+  },
+  "selected_reference": {
+    "action_positions": 63,
+    "bidirectional_historical_mass_on_disagreement": 0.10077077150344849,
+    "bidirectional_historical_token_mass": 0.9378370642662048,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.028574705123901367,
+    "reference_disagreement_positions": 2,
+    "reference_historical_mass_on_disagreement": 0.11426161229610443,
+    "reference_historical_token_mass": 0.9378640651702881
+  },
+  "teacher_checkpoint_sha256": "06850dd85a9af0fff111883d86191826f21e3ef2e3268a294234a82e842f00a7"
+}

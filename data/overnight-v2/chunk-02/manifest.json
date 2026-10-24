@@ -1,0 +1,88 @@
+{
+  "version": "arc1d-balanced-development-v1",
+  "protocol_version": "balanced-development-v1",
+  "seed": 202609061002,
+  "status": "development_only_outcome_blind",
+  "episodes": 8,
+  "tasks": 136,
+  "calibration_tasks": 0,
+  "partition_episodes": {
+    "development": 8
+  },
+  "role_counts": {
+    "source": 1,
+    "validation": 8,
+    "queries": 8
+  },
+  "declared_families": [
+    "translation",
+    "denoising",
+    "size_recoloring",
+    "gravity"
+  ],
+  "source_per_episode": 1,
+  "validation_per_episode": 8,
+  "queries_per_episode": 8,
+  "demonstrations_per_task": 4,
+  "aliases": {
+    "translation": "move_2pix_colorful_right",
+    "denoising": "block_and_noise_remove",
+    "size_recoloring": "recolor_blocks_by_size",
+    "gravity": "gravity_right"
+  },
+  "strata": {
+    "length": "short=16..19; long=20..24",
+    "translation": "small=nonzero block length <=7; large=>=8",
+    "denoising": "small=longest nonzero run <=7; large=>=8",
+    "size_recoloring": "small=longer block on left; large=longer block on right",
+    "gravity": "small=nonzero count <=10; large=>=11"
+  },
+  "tasks_per_role_per_stratum": 2,
+  "model_calls": 0,
+  "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+  "parent_manifest_sha256": "9554c4a805967ed7f7fb52edbb94c5c246512a20c70ff673be6d812ca9552065",
+  "excluded_canonical_inputs": 10009,
+  "new_unique_inputs": 680,
+  "rejections": {
+    "query_outside_predeclared_stratum": 187,
+    "canonical_input_overlap": 184,
+    "empty_or_identity": 96,
+    "canonical_pair_overlap": 11
+  },
+  "assignment": "Common independent four-task pool per stratum; seeded 2V/2Q split",
+  "limitations": [
+    "Strata balance observable query features, not exact task difficulty.",
+    "Global uniqueness filtering means tasks are not strictly IID.",
+    "Separate development replication; not an untouched final test."
+  ],
+  "script_sha256": "7eaca611990d7a42fc641d4519f262736b4bcfdc4892d6a92898dd280024ec29",
+  "files": {
+    "tasks.public.jsonl": "8322516bf9ada224a9a5960eb9e91509e43439d92a445c6d42f13a1abb8a648f",
+    "tasks.private.jsonl": "0f368a877e83d298de0b4a0249ce8404f881d90c930b79d3ccd613f848b4fb0c",
+    "episodes.jsonl": "f8f60f66e77666b97fd83a7d02ea3c05ce0231202cd11664f41878c00f3b5f6c",
+    "assignment.jsonl": "73c1c52a312c2627b0f36afa6740c674889f72b32044ea5b5cd59b4ee4a7445a"
+  },
+  "additional_excluded_corpora": [
+    {
+      "manifest_sha256": "1194e1f8fb4a7d6c9c1391b9018b31040509326a84e80febf088bf905a767a96",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "f85e5db5387adcc58bf741422b22df48ed8e04593c8358e31de9fbb7457c13e0",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "233d9ad880c51596db517fcf101dc98a921bb58590d564fe5c8beacceac705bc",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "9efcd2d7dd739b3bc1fd8ccb4b6856578c97ab1e051cf2d73b1192f1e4b672db",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    }
+  ]
+}

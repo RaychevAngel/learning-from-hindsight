@@ -1,0 +1,212 @@
+{
+  "version": "arc1d-hindsight-v1",
+  "seed": 20260905,
+  "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+  "status": "data_qualified_model_unqualified",
+  "episodes": 112,
+  "tasks": 1472,
+  "calibration_tasks": 16,
+  "demonstrations_per_task": 4,
+  "validation_per_episode": 4,
+  "queries_per_episode": 8,
+  "partition_episodes": {
+    "meta_train": 64,
+    "development": 16,
+    "final_known": 16,
+    "final_unseen": 16
+  },
+  "family_registry": {
+    "translation": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "move_2pix_colorful_right",
+        "move_2pix_colorful_left"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "denoising": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "block_and_noise_remove"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "size_recoloring": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "recolor_blocks_by_size"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "gravity": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "gravity_right",
+        "gravity_left"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "endpoint_filling": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "two_points_and_fill",
+        "two_points_and_fill_inv"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "copying_to_markers": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "copy_block_to_dots_colors"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "pattern_repetition": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "repeat_pattern_full"
+      ],
+      "length_range": [
+        16,
+        32
+      ]
+    },
+    "block_toward_marker": {
+      "partition_scope": "known",
+      "admitted_aliases": [
+        "block_touch_dot"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "reflection": {
+      "partition_scope": "reserved",
+      "admitted_aliases": [
+        "reflect_block_around_dot"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "block_size_sorting": {
+      "partition_scope": "reserved",
+      "admitted_aliases": [
+        "sort_blocks_by_size"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "collision_filling": {
+      "partition_scope": "reserved",
+      "admitted_aliases": [
+        "fill_until_collision"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    },
+    "half_block_coloring": {
+      "partition_scope": "reserved",
+      "admitted_aliases": [
+        "color_left_half_blocks"
+      ],
+      "length_range": [
+        16,
+        24
+      ]
+    }
+  },
+  "files": {
+    "tasks.public.jsonl": "1c66b3b5f5ebb4d4677d7e3a9fc79f1bf63c9b8390a7c08b1def60f11339e31a",
+    "tasks.private.jsonl": "17deb468b3ad9400ad8ffe993349252de440b1480fecc79e5fa270cd0ecbc398",
+    "episodes.jsonl": "d38fc974fa03f6ee07a79cfd8ba7d9c25bf69db940048296739f93a231f8886c"
+  },
+  "checks": {
+    "independently_verified_pairs": 7360,
+    "exact_unique_pairs": 7360,
+    "mirror_color_canonical_unique_pairs": 7360,
+    "canonical_unique_tasks": 1472,
+    "unique_task_seeds": 1472,
+    "finite_hypothesis_witness_tasks": 1472,
+    "model_calls": 0
+  },
+  "finite_witness_hypotheses": [
+    "move_2pix_colorful_right",
+    "move_2pix_colorful_left",
+    "block_and_noise_remove",
+    "recolor_blocks_by_size",
+    "gravity_right",
+    "gravity_left",
+    "two_points_and_fill",
+    "two_points_and_fill_inv",
+    "copy_block_to_dots_colors",
+    "repeat_pattern_full",
+    "block_touch_dot",
+    "reflect_block_around_dot",
+    "sort_blocks_by_size",
+    "fill_until_collision",
+    "color_left_half_blocks",
+    "identity",
+    "reverse",
+    "shift_-4",
+    "shift_-3",
+    "shift_-2",
+    "shift_-1",
+    "shift_1",
+    "shift_2",
+    "shift_3",
+    "shift_4"
+  ],
+  "planning_preview_excluded_pairs": 150,
+  "planning_preview_exclusion_sha256": "7ac2b93a8726fba63d48dc5e2f8f09f25ad771325b4d9a61f3863bfa62ade66b",
+  "rejections": {
+    "empty_or_identity": 4637,
+    "planning_preview_overlap": 19,
+    "canonical_pair_duplicate": 38182,
+    "task_pair_budget": 10
+  },
+  "alias_split_policy": "All unadmitted aliases of a semantic family are excluded, not assigned to another split. Mirrored/parameter aliases belong to the same family.",
+  "qualification_limits": [
+    "Witnesses distinguish query predictions only among the listed supported transforms; they do not prove universal identification from finite examples.",
+    "Task difficulty, token limits, answer formatting and model behavior require development-only model preflight.",
+    "No model outcome or treatment response was used to admit or reject data.",
+    "Whole semantic operator families are held out; ARC-1D remains a shared domain.",
+    "Calibration tasks are newly generated using the preview's familiar families; the prior preview remains excluded from final data."
+  ],
+  "development_revisions": [
+    "Root approved repetition-only lengths16-32: period2-5 generators at lengths16-24 have insufficient globally color/mirror-distinct pairs for the fixed allocation. Other families stay16-24; tokenizer preflight remains required.",
+    "Endpoint filling includes forward and inverse aliases within the same familiar family to avoid structural exhaustion; each episode fixes its alias across S/V/Q."
+  ],
+  "provenance": {
+    "generator_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arc/arc_1d_tasks.py",
+    "license": "Apache-2.0",
+    "license_file": "third_party/reasoning_gym/LICENSE",
+    "notice_file": "third_party/reasoning_gym/NOTICE.txt",
+    "copied_from_verified_development_preview": true
+  }
+}

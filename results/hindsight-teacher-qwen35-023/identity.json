@@ -1,0 +1,195 @@
+{
+  "code": {
+    "__init__.py": "e6e765da9b445f420be9f33b2c365ef8459c8b391373438c3ef22248cc868556",
+    "analysis.py": "7974c20dd8895d5fdfd6ccee8baa744f876f5ee69666d4cfae0d15b30a512d0e",
+    "data.py": "6d7152a667c56a09b38d49fc50c14d9078695dd9da08edb2f13a41c644bf9ae1",
+    "experiment.py": "7c4c6fb8c2140f23b087a94af33b6215d97356b24f842a0646ef888b0f0f2431",
+    "model.py": "c2798ebbd0c2815215a482716841a5d2a82e4032316cfcef74d24765078fcabb",
+    "representation.py": "8ba02fe4b02f35db787921c945a43e66b2cfe797f4ebcd731f92c77be93f77d0"
+  },
+  "config": {
+    "absolute_deadline_utc": "2026-09-06T05:45:00+00:00",
+    "candidate_count": 3,
+    "dataset_manifest_sha256": "f85e5db5387adcc58bf741422b22df48ed8e04593c8358e31de9fbb7457c13e0",
+    "deterministic_execution": true,
+    "diagnostic_source_ids": [
+      "b5146ba4da8c49d8068f68b6",
+      "b0701b945b9e0648f9007b52",
+      "208831d7e726ae9462d2bb3a",
+      "807d250dfae0d05ec41bda0f",
+      "b3a7a8f892234e68d05c5e72",
+      "eb2e08ce9a30ca1da12fc3f8",
+      "1f0ce06ab612b9becebf1c71",
+      "36e2d68fa834e3c42e64fee7"
+    ],
+    "enable_thinking": false,
+    "evaluation_tokens": 160,
+    "generation_batch_size": 1,
+    "hindsight_comparison": {
+      "evaluation_episode_ids": [
+        "b5146ba4da8c49d8068f68b6",
+        "b0701b945b9e0648f9007b52",
+        "208831d7e726ae9462d2bb3a",
+        "807d250dfae0d05ec41bda0f",
+        "b3a7a8f892234e68d05c5e72",
+        "eb2e08ce9a30ca1da12fc3f8",
+        "1f0ce06ab612b9becebf1c71",
+        "36e2d68fa834e3c42e64fee7"
+      ],
+      "fit_episode_ids": [
+        "dcc1c0469362d914334b57d2",
+        "c809ff4848444c6de85cd495",
+        "ac6b2de62c40d6f673532fda",
+        "05ae14f9dbb94e16b6dce525",
+        "e32c4301e05862b7009381f9",
+        "e737bbca8688acc619de8f73",
+        "dcc1e8857b4987447cdee528",
+        "cb754aa135b5da6786857755"
+      ],
+      "fit_identity_sha256": "3bbb717b5341dfe2713e92c3efdc7cd1fd2aee455144b245ff6eec9095aad572",
+      "fit_lessons_sha256": "fb1798c5f13df26665fc71cbdc933021dc1a681aef38e65bf57d4f9c5a244cd5",
+      "fit_observations_sha256": "86cd094dd5ce293d5527b6ea878cb19a7e8fbd77fe1c419de5f5057d362b0416",
+      "fit_selections": {
+        "05ae14f9dbb94e16b6dce525": {
+          "adapted_successes": 4,
+          "baseline_successes": 1,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        },
+        "ac6b2de62c40d6f673532fda": {
+          "adapted_successes": 5,
+          "baseline_successes": 1,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        },
+        "c809ff4848444c6de85cd495": {
+          "adapted_successes": 6,
+          "baseline_successes": 0,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        },
+        "cb754aa135b5da6786857755": {
+          "adapted_successes": 7,
+          "baseline_successes": 7,
+          "derived_from": "post_update_V",
+          "selected_candidate": null
+        },
+        "dcc1c0469362d914334b57d2": {
+          "adapted_successes": 4,
+          "baseline_successes": 0,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        },
+        "dcc1e8857b4987447cdee528": {
+          "adapted_successes": 8,
+          "baseline_successes": 8,
+          "derived_from": "post_update_V",
+          "selected_candidate": null
+        },
+        "e32c4301e05862b7009381f9": {
+          "adapted_successes": 6,
+          "baseline_successes": 4,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        },
+        "e737bbca8688acc619de8f73": {
+          "adapted_successes": 4,
+          "baseline_successes": 3,
+          "derived_from": "post_update_V",
+          "selected_candidate": 0
+        }
+      },
+      "lessons_sha256": "3810766140284b967ce11e28e5872f2725d3132393f4063b5e47e01e16b6fee9",
+      "qualification_script_sha256": "27648f35011ef741d1c4c86d8b441c5e3566d8b55262b7f9dfb1af8e6a0da7b8",
+      "source_identity_sha256": "13378c99d3b5ccd0f8f11dfdd90a790e2c814bceb960220859436053b5d4eb85"
+    },
+    "initial_cost_cap_usd": 35,
+    "learning_rate": 0.0001,
+    "max_context_tokens": 1536,
+    "max_gpu_hours": 6,
+    "max_invocation_seconds": 3900,
+    "max_teacher_context_tokens": 4096,
+    "model_name": "Qwen/Qwen3.5-4B",
+    "pi_tokens": 80,
+    "protocol_version": "qwen35-hindsight-teacher-development-023",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "seed": 7301,
+    "source_tokens": 128,
+    "student_steps": 4,
+    "teacher_batch_size": 4,
+    "teacher_epochs": 32
+  },
+  "dataset_manifest": {
+    "additional_excluded_corpora": [
+      {
+        "canonical_inputs": 680,
+        "manifest_sha256": "1194e1f8fb4a7d6c9c1391b9018b31040509326a84e80febf088bf905a767a96",
+        "newly_excluded_canonical_inputs": 680
+      }
+    ],
+    "aliases": {
+      "denoising": "block_and_noise_remove",
+      "gravity": "gravity_right",
+      "size_recoloring": "recolor_blocks_by_size",
+      "translation": "move_2pix_colorful_right"
+    },
+    "assignment": "Common independent four-task pool per stratum; seeded 2V/2Q split",
+    "calibration_tasks": 0,
+    "declared_families": [
+      "translation",
+      "denoising",
+      "size_recoloring",
+      "gravity"
+    ],
+    "demonstrations_per_task": 4,
+    "episodes": 8,
+    "excluded_canonical_inputs": 7969,
+    "files": {
+      "assignment.jsonl": "256f0b178bf3ae90fe35b5b1f32bcf54b19055a528da8de2b8592fcac3146ccc",
+      "episodes.jsonl": "1890403f5ea5c4aeba9926ebc0d198ffcbb77814c4e8e24e7b94265c4aa04ad7",
+      "tasks.private.jsonl": "b2c74b125b1b39605f8d3dd18b64faf6c141f8f0f21e0abd4dd28ac4b8e5b6da",
+      "tasks.public.jsonl": "87450b26d76eabf18d60d1e7c7516eb20ed0a8c404e043780ec5666700a706f5"
+    },
+    "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+    "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+    "limitations": [
+      "Strata balance observable query features, not exact task difficulty.",
+      "Global uniqueness filtering means tasks are not strictly IID.",
+      "Separate development replication; not an untouched final test."
+    ],
+    "model_calls": 0,
+    "new_unique_inputs": 680,
+    "parent_manifest_sha256": "9554c4a805967ed7f7fb52edbb94c5c246512a20c70ff673be6d812ca9552065",
+    "partition_episodes": {
+      "development": 8
+    },
+    "protocol_version": "balanced-development-v1",
+    "queries_per_episode": 8,
+    "rejections": {
+      "canonical_input_overlap": 109,
+      "canonical_pair_overlap": 10,
+      "empty_or_identity": 77,
+      "query_outside_predeclared_stratum": 165
+    },
+    "role_counts": {
+      "queries": 8,
+      "source": 1,
+      "validation": 8
+    },
+    "script_sha256": "7eaca611990d7a42fc641d4519f262736b4bcfdc4892d6a92898dd280024ec29",
+    "seed": 2026090602,
+    "source_per_episode": 1,
+    "status": "development_only_outcome_blind",
+    "strata": {
+      "denoising": "small=longest nonzero run <=7; large=>=8",
+      "gravity": "small=nonzero count <=10; large=>=11",
+      "length": "short=16..19; long=20..24",
+      "size_recoloring": "small=longer block on left; large=longer block on right",
+      "translation": "small=nonzero block length <=7; large=>=8"
+    },
+    "tasks": 136,
+    "tasks_per_role_per_stratum": 2,
+    "validation_per_episode": 8,
+    "version": "arc1d-balanced-development-v1"
+  }
+}

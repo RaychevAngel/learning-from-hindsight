@@ -1,0 +1,177 @@
+{
+  "C_first_error_improved_sources": [
+    "b0701b945b9e0648f9007b52"
+  ],
+  "framing": {
+    "first_wrong_source_probability_means": {
+      "B": 0.07757667877889192,
+      "C": 0.14345670763882132,
+      "old_PI": 0.09926116953760458
+    },
+    "first_wrong_values": [
+      {
+        "arms": {
+          "B": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.03730269834192655
+          },
+          "C": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.03288317314461577
+          },
+          "old_PI": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.0850307618636364
+          }
+        },
+        "array_index": 2,
+        "correct_value_offline": 0,
+        "episode_id": "b5146ba4da8c49d8068f68b6",
+        "observed_value": 8,
+        "response_position": 21
+      },
+      {
+        "arms": {
+          "B": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.053359466347817595
+          },
+          "C": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.4370364653231036
+          },
+          "old_PI": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.04205745680443295
+          }
+        },
+        "array_index": 5,
+        "correct_value_offline": 0,
+        "episode_id": "b0701b945b9e0648f9007b52",
+        "observed_value": 3,
+        "response_position": 30
+      },
+      {
+        "arms": {
+          "B": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.03727184123046261
+          },
+          "C": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.008573166910616525
+          },
+          "old_PI": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.047349555840764015
+          }
+        },
+        "array_index": 6,
+        "correct_value_offline": 2,
+        "episode_id": "b3a7a8f892234e68d05c5e72",
+        "observed_value": 1,
+        "response_position": 39
+      },
+      {
+        "arms": {
+          "B": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.18237270919536092
+          },
+          "C": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.09533402517694936
+          },
+          "old_PI": {
+            "argmax_is_correct": false,
+            "argmax_is_observed": true,
+            "correct_scalar_probability": 0.22260690364158497
+          }
+        },
+        "array_index": 4,
+        "correct_value_offline": 2,
+        "episode_id": "eb2e08ce9a30ca1da12fc3f8",
+        "observed_value": 1,
+        "response_position": 29
+      }
+    ],
+    "independently_mapped_native_scalar_values": 150,
+    "interpretation": [
+      "All four first-wrong positions still have the historical observed token as argmax in old_PI, B and C.",
+      "C raises mean correct-token probability at those four positions; B lowers it. These means do not establish answer accuracy or transfer.",
+      "B adds source-fallibility framing to the unchanged lesson; C additionally exposes the complete recorded attempt and binary feedback. This does not isolate consistency bias.",
+      "Earlier array values are correct at each first-error position, but the preceding original rule sentence can still be wrong.",
+      "Across all arrays, source-equal correct-token probability is slightly lower under both B and C than old_PI; do not cherry-pick the first-error average as global improvement.",
+      "Gold was used only by this offline audit, not supplied to029 model inputs. Tokens are correlated; no token-level inference is claimed.",
+      "No model forward, generation, optimization or active experiment-code change occurred in this independent audit."
+    ],
+    "runtime_seconds": 27.813603942049667,
+    "source_count": 8,
+    "source_equal_array_probability_means": {
+      "B": 0.715697858941851,
+      "C": 0.7179414501602073,
+      "old_PI": 0.7182086923167655
+    },
+    "work": {
+      "generation_sequences": 0,
+      "scoring_forwards": 16,
+      "student_optimizer_steps": 0,
+      "teacher_example_exposures": 0,
+      "teacher_optimizer_steps": 0
+    }
+  },
+  "limits": "This extractor checks arithmetic in independent audit receipts, not model outputs anew.",
+  "scope": "Completed audited training028 and scoring029 only; no031/035 partial outcomes.",
+  "source_hashes": {
+    "results/prefix-framing-029-independent-audit.json": "bc97b210b4c6e6fe69b305383be4f99a59ed1a91faaadb924bb5d1db10bee873",
+    "results/proposer-028-independent-audit.json": "2a88c7fe4149a4c8ec279b9322bbb53d66978b90b4e20860191ae6cdba9cf4f6"
+  },
+  "training": {
+    "Q_outcomes": 0,
+    "groups": 32,
+    "likelihood_discrepancy_nats": {
+      "max_group_max": 0.30506348609924316,
+      "min_group_max": 0.11333447694778442
+    },
+    "limitations": [
+      "Training-only audit; rewards and selected V scores do not establish held-out proposer utility.",
+      "Cached sampled-token and full teacher-forced likelihoods are numerically approximate; discrepancies are recorded, not silently treated as zero.",
+      "Tokenization, saved adapter checkpoints, Adam step counters and persisted grades were independently checked on CPU; no model forward or gradient was re-executed.",
+      "Per-group parameter changes and frozen-initial checkpoints are verified; base/student nonmutation during execution additionally relies on frozen implementation and runtime records.",
+      "All-tied groups advance the group/policy version but do not perform optimizer work. Reused no-update outcomes are not new generations.",
+      "The four training V tasks and correlated tokens are not independent source replications; no inferential held-out utility claim is made here."
+    ],
+    "optimizer_updates": 14,
+    "proposal_cap_hits": 1,
+    "proposal_records": 128,
+    "runtime_seconds": 2583.688327364158,
+    "source_episodes": 32,
+    "tied_no_update_groups": 18,
+    "unusable_proposals": 13,
+    "usable_proposals": 115,
+    "work": {
+      "generation_sequences": 748,
+      "proposer_backward_sequences": 56,
+      "proposer_generation_sequences": 128,
+      "proposer_groups": 32,
+      "proposer_optimizer_steps": 14,
+      "proposer_scoring_forwards": 56,
+      "proposer_zero_advantage_groups": 18,
+      "scoring_forwards": 115,
+      "student_optimizer_steps": 1840,
+      "teacher_example_exposures": 0,
+      "teacher_optimizer_steps": 0
+    }
+  }
+}

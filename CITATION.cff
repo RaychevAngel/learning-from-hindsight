@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this research software when using the implementation or released evidence."
+type: software
+title: "Learning from hindsight"
+version: 0.1.0
+date-released: 2026-10-24
+authors:
+  - family-names: Raychev
+    given-names: Angel
+repository-code: "https://github.com/RaychevAngel/learning-from-hindsight"
+url: "https://angelraychev.com/scalable-meta-learning-from-hindsight/"
+license: Apache-2.0
+abstract: >-
+  Research implementation of source-only lesson selection by actual post-update
+  validation performance, full-vocabulary distillation and future-aware hindsight
+  teacher fitting, with compact historical evidence and offline correctness tests.

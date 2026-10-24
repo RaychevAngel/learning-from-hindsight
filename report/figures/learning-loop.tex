@@ -1,0 +1,28 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw=accent!55,fill=pale,rounded corners=2pt,align=center,
+    text width=4.9cm,minimum height=13mm,inner sep=5pt,font=\small},
+  arrow/.style={-{Stealth[length=2.1mm]},thick,draw=accent},
+  note/.style={font=\small\bfseries,text=ink,anchor=west}
+]
+\node[note] at (0,1.0) {Outer training: select and learn the teaching policy};
+\node[box] (s) at (2.6,0) {Completed source\\task, response, feedback};
+\node[box] (p) at (8.4,0) {Proposer generates\\source-derived PI contexts};
+\node[box] (q) at (14.2,0) {PI-conditioned model\\scores original actions};
+\node[box] (u) at (14.2,-2.05) {Matched student clones\\learn from detached targets};
+\node[box] (v) at (8.4,-2.05) {Validation selects PI targets\\or the no-update reference};
+\node[box] (h) at (2.6,-2.05) {Raw-experience teacher\\fits selected distributions};
+\draw[arrow] (s)--(p); \draw[arrow] (p)--(q); \draw[arrow] (q)--(u);
+\draw[arrow] (u)--(v); \draw[arrow] (v)--(h);
+\draw[arrow,draw=warm] (v.north)--node[right,font=\scriptsize,text=warm]{learning reward}(p.south);
+\draw[arrow,dashed] (s)--node[right,font=\scriptsize,text=muted]{raw source}(h);
+\node[note] at (0,-3.55) {Amortized application: no new teaching text or trajectory};
+\node[box] (s2) at (2.6,-4.55) {A new completed\\source experience};
+\node[box] (h2) at (8.4,-4.55) {Learned future-aware scorer\\assigns detached targets};
+\node[box] (u2) at (14.2,-4.55) {Causal student update\\then solve different tasks};
+\draw[arrow] (s2)--(h2); \draw[arrow] (h2)--(u2);
+\end{tikzpicture}
+\caption{Learning teaching value and amortizing its policy effect. Validation measures the student with PI absent. Queries compare the fixed procedure. The application path eliminates additional \emph{target-generation sampling}, not scoring, optimization or the original source rollout.}
+\label{fig:loop}
+\end{figure}

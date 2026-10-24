@@ -1,0 +1,3107 @@
+{
+  "conditions": [
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 10
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        }
+      },
+      "candidate": 0,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 5,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.3671875,
+      "successful_observed_trials": 47
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 9,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.4375,
+          "successful_observed_trials": 7
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 10
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        }
+      },
+      "candidate": 1,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 13,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.3671875,
+      "successful_observed_trials": 47
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.6875,
+          "successful_observed_trials": 11
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        }
+      },
+      "candidate": 2,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 6,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.34375,
+      "successful_observed_trials": 44
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.5,
+          "successful_observed_trials": 8
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 10
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "baseline",
+      "format_failures": 4,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.3828125,
+      "successful_observed_trials": 49
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.1875,
+          "successful_observed_trials": 3
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.5,
+          "successful_observed_trials": 8
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.8125,
+          "successful_observed_trials": 13
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.6875,
+          "successful_observed_trials": 11
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.1875,
+          "successful_observed_trials": 3
+        }
+      },
+      "candidate": 0,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 7,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.3671875,
+      "successful_observed_trials": 47
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.1875,
+          "successful_observed_trials": 3
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 4,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.4375,
+          "successful_observed_trials": 7
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.6875,
+          "successful_observed_trials": 11
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        }
+      },
+      "candidate": 1,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 8,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.390625,
+      "successful_observed_trials": 50
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.4375,
+          "successful_observed_trials": 7
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.6875,
+          "successful_observed_trials": 11
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        }
+      },
+      "candidate": 2,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 8,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.4140625,
+      "successful_observed_trials": 53
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 10
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.1875,
+          "successful_observed_trials": 3
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "generic",
+      "format_failures": 6,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.375,
+      "successful_observed_trials": 48
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.0625,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 4
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.5625,
+          "successful_observed_trials": 9
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 4,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.3125,
+          "successful_observed_trials": 5
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.9375,
+          "successful_observed_trials": 15
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.6875,
+          "successful_observed_trials": 11
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 16,
+          "planned_trials": 16,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 2
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "mismatched_pi",
+      "format_failures": 8,
+      "incomplete_episodes": 0,
+      "observed_trials": 128,
+      "partition": "development",
+      "planned_trials": 128,
+      "role": "Q",
+      "source_mean_success": 0.3828125,
+      "successful_observed_trials": 49
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.75,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        }
+      },
+      "candidate": 0,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 2,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.34375,
+      "successful_observed_trials": 22
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 4,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.75,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        }
+      },
+      "candidate": 1,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 6,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.328125,
+      "successful_observed_trials": 21
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.75,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        }
+      },
+      "candidate": 2,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "adapted_pi",
+      "format_failures": 3,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.328125,
+      "successful_observed_trials": 21
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.5,
+          "successful_observed_trials": 4
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.375,
+          "successful_observed_trials": 3
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "baseline",
+      "format_failures": 4,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.359375,
+      "successful_observed_trials": 23
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        }
+      },
+      "candidate": 0,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 6,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.328125,
+      "successful_observed_trials": 21
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        }
+      },
+      "candidate": 1,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 3,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.34375,
+      "successful_observed_trials": 22
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.75,
+          "successful_observed_trials": 6
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.5,
+          "successful_observed_trials": 4
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        }
+      },
+      "candidate": 2,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "direct_pi",
+      "format_failures": 3,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.34375,
+      "successful_observed_trials": 22
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.5,
+          "successful_observed_trials": 4
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "generic",
+      "format_failures": 3,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.3125,
+      "successful_observed_trials": 20
+    },
+    {
+      "by_family": {
+        "block_toward_marker": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 2,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        },
+        "copying_to_markers": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "denoising": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "endpoint_filling": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 1,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0,
+          "successful_observed_trials": 0
+        },
+        "gravity": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 3,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.25,
+          "successful_observed_trials": 2
+        },
+        "pattern_repetition": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 1,
+          "successful_observed_trials": 8
+        },
+        "size_recoloring": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.625,
+          "successful_observed_trials": 5
+        },
+        "translation": {
+          "cap_hits": 0,
+          "complete_episodes": 2,
+          "format_failures": 0,
+          "incomplete_episodes": 0,
+          "observed_trials": 8,
+          "planned_trials": 8,
+          "source_mean_success": 0.125,
+          "successful_observed_trials": 1
+        }
+      },
+      "candidate": null,
+      "cap_hits": 0,
+      "complete_episodes": 16,
+      "condition": "mismatched_pi",
+      "format_failures": 6,
+      "incomplete_episodes": 0,
+      "observed_trials": 64,
+      "partition": "development",
+      "planned_trials": 64,
+      "role": "V",
+      "source_mean_success": 0.265625,
+      "successful_observed_trials": 17
+    }
+  ],
+  "frozen_V_selection_Q": [
+    {
+      "bootstrap_samples": 1000,
+      "ci95": [
+        -0.046875,
+        0.0
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 0,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 1,
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 15,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "ci95": [
+        -0.0234375,
+        0.0
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 0,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.0078125,
+      "partition": "development",
+      "regressed_episodes": 1,
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 15,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    }
+  ],
+  "missing_records": [],
+  "observed_records": 1728,
+  "paired_vs_baseline": [
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        }
+      },
+      "candidate": 0,
+      "ci95": [
+        -0.078125,
+        0.046875
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 3,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 4,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 9,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        }
+      },
+      "candidate": 1,
+      "ci95": [
+        -0.0859375,
+        0.046875
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 4,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 9,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.1875
+        }
+      },
+      "candidate": 2,
+      "ci95": [
+        -0.1015625,
+        0.015820312499999822
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 3,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.0390625,
+      "partition": "development",
+      "regressed_episodes": 5,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 8,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        }
+      },
+      "candidate": 0,
+      "ci95": [
+        -0.109375,
+        0.0546875
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 5,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 4,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 7,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        }
+      },
+      "candidate": 1,
+      "ci95": [
+        -0.0703125,
+        0.0703125
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 5,
+      "incomplete_episode_ids": [],
+      "mean_difference": 0.0078125,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 8,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        }
+      },
+      "candidate": 2,
+      "ci95": [
+        -0.015625,
+        0.078125
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 5,
+      "incomplete_episode_ids": [],
+      "mean_difference": 0.03125,
+      "partition": "development",
+      "regressed_episodes": 2,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 9,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        }
+      },
+      "candidate": null,
+      "ci95": [
+        -0.0546875,
+        0.03125
+      ],
+      "condition": "generic",
+      "episodes": 16,
+      "improved_episodes": 2,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.0078125,
+      "partition": "development",
+      "regressed_episodes": 2,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 12,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": -0.0625
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.1875
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.1875
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0625
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        }
+      },
+      "candidate": null,
+      "ci95": [
+        -0.0703125,
+        0.0703125
+      ],
+      "condition": "mismatched_pi",
+      "episodes": 16,
+      "improved_episodes": 5,
+      "incomplete_episode_ids": [],
+      "mean_difference": 0.0,
+      "partition": "development",
+      "regressed_episodes": 5,
+      "role": "Q",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 6,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.25
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.25
+        }
+      },
+      "candidate": 0,
+      "ci95": [
+        -0.109375,
+        0.078125
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 1,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 2,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 13,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.25
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.25
+        }
+      },
+      "candidate": 1,
+      "ci95": [
+        -0.125,
+        0.078125
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 1,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.03125,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 12,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.25
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.25
+        }
+      },
+      "candidate": 2,
+      "ci95": [
+        -0.125,
+        0.078125
+      ],
+      "condition": "adapted_pi",
+      "episodes": 16,
+      "improved_episodes": 1,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.03125,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 12,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        }
+      },
+      "candidate": 0,
+      "ci95": [
+        -0.09375,
+        0.03125
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 1,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.03125,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 12,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        }
+      },
+      "candidate": 1,
+      "ci95": [
+        -0.078125,
+        0.046875
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 2,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 11,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0.25
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        }
+      },
+      "candidate": 2,
+      "ci95": [
+        -0.109375,
+        0.09375
+      ],
+      "condition": "direct_pi",
+      "episodes": 16,
+      "improved_episodes": 2,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.015625,
+      "partition": "development",
+      "regressed_episodes": 4,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 10,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        }
+      },
+      "candidate": null,
+      "ci95": [
+        -0.09375,
+        0.0
+      ],
+      "condition": "generic",
+      "episodes": 16,
+      "improved_episodes": 0,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.046875,
+      "partition": "development",
+      "regressed_episodes": 3,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 13,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    },
+    {
+      "bootstrap_samples": 1000,
+      "by_family": {
+        "block_toward_marker": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "copying_to_markers": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "denoising": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "endpoint_filling": {
+          "episodes": 2,
+          "mean_difference": -0.125
+        },
+        "gravity": {
+          "episodes": 2,
+          "mean_difference": -0.25
+        },
+        "pattern_repetition": {
+          "episodes": 2,
+          "mean_difference": 0
+        },
+        "size_recoloring": {
+          "episodes": 2,
+          "mean_difference": 0.0
+        },
+        "translation": {
+          "episodes": 2,
+          "mean_difference": -0.25
+        }
+      },
+      "candidate": null,
+      "ci95": [
+        -0.21875,
+        0.0
+      ],
+      "condition": "mismatched_pi",
+      "episodes": 16,
+      "improved_episodes": 1,
+      "incomplete_episode_ids": [],
+      "mean_difference": -0.09375,
+      "partition": "development",
+      "regressed_episodes": 4,
+      "role": "V",
+      "seed": 0,
+      "status": "complete",
+      "tied_episodes": 11,
+      "uncertainty": "paired source-episode bootstrap; conditional on observed families/fit seed"
+    }
+  ],
+  "planned_records": 1728,
+  "selections_without_query_plan": [],
+  "status": "complete",
+  "within_source_V_ordering": [
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "0af833c31b99aec1f3aefb09",
+      "family": "pattern_repetition",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          1,
+          1,
+          1
+        ],
+        "direct_pi": [
+          1,
+          1,
+          1
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "13613767d690208c3038fb06",
+      "family": "translation",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "direct_pi": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "138f0dace0ea6c2e3386ec96",
+      "family": "denoising",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "28dfb250c9fa9584d01608e2",
+      "family": "gravity",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          1,
+          1,
+          1
+        ],
+        "direct_pi": [
+          1,
+          1,
+          1
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "506a69c304b6115aad7d5279",
+      "family": "copying_to_markers",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 1,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 2,
+      "discordant_pairs": 0,
+      "episode_id": "77d821c957410c6dc15b1979",
+      "family": "denoising",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.25,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "999495fd3448be91aadb71ef",
+      "family": "endpoint_filling",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "b8088c62eaf6fcd19fbeae11",
+      "family": "block_toward_marker",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "d6a922e56c907e9aed883816",
+      "family": "block_toward_marker",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "ddfdbcdfc53fc53c9deacc80",
+      "family": "size_recoloring",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "direct_pi": [
+          0.75,
+          0.75,
+          0.75
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "debf7990ab6fe2921b9c2617",
+      "family": "copying_to_markers",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0,
+          0
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 1,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "e3b74c61323ffad1dba752a0",
+      "family": "endpoint_filling",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0,
+          0.25,
+          0.25
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 2
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "e433d41a06f7ff84eaf58aad",
+      "family": "translation",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0,
+          0,
+          0
+        ],
+        "direct_pi": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 3,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "e55f974c81da3a5201994bc8",
+      "family": "pattern_repetition",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          1,
+          1,
+          1
+        ],
+        "direct_pi": [
+          1,
+          1,
+          1
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 0
+    },
+    {
+      "both_ties": 1,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "f371d42219003305ad88b6c6",
+      "family": "gravity",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "direct_pi": [
+          0.25,
+          0.25,
+          0.5
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 2
+    },
+    {
+      "both_ties": 1,
+      "candidates": [
+        0,
+        1,
+        2
+      ],
+      "concordant_pairs": 0,
+      "direct_only_ties": 0,
+      "discordant_pairs": 0,
+      "episode_id": "f5e240bef2d8f2ec5c88ed32",
+      "family": "size_recoloring",
+      "kendall_tau_b": null,
+      "partition": "development",
+      "scores": {
+        "adapted_pi": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "direct_pi": [
+          0.5,
+          0.5,
+          0.25
+        ]
+      },
+      "status": "complete",
+      "update_only_ties": 2
+    }
+  ]
+}

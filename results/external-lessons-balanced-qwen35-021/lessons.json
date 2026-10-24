@@ -1,0 +1,67 @@
+{
+  "provenance": {
+    "kind": "fixed source-only external proposer diagnostic",
+    "model_selection": "Inherited Codex subagent default; no model override",
+    "model_alias": null,
+    "immutable_model_revision": null,
+    "provider_generation_call_count": null,
+    "proposer_sessions": 8,
+    "source_isolation": "Eight fresh agents with no inherited conversation, each instructed to read exactly one new source-only input file. No V/Q, other source, history, memory, labels or oracle answer supplied. Instruction-level isolation, not an independently enforced sandbox.",
+    "source_input_pattern": "results/sources-balanced-qwen35-020/proposer-inputs/<episode_id>.json",
+    "proposal_instruction": "Infer a concrete transferable procedure supported by every source demonstration. Do not trust the attempted explanation merely because it was written. Return one lesson of at most 100 words explaining accurate execution and useful preservation/length checks; do not solve the source query.",
+    "lesson_selection": "One returned lesson per source, verbatim without root editing; no candidate selection using V or Q.",
+    "comparison": "Eight new balanced-development source episodes. Same Qwen3.5 student, strictdet, source sampling, four-step 1e-4 update and proposer procedure as018. Uniform singleton evaluation preselected from019 batch-sensitivity audit before new V/Q outcomes. No learned proposer, shared-weight or final-test claim.",
+    "proposer_agent_names": [
+      "/root/proposer_021_0",
+      "/root/proposer_021_1",
+      "/root/proposer_021_2",
+      "/root/proposer_021_3",
+      "/root/proposer_021_4",
+      "/root/proposer_021_5",
+      "/root/proposer_021_6",
+      "/root/proposer_021_7"
+    ]
+  },
+  "rows": [
+    {
+      "episode_id": "dcc1c0469362d914334b57d2",
+      "source_sha256": "d89b9d453725437ac8db81ae31d9965b50e468f393234c910895234aa6cd9411",
+      "lesson": "Infer displacement by comparing indexed positions across every demonstration: the intact nonzero block moves exactly two positions right. Build a zero-filled array of the original length, then copy each block element from index i to i+2. Verify that both block endpoints advance by two, values and order remain unchanged, and nonzero count and total array length are preserved. Check the actual array against the rule sentence rather than trusting the explanation. Follow the requested two-line format and the rule sentence’s 12-word limit."
+    },
+    {
+      "episode_id": "c809ff4848444c6de85cd495",
+      "source_sha256": "97139f969c40cbd43725ee1c38f23a4ab8a28d02a3753639ce0d4b4677c510f8",
+      "lesson": "Determine displacement by comparing both endpoints of the nonzero block across every demonstration: each moves exactly two positions right. Create an equal-length zero array and copy the block two indices later, preserving every value, repetition, and internal order. Verify that leading zeros increase by two, trailing zeros decrease by two, and total length stays 24. Do not confuse displacement with the final number of leading zeros. Follow the requested two-line format and keep the rule sentence within 12 words."
+    },
+    {
+      "episode_id": "ac6b2de62c40d6f673532fda",
+      "source_sha256": "64742831c59e886fffa02a4234b5ef9ebdf73946100597e2a359c3c7f021d0b3",
+      "lesson": "Scan the original array for contiguous nonzero runs. Replace each run of length one with zero; preserve runs of length two or more. Treat a missing neighbor at either boundary as zero. Replacement must not delete elements or shift positions. Verify that output length matches input length, original zeros remain unchanged, preserved runs retain their values and indices, and only isolated nonzeros change. Follow the requested response format: one rule sentence of at most 12 words, then `FINAL:` with the complete JSON array."
+    },
+    {
+      "episode_id": "05ae14f9dbb94e16b6dce525",
+      "source_sha256": "54bea75bce08ccee96a29905e3e640433ae6ee2396b5da055d9f94986dee3da4",
+      "lesson": "Scan the array for contiguous runs of nonzero values and measure their lengths. Preserve the unique longest run exactly where it is; replace every nonzero entry outside that run with zero. Compare run lengths, not numeric values, and never fill zero gaps. Check that the output has the original length, all original zeros remain zero, and the retained run’s values and positions are unchanged. Follow any required answer format exactly."
+    },
+    {
+      "episode_id": "e32c4301e05862b7009381f9",
+      "source_sha256": "2eb17f009c0fcaff2ca4048e1a39c7f9aae82ca59a8dd24961f8125d3f99dfd5",
+      "lesson": "Identify each maximal contiguous run of 3s and count its length. Replace the shorter run with 2s and the longer run with 1s, regardless of their left-to-right order. The demonstrations confound position with size, while the failed attempt shows that assigning colors by position does not transfer. Edit a copy of the input, preserving every zero and each run’s exact boundaries. Check that the output has the same total length, unchanged zero positions, and color counts matching the corresponding run lengths. Follow the requested response format without adding explanation."
+    },
+    {
+      "episode_id": "e737bbca8688acc619de8f73",
+      "source_sha256": "a33403574a3ab558325142c3f499ea160310d6ef18a602ab73c5851b6756d51c",
+      "lesson": "Identify the two maximal consecutive runs of 3s and count their lengths. Replace every 3 in the longer run with 1 and every 3 in the shorter run with 2, regardless of their left-to-right order. Verify this length-based rule against every demonstration; positional alternation fails. Preserve all zeros, run boundaries, and total array length. Check that each replacement run remains uniform and retains its original length, then follow the requested output format exactly."
+    },
+    {
+      "episode_id": "dcc1e8857b4987447cdee528",
+      "source_sha256": "bdb7f4c5303f0b03e05494340ae48ea101d4e6839ce69ce36773c22e406d1896",
+      "lesson": "Move all zeros to the end while preserving the left-to-right order of every nonzero value, including duplicates. Scan once, collect nonzeros, count zeros, then append exactly that many zeros. Check that output length equals input length, the nonzero subsequence is unchanged, each value’s frequency is preserved, and no nonzero appears after the first trailing zero. Respect the required answer format: a rule sentence of at most 12 words, then `FINAL:` followed by the complete JSON array on the second line."
+    },
+    {
+      "episode_id": "cb754aa135b5da6786857755",
+      "source_sha256": "c67e27e75fcc29c1f4d029f93fd3ff1e068ab2668930c2c5e00229a1b533a6eb",
+      "lesson": "Compact the array stably: scan left to right, copy every nonzero value in its original order, then append exactly as many zeros as the input contained. Preserve duplicates and total array length; zeros move to the end rather than being deleted. Check that input and output have identical nonzero subsequences, zero counts, and lengths. Validate the procedure against every demonstration, and follow the requested rule-sentence and JSON-array output format."
+    }
+  ]
+}

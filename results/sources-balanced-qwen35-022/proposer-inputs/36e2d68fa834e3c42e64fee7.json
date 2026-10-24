@@ -1,0 +1,6 @@
+{
+  "attempt": "Extract non-zero numbers and compact them to the front.\nFINAL: [3, 5, 1, 3, 6, 7, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0]",
+  "feedback": "The submitted answer was correct.",
+  "record_id": "36e2d68fa834e3c42e64fee7",
+  "task": "Infer the common transformation and apply it to the query.\nExample 1 input: [0, 5, 3, 1, 0, 0, 6, 8, 8, 2, 1, 3, 0, 0, 0, 0]\nExample 1 output: [5, 3, 1, 6, 8, 8, 2, 1, 3, 0, 0, 0, 0, 0, 0, 0]\nExample 2 input: [0, 0, 7, 4, 4, 9, 1, 0, 0, 1, 0, 0, 0, 8, 9, 0]\nExample 2 output: [7, 4, 4, 9, 1, 1, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0]\nExample 3 input: [0, 1, 5, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nExample 3 output: [1, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nExample 4 input: [0, 0, 0, 0, 0, 0, 2, 6, 0, 2, 4, 2, 0, 4, 2, 0]\nExample 4 output: [2, 6, 2, 4, 2, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nQuery input: [0, 0, 3, 0, 5, 0, 1, 3, 0, 0, 0, 0, 6, 7, 0, 4]\n\nRespond in exactly two lines.\nFirst line: one rule sentence of at most 12 words.\nSecond line: FINAL: followed by the complete output grid as a JSON array.\nDo not restate demonstrations, show steps, or add any other text."
+}

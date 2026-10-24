@@ -1,0 +1,191 @@
+{
+  "actual_sources": 8,
+  "admission_protocol": "balanced-development-v1",
+  "completed_at": "2026-09-06T04:18:26.720209+00:00",
+  "completed_episode_ids": [
+    "b5146ba4da8c49d8068f68b6",
+    "b0701b945b9e0648f9007b52",
+    "208831d7e726ae9462d2bb3a",
+    "807d250dfae0d05ec41bda0f",
+    "b3a7a8f892234e68d05c5e72",
+    "eb2e08ce9a30ca1da12fc3f8",
+    "1f0ce06ab612b9becebf1c71",
+    "36e2d68fa834e3c42e64fee7"
+  ],
+  "config_sha256": "4aafdc6cdc28a77aa371ad4934198062e342ca0224814e1fcacdfb60713df5a2",
+  "current_episode_id": "36e2d68fa834e3c42e64fee7",
+  "data_directory": "/opt/scalable-hindsight-023/data/balanced-transfer-v1",
+  "episode_ids": [
+    "b5146ba4da8c49d8068f68b6",
+    "b0701b945b9e0648f9007b52",
+    "208831d7e726ae9462d2bb3a",
+    "807d250dfae0d05ec41bda0f",
+    "b3a7a8f892234e68d05c5e72",
+    "eb2e08ce9a30ca1da12fc3f8",
+    "1f0ce06ab612b9becebf1c71",
+    "36e2d68fa834e3c42e64fee7"
+  ],
+  "evaluation_generation_sequences": 0,
+  "expected": [
+    {
+      "episode_id": "b5146ba4da8c49d8068f68b6",
+      "partition": "development",
+      "prompt_sha256": "3c609889b0f6bc234ebe5ebdf06dfed2e52fe985d221d2122d631e1945b5c2e5",
+      "task_id": "d32ae93b126f2dc3fcb63d9e"
+    },
+    {
+      "episode_id": "b0701b945b9e0648f9007b52",
+      "partition": "development",
+      "prompt_sha256": "540aa0b9d970ceb04003456524f07efb5abe44979c85d9fe301f0aa7a4fd988e",
+      "task_id": "f29d4fa8e1e27f1b731c690a"
+    },
+    {
+      "episode_id": "208831d7e726ae9462d2bb3a",
+      "partition": "development",
+      "prompt_sha256": "b388c874094cc7f1795286685ec480b9b5951d42b0aaf2013d85bed5369a2116",
+      "task_id": "66e6c056b1bca0aa0c3ce907"
+    },
+    {
+      "episode_id": "807d250dfae0d05ec41bda0f",
+      "partition": "development",
+      "prompt_sha256": "cb27796b99c708f98293c1d0986e0d146b1281eec6f80ed985e559da735e268d",
+      "task_id": "6ef4b7edbcee4d6e805ea7e3"
+    },
+    {
+      "episode_id": "b3a7a8f892234e68d05c5e72",
+      "partition": "development",
+      "prompt_sha256": "26877278ea55f60cb2516e71d1c8d3b2a9f2b2008ad35cca2a63954c87fbf9d8",
+      "task_id": "d4aafda49b9edcb30fd8b4c6"
+    },
+    {
+      "episode_id": "eb2e08ce9a30ca1da12fc3f8",
+      "partition": "development",
+      "prompt_sha256": "3cfe78135d2de3f72adb9855aedecf77cdac42be3ce1bd64d1dcb549a7398b0f",
+      "task_id": "d75cb428823e9a98c2561790"
+    },
+    {
+      "episode_id": "1f0ce06ab612b9becebf1c71",
+      "partition": "development",
+      "prompt_sha256": "01922c0a055d08941f865cce715bac3f6f0f1c40d6c78664d53ced34bd632f44",
+      "task_id": "00b29bee3a96d72250a97851"
+    },
+    {
+      "episode_id": "36e2d68fa834e3c42e64fee7",
+      "partition": "development",
+      "prompt_sha256": "6f18f23564d6177d78706e02a474bc68e657a71764ab62c6c6f2cbc5412d9536",
+      "task_id": "688ff85154fa8ddd6ac1f904"
+    }
+  ],
+  "expected_sources": 8,
+  "manifest_sha256": "f85e5db5387adcc58bf741422b22df48ed8e04593c8358e31de9fbb7457c13e0",
+  "missing_sources": 0,
+  "model_name": "Qwen/Qwen3.5-4B",
+  "planned_work": {
+    "generation_sequences": 8,
+    "scoring_forwards": 0,
+    "student_optimizer_steps": 0,
+    "teacher_example_exposures": 0,
+    "teacher_optimizer_steps": 0
+  },
+  "proposal_generation_sequences": 0,
+  "proposer_input_fields": [
+    "record_id",
+    "task",
+    "attempt",
+    "feedback"
+  ],
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "script_sha256": "111a4c8cf48ab820fc4e587fa7c9a0c3e4374520e821677e5c69754cb9343c94",
+  "selection": "eight predeclared development source IDs; no outcome-based selection",
+  "source_provenance": [
+    {
+      "cap_hit": false,
+      "episode_id": "b5146ba4da8c49d8068f68b6",
+      "prompt_tokens": 698,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/b5146ba4da8c49d8068f68b6.json",
+      "proposer_input_sha256": "68a13b45b4ae63f15a714e422c854d673349e29a5357df049ae42db31cdfb547",
+      "response_tokens": 78,
+      "source_sha256": "32e494e4fa015ad2e61e2aa40df34b8d93f3769ce2767cde3cf6982179e6e5f3",
+      "task_id": "d32ae93b126f2dc3fcb63d9e"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "b0701b945b9e0648f9007b52",
+      "prompt_tokens": 644,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/b0701b945b9e0648f9007b52.json",
+      "proposer_input_sha256": "50358c87bb4198822ef4b5d139f93e87ec31253e0baf6f4002a165cf0743a2ee",
+      "response_tokens": 72,
+      "source_sha256": "9b8c4b31a2870037424308052d6f4ab96accbc1f347e5872c01dfa52abf686ed",
+      "task_id": "f29d4fa8e1e27f1b731c690a"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "208831d7e726ae9462d2bb3a",
+      "prompt_tokens": 671,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/208831d7e726ae9462d2bb3a.json",
+      "proposer_input_sha256": "c4cbda30adab8472500d5602d38eb3b656cdbc80a8cd3134250d496cee000e94",
+      "response_tokens": 74,
+      "source_sha256": "b779c4e25c82591fc0ed99e239c2ee206beaea096c6a2d49b62e2f5d0b2b502d",
+      "task_id": "66e6c056b1bca0aa0c3ce907"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "807d250dfae0d05ec41bda0f",
+      "prompt_tokens": 563,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/807d250dfae0d05ec41bda0f.json",
+      "proposer_input_sha256": "78ffa80cf21e8c4ce95ebedca45de2e7dfff87193a9e4d9d62a3cc6cca9af0b3",
+      "response_tokens": 62,
+      "source_sha256": "b3038ad0c983b4a5bcc1148e80107b7b1a96f0cb8470f59deafd291eac30ade8",
+      "task_id": "6ef4b7edbcee4d6e805ea7e3"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "b3a7a8f892234e68d05c5e72",
+      "prompt_tokens": 617,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/b3a7a8f892234e68d05c5e72.json",
+      "proposer_input_sha256": "a8664095c8d4f6780979ef17980b4549bb612311e520241e3ed9df99a4221b63",
+      "response_tokens": 75,
+      "source_sha256": "2a5389d34e7253fca1bd5af9177c0e6719fe9fe827e084927f2f8fdec499778e",
+      "task_id": "d4aafda49b9edcb30fd8b4c6"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "eb2e08ce9a30ca1da12fc3f8",
+      "prompt_tokens": 698,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/eb2e08ce9a30ca1da12fc3f8.json",
+      "proposer_input_sha256": "491080d3909a3a7a9edfab68b496567d4004b29d27c3571294c378a44a7b9863",
+      "response_tokens": 80,
+      "source_sha256": "df15c6090dc8391887909bc1a9ad6a164c0864f57a3725fbeb3eed6b4e3cfe87",
+      "task_id": "d75cb428823e9a98c2561790"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "1f0ce06ab612b9becebf1c71",
+      "prompt_tokens": 644,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/1f0ce06ab612b9becebf1c71.json",
+      "proposer_input_sha256": "c58cabbad22ce35fac4614a331962126018c39eec6e774201d7ebb460bddef91",
+      "response_tokens": 72,
+      "source_sha256": "16a55eef17e54ffa8ba1a208d38882afe6f03eb1622b5df88c339c4669f14768",
+      "task_id": "00b29bee3a96d72250a97851"
+    },
+    {
+      "cap_hit": false,
+      "episode_id": "36e2d68fa834e3c42e64fee7",
+      "prompt_tokens": 563,
+      "proposer_input_path": "/opt/scalable-hindsight-023/results/sources-balanced-qwen35-022/proposer-inputs/36e2d68fa834e3c42e64fee7.json",
+      "proposer_input_sha256": "975ab521fde946441b9e8d50e2438ea54055bf4857c58b7f4b8ba329a1df6dc4",
+      "response_tokens": 63,
+      "source_sha256": "0ce6b88dbdd170528e54d99c99385f2e99e2b8540e9a3b8ceea330e4df746f60",
+      "task_id": "688ff85154fa8ddd6ac1f904"
+    }
+  ],
+  "started_at": "2026-09-06T04:17:52.083317+00:00",
+  "status": "completed",
+  "work": {
+    "generation_sequences": 8,
+    "scoring_forwards": 0,
+    "student_optimizer_steps": 0,
+    "teacher_example_exposures": 0,
+    "teacher_optimizer_steps": 0
+  }
+}

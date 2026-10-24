@@ -1,0 +1,6 @@
+{
+  "attempt": "Replace each contiguous group of 3s with a unique color.\nFINAL: [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0]",
+  "feedback": "The submitted answer was incorrect.",
+  "record_id": "eb2e08ce9a30ca1da12fc3f8",
+  "task": "Infer the common transformation and apply it to the query.\nExample 1 input: [0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 3, 3]\nExample 1 output: [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 2, 2]\nExample 2 input: [0, 0, 0, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3]\nExample 2 output: [0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2]\nExample 3 input: [0, 0, 0, 3, 3, 3, 3, 3, 3, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0, 0]\nExample 3 output: [0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]\nExample 4 input: [3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 0]\nExample 4 output: [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0]\nQuery input: [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0]\n\nRespond in exactly two lines.\nFirst line: one rule sentence of at most 12 words.\nSecond line: FINAL: followed by the complete output grid as a JSON array.\nDo not restate demonstrations, show steps, or add any other text."
+}

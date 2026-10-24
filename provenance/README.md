@@ -1,0 +1,45 @@
+# Release provenance
+
+The public package is curated from the private historical
+`RaychevAngel/scalable-hindsight` archive at commit
+`0116d67f869453c2ba4086b4be9db963284da3f8`. It is a new repository, not a
+visibility change or history rewrite of that archive.
+
+- `source-manifest.json` compares each exported file with its historical source.
+  Original scientific modules/runners remain byte-identical; release additions
+  provide documentation, dependency alignment, reanalysis, tests and CI.
+- `evidence-manifest.json` pins the selected compact data/result inputs by SHA256
+  and size. Some were intentionally ignored by the original Git repository, so
+  the source commit alone does not pin those historical artifacts.
+- `large-artifacts.json` records known hashes/sizes for optional, unshipped
+  full-vocabulary tensors and adapter checkpoints. It is not a download catalog:
+  **there is no public retrieval URL for these artifacts in this release**.
+
+The package preserves completed observations, including malformed and incorrect
+answers. It does not include provider credentials, account IDs, operational
+transcripts, caches, model weights, multi-GB tensors or partial runs presented as
+completed science. Synthetic oracle files are released deliberately for regrading;
+they must not be put into a model's input by an experiment runner.
+
+The original per-run configurations contain expired September deadlines and
+historical dataset/code hashes. They are evidence of those runs—not ready-to-launch
+commands. The quickstart prepares new, bounded configurations with new identities.
+Do not remove historical admission/hash checks to make a differently conditioned
+run look like a reproduction.
+
+## Release-only changes
+
+- Clear top-level navigation among offline reanalysis, CPU correctness and new
+  real-model experimentation.
+- Project metadata aligned with the already pinned Qwen3.5 environment, instead
+  of advertising the private archive's older default Qwen3 dependency stack.
+- A standard-library evidence verifier/regrader and adversarial integrity tests.
+- Apache-2.0 licensing/attribution, selected synthetic fixtures and offline CI.
+- Public-facing reproduction instructions no longer depend on private GitHub
+  access or excluded provider-control scripts.
+- A compact 7.2 × 5.4 inch print layout for the 025 localization figure matches
+  the canonical report; the historical numeric inputs and screen layout stay
+  unchanged.
+
+No model outputs, stored scores, scientific algorithms or historical source
+texts were edited to improve a result. Publication did not rerun the experiments.

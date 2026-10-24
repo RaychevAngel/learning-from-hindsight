@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling==1.27.0", "editables==0.5"]
+build-backend = "hatchling.build"
+
+[project]
+name = "learning-from-hindsight"
+version = "0.1.0"
+description = "Learning useful teaching distributions from completed source experience"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "Apache-2.0"
+license-files = [
+  "LICENSE",
+  "NOTICE",
+  "third_party/reasoning_gym/LICENSE",
+  "third_party/reasoning_gym/NOTICE.txt",
+  "third_party/reasoning_gym/ARC1D-LICENSE-MIT.txt",
+]
+authors = [{name = "Angel Raychev"}]
+dependencies = [
+  "torch==2.9.1",
+  "transformers @ https://github.com/huggingface/transformers/archive/c93057d4835cd31752bb56f59989dd27696eb45b.zip",
+  "peft==0.20.0",
+  "numpy>=2,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "ruff==0.15.12"]
+plots = ["matplotlib==3.11.1"]
+
+[project.urls]
+Source = "https://github.com/RaychevAngel/learning-from-hindsight"
+Article = "https://angelraychev.com/scalable-meta-learning-from-hindsight/"
+
+[project.scripts]
+hindsight = "hindsight.experiment:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hindsight"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+

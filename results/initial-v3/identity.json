@@ -1,0 +1,267 @@
+{
+  "code": {
+    "__init__.py": "e6e765da9b445f420be9f33b2c365ef8459c8b391373438c3ef22248cc868556",
+    "analysis.py": "7974c20dd8895d5fdfd6ccee8baa744f876f5ee69666d4cfae0d15b30a512d0e",
+    "data.py": "5de88c8c57057f145a89d3415b97f8092ba833643ec8f7847352603ca11ceddd",
+    "experiment.py": "f335af21bba8a10f9d300b4bc18609e301fe208ee2c91f0680f622a7076fdd1e",
+    "model.py": "fbe64ec5f371ac08c24394b01b52a6a99298808f3192d8ebf35d35fd1bf38edb"
+  },
+  "config": {
+    "absolute_deadline_utc": "2026-09-06T05:45:00+00:00",
+    "candidate_count": 3,
+    "evaluation_tokens": 160,
+    "generation_batch_size": 8,
+    "initial_cost_cap_usd": 35,
+    "learning_rate": 0.0001,
+    "max_context_tokens": 1536,
+    "max_gpu_hours": 6,
+    "max_invocation_seconds": 7200,
+    "max_teacher_context_tokens": 4096,
+    "model_name": "Qwen/Qwen3-4B-Instruct-2507",
+    "pi_tokens": 80,
+    "protocol_version": "initial-v1",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "seed": 7301,
+    "source_tokens": 128,
+    "student_steps": 4,
+    "teacher_batch_size": 4,
+    "teacher_epochs": 4
+  },
+  "dataset_manifest": {
+    "alias_split_policy": "All unadmitted aliases of a semantic family are excluded, not assigned to another split. Mirrored/parameter aliases belong to the same family.",
+    "calibration_tasks": 16,
+    "checks": {
+      "canonical_unique_tasks": 1472,
+      "exact_unique_pairs": 7360,
+      "finite_hypothesis_witness_tasks": 1472,
+      "independently_verified_pairs": 7360,
+      "mirror_color_canonical_unique_pairs": 7360,
+      "model_calls": 0,
+      "unique_task_seeds": 1472
+    },
+    "demonstrations_per_task": 4,
+    "development_revisions": [
+      "Root approved repetition-only lengths16-32: period2-5 generators at lengths16-24 have insufficient globally color/mirror-distinct pairs for the fixed allocation. Other families stay16-24; tokenizer preflight remains required.",
+      "Endpoint filling includes forward and inverse aliases within the same familiar family to avoid structural exhaustion; each episode fixes its alias across S/V/Q."
+    ],
+    "episodes": 112,
+    "family_registry": {
+      "block_size_sorting": {
+        "admitted_aliases": [
+          "sort_blocks_by_size"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "reserved"
+      },
+      "block_toward_marker": {
+        "admitted_aliases": [
+          "block_touch_dot"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "collision_filling": {
+        "admitted_aliases": [
+          "fill_until_collision"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "reserved"
+      },
+      "copying_to_markers": {
+        "admitted_aliases": [
+          "copy_block_to_dots_colors"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "denoising": {
+        "admitted_aliases": [
+          "block_and_noise_remove"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "endpoint_filling": {
+        "admitted_aliases": [
+          "two_points_and_fill",
+          "two_points_and_fill_inv"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "gravity": {
+        "admitted_aliases": [
+          "gravity_right",
+          "gravity_left"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "half_block_coloring": {
+        "admitted_aliases": [
+          "color_left_half_blocks"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "reserved"
+      },
+      "pattern_repetition": {
+        "admitted_aliases": [
+          "repeat_pattern_full"
+        ],
+        "length_range": [
+          16,
+          32
+        ],
+        "partition_scope": "known"
+      },
+      "reflection": {
+        "admitted_aliases": [
+          "reflect_block_around_dot"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "reserved"
+      },
+      "size_recoloring": {
+        "admitted_aliases": [
+          "recolor_blocks_by_size"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      },
+      "translation": {
+        "admitted_aliases": [
+          "move_2pix_colorful_right",
+          "move_2pix_colorful_left"
+        ],
+        "length_range": [
+          16,
+          24
+        ],
+        "partition_scope": "known"
+      }
+    },
+    "files": {
+      "episodes.jsonl": "d38fc974fa03f6ee07a79cfd8ba7d9c25bf69db940048296739f93a231f8886c",
+      "prompt-pairing.jsonl": "a0839ac8e70c5c35e5f04fa5a8b6d72b201c978d2b7902197baf5500e3d99f47",
+      "tasks.private.jsonl": "e11f140ef90d0e37762bd029106579cc1782a4382ef2b31dbebd3c5c364abdc3",
+      "tasks.public.jsonl": "b937c7b3808b38450cd9c124ebf51e085675c15b574ad5740545451572567958"
+    },
+    "finite_witness_hypotheses": [
+      "move_2pix_colorful_right",
+      "move_2pix_colorful_left",
+      "block_and_noise_remove",
+      "recolor_blocks_by_size",
+      "gravity_right",
+      "gravity_left",
+      "two_points_and_fill",
+      "two_points_and_fill_inv",
+      "copy_block_to_dots_colors",
+      "repeat_pattern_full",
+      "block_touch_dot",
+      "reflect_block_around_dot",
+      "sort_blocks_by_size",
+      "fill_until_collision",
+      "color_left_half_blocks",
+      "identity",
+      "reverse",
+      "shift_-4",
+      "shift_-3",
+      "shift_-2",
+      "shift_-1",
+      "shift_1",
+      "shift_2",
+      "shift_3",
+      "shift_4"
+    ],
+    "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+    "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+    "partition_episodes": {
+      "development": 16,
+      "final_known": 16,
+      "final_unseen": 16,
+      "meta_train": 64
+    },
+    "planning_preview_excluded_pairs": 150,
+    "planning_preview_exclusion_sha256": "7ac2b93a8726fba63d48dc5e2f8f09f25ad771325b4d9a61f3863bfa62ade66b",
+    "prompt_revision": {
+      "changed_fields": [
+        "tasks.public.prompt",
+        "tasks.private.public_sha256"
+      ],
+      "episodes_byte_identical": true,
+      "model_calls": 0,
+      "new_intro": "Infer the common transformation and apply it to the query.",
+      "new_trailing_contract": "Respond in exactly two lines.\nFirst line: one rule sentence of at most 12 words.\nSecond line: FINAL: followed by the complete output grid as a JSON array.\nDo not restate demonstrations, show steps, or add any other text.",
+      "old_header": "Infer the common transformation from the four demonstrations and apply it to the query.\nGive a brief explanation, then exactly one final line: FINAL: [0, 1, ...].\nThe FINAL field must be a JSON array of integers with the same length as the query.",
+      "paired_tasks": 1472,
+      "parent_files": {
+        "episodes.jsonl": "d38fc974fa03f6ee07a79cfd8ba7d9c25bf69db940048296739f93a231f8886c",
+        "tasks.private.jsonl": "17deb468b3ad9400ad8ffe993349252de440b1480fecc79e5fa270cd0ecbc398",
+        "tasks.public.jsonl": "1c66b3b5f5ebb4d4677d7e3a9fc79f1bf63c9b8390a7c08b1def60f11339e31a"
+      },
+      "parent_manifest_sha256": "139be31ac689023b02fda99500806b196b62953eec7e9d69f7a96eaea3ab643e",
+      "parent_version": "arc1d-hindsight-v1",
+      "reason": "Development E0 observed truncation under the loose brief-explanation instruction. This revision constrains response length without changing any task or split.",
+      "regenerated_tasks": 0,
+      "revision": "two-lines-rule-at-most-12-words",
+      "script_sha256": "bcf371577e5175a3ca34e079b9ee43ad93d9fe03a5501cb7c475ab4cbf5b6188",
+      "semantic_identity_sha256": "518227c32517c774cddb6c08f7fe357c6125c590fadda5bdca227cd6f2f96cc3"
+    },
+    "provenance": {
+      "copied_from_verified_development_preview": true,
+      "generator_url": "https://raw.githubusercontent.com/open-thought/reasoning-gym/49b07130b3fcd12f2d064bba7c43869543a0e7e7/reasoning_gym/arc/arc_1d_tasks.py",
+      "license": "Apache-2.0",
+      "license_file": "third_party/reasoning_gym/LICENSE",
+      "notice_file": "third_party/reasoning_gym/NOTICE.txt"
+    },
+    "qualification_limits": [
+      "Witnesses distinguish query predictions only among the listed supported transforms; they do not prove universal identification from finite examples.",
+      "Task difficulty, token limits, answer formatting and model behavior require development-only model preflight.",
+      "No model outcome or treatment response was used to admit or reject data.",
+      "Whole semantic operator families are held out; ARC-1D remains a shared domain.",
+      "Calibration tasks are newly generated using the preview's familiar families; the prior preview remains excluded from final data."
+    ],
+    "queries_per_episode": 8,
+    "rejections": {
+      "canonical_pair_duplicate": 38182,
+      "empty_or_identity": 4637,
+      "planning_preview_overlap": 19,
+      "task_pair_budget": 10
+    },
+    "seed": 20260905,
+    "status": "data_qualified_prompt_revision_model_unqualified",
+    "tasks": 1472,
+    "validation_per_episode": 4,
+    "version": "arc1d-hindsight-v2-prompt-only"
+  }
+}

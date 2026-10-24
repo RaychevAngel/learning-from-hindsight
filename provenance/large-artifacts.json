@@ -1,0 +1,127 @@
+{
+  "artifacts": [
+    {
+      "bytes": 232436666,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/b5146ba4da8c49d8068f68b6.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "36f0ffabbdf51d477c6b3642837eeeb1f1fdc157348b997a828c9e1f4996e8a3"
+    },
+    {
+      "bytes": 214557178,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/b0701b945b9e0648f9007b52.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "e1ce18a23a7e970117e268e2890ae863365a2f17644a4915a62d39cc307d9ca7"
+    },
+    {
+      "bytes": 220517050,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/208831d7e726ae9462d2bb3a.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "469c33bfc2e44da60ee77d498467abb862dfd2b97e0c10c5b97bca7eacb97af1"
+    },
+    {
+      "bytes": 184758138,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/807d250dfae0d05ec41bda0f.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "71746ceb8114ad6f90ce0ba03165a0c0513e4fd80e747d571f0164cc123a7452"
+    },
+    {
+      "bytes": 223496634,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/b3a7a8f892234e68d05c5e72.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "57b9f2d73ce166d6a33e43133ecdaecf84366778b6839984b7c974e1f28c7e6a"
+    },
+    {
+      "bytes": 238396346,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/eb2e08ce9a30ca1da12fc3f8.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "92582364a3e1d95a6e7b728db9221348c33b93ae72e996aa71affacae139f730"
+    },
+    {
+      "bytes": 214557178,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/1f0ce06ab612b9becebf1c71.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "2097bfc1a3aa10f7db15d14ba04c305818ae534ff606dc5038afb2b9ba11e152"
+    },
+    {
+      "bytes": 187737978,
+      "hash_origin": "Independent completed tensor audit, September 2026",
+      "path": "results/source-fidelity-qwen35-025/distributions/36e2d68fa834e3c42e64fee7.pt",
+      "public_download": null,
+      "purpose": "Full-vocabulary explicit-PI target, initial and post-update tensors",
+      "sha256": "7bb0991fa0054f9b7758edfe578b86bea3e966afdb2b7090f2e685c6bd3bb24a"
+    },
+    {
+      "bytes": 130033153,
+      "hash_origin": "Completed historical run receipt",
+      "path": "results/hindsight-teacher-qwen35-023/teacher/checkpoint.pt",
+      "public_download": null,
+      "purpose": "Main fitted future-aware teacher adapter",
+      "sha256": "06850dd85a9af0fff111883d86191826f21e3ef2e3268a294234a82e842f00a7"
+    },
+    {
+      "bytes": 260066609,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/initial.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "796688fbcf811a3d293f854299dfbcb43d31e1f204ace8e5aa8b85075728a72d"
+    },
+    {
+      "bytes": 520212779,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/group-0008.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "9128271d992ad36d95186c0239811951acb737290c542bea2f4657e234948e33"
+    },
+    {
+      "bytes": 520212779,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/group-0016.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "dfe7a319783691aa27e6ae50ce610ac59b90920b50daf7095f75a0e248f3bed0"
+    },
+    {
+      "bytes": 520212779,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/group-0024.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "16961fecf1e32bd01025dbdc4e9dcc9c776c8d4cf1e48cf7a2d9719b83800041"
+    },
+    {
+      "bytes": 520212779,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/group-0032.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "9c2cb28524f33674a5c05ce63fdfab40f68d6182f560c6a107463ed63fc69403"
+    },
+    {
+      "bytes": 520200349,
+      "hash_origin": "Independent completed training audit, September 2026",
+      "path": "results/proposer-028/checkpoints/final.pt",
+      "public_download": null,
+      "purpose": "Audited actual-reward proposer optimization checkpoint",
+      "sha256": "a03f7b07ae8f0cca9c4df0ef78e11da2a3222f4373506439490e86e801e2b651"
+    }
+  ],
+  "no_public_retrieval_claim": true,
+  "schema": "hindsight-optional-large-artifacts-v1",
+  "status": "Not included or publicly hosted by this release"
+}

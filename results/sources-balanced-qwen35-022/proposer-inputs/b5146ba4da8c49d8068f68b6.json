@@ -1,0 +1,6 @@
+{
+  "attempt": "Shift all non-zero elements one position to the right.\nFINAL: [0, 0, 8, 2, 3, 5, 3, 8, 8, 2, 6, 2, 9, 9, 0, 0, 0, 0, 0, 0, 0]",
+  "feedback": "The submitted answer was incorrect.",
+  "record_id": "b5146ba4da8c49d8068f68b6",
+  "task": "Infer the common transformation and apply it to the query.\nExample 1 input: [0, 0, 0, 7, 2, 5, 9, 9, 9, 8, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]\nExample 1 output: [0, 0, 0, 0, 0, 7, 2, 5, 9, 9, 9, 8, 7, 1, 0, 0, 0, 0, 0, 0, 0]\nExample 2 input: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0]\nExample 2 output: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0]\nExample 3 input: [0, 0, 8, 2, 4, 9, 1, 5, 5, 2, 3, 6, 4, 2, 8, 4, 7, 6, 0, 0, 0]\nExample 3 output: [0, 0, 0, 0, 8, 2, 4, 9, 1, 5, 5, 2, 3, 6, 4, 2, 8, 4, 7, 6, 0]\nExample 4 input: [5, 3, 7, 2, 7, 7, 1, 5, 1, 4, 8, 9, 1, 5, 5, 7, 6, 5, 0, 0, 0]\nExample 4 output: [0, 0, 5, 3, 7, 2, 7, 7, 1, 5, 1, 4, 8, 9, 1, 5, 5, 7, 6, 5, 0]\nQuery input: [0, 8, 2, 3, 5, 3, 8, 8, 2, 6, 2, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0]\n\nRespond in exactly two lines.\nFirst line: one rule sentence of at most 12 words.\nSecond line: FINAL: followed by the complete output grid as a JSON array.\nDo not restate demonstrations, show steps, or add any other text."
+}

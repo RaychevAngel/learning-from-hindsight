@@ -1,0 +1,29 @@
+{
+  "protocol_version": "qwen35-4b-development-diagnostic",
+  "model_name": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "enable_thinking": false,
+  "deterministic_execution": true,
+  "seed": 7301,
+  "source_tokens": 128,
+  "pi_tokens": 80,
+  "evaluation_tokens": 160,
+  "generation_batch_size": 8,
+  "candidate_count": 3,
+  "student_steps": 4,
+  "learning_rate": 0.0001,
+  "teacher_epochs": 4,
+  "teacher_batch_size": 4,
+  "max_context_tokens": 1536,
+  "max_teacher_context_tokens": 4096,
+  "absolute_deadline_utc": "2026-09-06T05:45:00+00:00",
+  "max_invocation_seconds": 1200,
+  "initial_cost_cap_usd": 35,
+  "max_gpu_hours": 6,
+  "diagnostic_source_ids": [
+    "13613767d690208c3038fb06",
+    "77d821c957410c6dc15b1979",
+    "ddfdbcdfc53fc53c9deacc80",
+    "28dfb250c9fa9584d01608e2"
+  ]
+}

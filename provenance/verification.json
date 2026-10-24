@@ -1,0 +1,57 @@
+{
+  "verified_at_utc": "2026-10-24T08:23:16.178910+00:00",
+  "historical_source_commit": "0116d67f869453c2ba4086b4be9db963284da3f8",
+  "platform": "macOS arm64, CPU-only",
+  "environment": {
+    "torch": "2.9.1",
+    "transformers": "5.17.0.dev0",
+    "peft": "0.20.0",
+    "numpy": "2.4.6",
+    "pytest": "8.4.2",
+    "ruff": "0.15.12",
+    "matplotlib": "3.11.1",
+    "python": "3.11.15 (main, Mar 10 2026, 18:01:34) [Clang 21.1.4 ]",
+    "transformers_origin": {
+      "url": "https://github.com/huggingface/transformers/archive/c93057d4835cd31752bb56f59989dd27696eb45b.zip",
+      "archive_info": {}
+    }
+  },
+  "checks": {
+    "complete_test_suite": {
+      "passed": 468,
+      "failed": 0
+    },
+    "explicit_data_free_CPU_subset": {
+      "passed": 305,
+      "deselected": 4
+    },
+    "dependency_free_integrity_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "saved_evaluation_records_regraded": 2848,
+    "synthetic_pairs_independently_checked": 8720,
+    "historical_input_files_hashed": 137,
+    "fresh_source_copy_CPU_proof": "passed with clone-local import enforced",
+    "offline_figure_and_table_rebuild": "passed; no scientific input data changed",
+    "wheel_and_source_build": "passed with isolated Hatchling 1.27.0 backend",
+    "wheel_install_and_editable_import": "passed without installing scientific dependencies",
+    "privacy_and_forbidden_artifact_scan": "passed",
+    "canonical_report_files_in_source_distribution": 11,
+    "canonical_report_PDF_sha256": "2536f5b460e76a9a634b8a084b7598299e809d436fef341729c6a14be3272dc0",
+    "canonical_report_source_sha256": "e68485c48ebc0548952a36436f99f7980ff2774e205a82511bf7ee48120b95e1",
+    "original_ARC1D_MIT_notice_in_wheel_and_source_distribution": true,
+    "original_ARC1D_MIT_notice_sha256": "2e8c1021c727bb150ea03c3e303349a35940e9deb27d2c950d0b996d4998ed62",
+    "remote_CI": "not run by this local receipt; inspect repository Actions"
+  },
+  "evidence_files_digest_sha256": "78a83b3b945fdda5c6beca3b7f9641cfd5b01e45f78d920878104b77da7dcaf8",
+  "evidence_digest_unchanged_by_publication_packaging": true,
+  "main_model_code_sha256": "c2798ebbd0c2815215a482716841a5d2a82e4032316cfcef74d24765078fcabb",
+  "limits": [
+    "Scientific package environment was reused, not installed from scratch",
+    "Build/editable installation was tested in a new backend-only environment",
+    "Tiny randomly initialized CPU models do not establish real-model task improvement",
+    "No new scientific experiment, trained-model evaluation or paid provider call",
+    "Full tensor/checkpoint re-audits require the separately identified unshipped artifacts"
+  ]
+}

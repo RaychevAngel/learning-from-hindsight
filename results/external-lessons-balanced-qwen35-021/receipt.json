@@ -1,0 +1,168 @@
+{
+  "actual_observations": 384,
+  "admission_protocol": "balanced-development-v1",
+  "completed_at": "2026-09-06T03:44:40.294731+00:00",
+  "completed_episode_ids": [
+    "dcc1c0469362d914334b57d2",
+    "c809ff4848444c6de85cd495",
+    "ac6b2de62c40d6f673532fda",
+    "05ae14f9dbb94e16b6dce525",
+    "e32c4301e05862b7009381f9",
+    "e737bbca8688acc619de8f73",
+    "dcc1e8857b4987447cdee528",
+    "cb754aa135b5da6786857755"
+  ],
+  "current_episode_id": "cb754aa135b5da6786857755",
+  "data_directory": "/opt/scalable-hindsight-020/data/balanced-development-v1",
+  "episode_ids": [
+    "dcc1c0469362d914334b57d2",
+    "c809ff4848444c6de85cd495",
+    "ac6b2de62c40d6f673532fda",
+    "05ae14f9dbb94e16b6dce525",
+    "e32c4301e05862b7009381f9",
+    "e737bbca8688acc619de8f73",
+    "dcc1e8857b4987447cdee528",
+    "cb754aa135b5da6786857755"
+  ],
+  "expected_observations": 384,
+  "generated_evaluation_tokens": 29051,
+  "generation_batch_size_override": 1,
+  "lesson_provenance": {
+    "comparison": "Eight new balanced-development source episodes. Same Qwen3.5 student, strictdet, source sampling, four-step 1e-4 update and proposer procedure as018. Uniform singleton evaluation preselected from019 batch-sensitivity audit before new V/Q outcomes. No learned proposer, shared-weight or final-test claim.",
+    "immutable_model_revision": null,
+    "kind": "fixed source-only external proposer diagnostic",
+    "lesson_selection": "One returned lesson per source, verbatim without root editing; no candidate selection using V or Q.",
+    "model_alias": null,
+    "model_selection": "Inherited Codex subagent default; no model override",
+    "proposal_instruction": "Infer a concrete transferable procedure supported by every source demonstration. Do not trust the attempted explanation merely because it was written. Return one lesson of at most 100 words explaining accurate execution and useful preservation/length checks; do not solve the source query.",
+    "proposer_agent_names": [
+      "/root/proposer_021_0",
+      "/root/proposer_021_1",
+      "/root/proposer_021_2",
+      "/root/proposer_021_3",
+      "/root/proposer_021_4",
+      "/root/proposer_021_5",
+      "/root/proposer_021_6",
+      "/root/proposer_021_7"
+    ],
+    "proposer_sessions": 8,
+    "provider_generation_call_count": null,
+    "source_input_pattern": "results/sources-balanced-qwen35-020/proposer-inputs/<episode_id>.json",
+    "source_isolation": "Eight fresh agents with no inherited conversation, each instructed to read exactly one new source-only input file. No V/Q, other source, history, memory, labels or oracle answer supplied. Instruction-level isolation, not an independently enforced sandbox."
+  },
+  "lessons_file": "/opt/scalable-hindsight-020/results/frontier-lessons-balanced-qwen35-021.json",
+  "lessons_sha256": "fb1798c5f13df26665fc71cbdc933021dc1a681aef38e65bf57d4f9c5a244cd5",
+  "missing_observations": 0,
+  "parent_identity_sha256": "2741cac37435d48fe8ac2a672743908c27f63af30141540d1cb09110fd4f05c1",
+  "planned_work": {
+    "generation_sequences": 384,
+    "scoring_forwards": 8,
+    "student_optimizer_steps": 32,
+    "teacher_example_exposures": 0,
+    "teacher_optimizer_steps": 0
+  },
+  "proposal_generation_sequences": 0,
+  "script_sha256": "eb5840da145b1d9fa03a07985cf1b40c916827d92ab1dd605bb8433c7538d866",
+  "selection": "none; eight supplied development episodes, one fixed lesson each",
+  "source_generation_sequences": 0,
+  "source_provenance": [
+    {
+      "episode_id": "dcc1c0469362d914334b57d2",
+      "lesson_sha256": "55b87829928ffe1b080e86768a0e19daf75255d5b1a29e02fc1a040062fb7c89",
+      "partition": "development",
+      "prompt_sha256": "17ae6d093016c4b4f6ddb83c413edd7e5a639e8504802cb4dc6197aa4411b039",
+      "prompt_tokens": 617,
+      "response_tokens": 68,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/dcc1c0469362d914334b57d2.json",
+      "source_sha256": "d89b9d453725437ac8db81ae31d9965b50e468f393234c910895234aa6cd9411",
+      "task_id": "8dad23be6fe32a80b2993d86"
+    },
+    {
+      "episode_id": "c809ff4848444c6de85cd495",
+      "lesson_sha256": "3831accc5ba018beb4bbb0c67c0654a706966f8cc352119c49ed3232b0ca5b44",
+      "partition": "development",
+      "prompt_sha256": "55ed1ed0d79ae37645bab0d0a10bbdbaf71a1806897b2d7faa69e59f4ee2fa7d",
+      "prompt_tokens": 779,
+      "response_tokens": 87,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/c809ff4848444c6de85cd495.json",
+      "source_sha256": "97139f969c40cbd43725ee1c38f23a4ab8a28d02a3753639ce0d4b4677c510f8",
+      "task_id": "23c15aafe8fbd5cbfc72ef7b"
+    },
+    {
+      "episode_id": "ac6b2de62c40d6f673532fda",
+      "lesson_sha256": "fde7ee70d9371b03175dde7bdc66d975a3cdaa69ce5b1b169663c5abf686b685",
+      "partition": "development",
+      "prompt_sha256": "c4a4699e3e59074fdfe2e9f463b8264522349f1ba3db81824733773746430836",
+      "prompt_tokens": 617,
+      "response_tokens": 67,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/ac6b2de62c40d6f673532fda.json",
+      "source_sha256": "64742831c59e886fffa02a4234b5ef9ebdf73946100597e2a359c3c7f021d0b3",
+      "task_id": "13c8469239aa2de694de85ea"
+    },
+    {
+      "episode_id": "05ae14f9dbb94e16b6dce525",
+      "lesson_sha256": "4ac90319239f8de7ec1dcee49233ff9d1b8d7cffac0dc2837c83499da4761a4c",
+      "partition": "development",
+      "prompt_sha256": "094ea6f0bcfc3dfb03fce56321d9e6497555fad6fa62f4c9df45183cbef6f290",
+      "prompt_tokens": 644,
+      "response_tokens": 73,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/05ae14f9dbb94e16b6dce525.json",
+      "source_sha256": "54bea75bce08ccee96a29905e3e640433ae6ee2396b5da055d9f94986dee3da4",
+      "task_id": "b59274ff64e697d72f713180"
+    },
+    {
+      "episode_id": "e32c4301e05862b7009381f9",
+      "lesson_sha256": "053f8953879d1263754301b10296e2ba4ddfd013802431fbbd69a074bca9598d",
+      "partition": "development",
+      "prompt_sha256": "07521c74cddf58b82dfeda2b4d6047f6b2c13bf7c89dfbfc94057e299f1f1698",
+      "prompt_tokens": 698,
+      "response_tokens": 88,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/e32c4301e05862b7009381f9.json",
+      "source_sha256": "2eb17f009c0fcaff2ca4048e1a39c7f9aae82ca59a8dd24961f8125d3f99dfd5",
+      "task_id": "22357d7e461f17e70200c615"
+    },
+    {
+      "episode_id": "e737bbca8688acc619de8f73",
+      "lesson_sha256": "9bb9dab02fb3572033ccd2f7dda39222438ee4e7f2c0937e109198fa5eff1b25",
+      "partition": "development",
+      "prompt_sha256": "695852be8d6531f916b75aa13d7401f8f7b9cf196793dc17c9453c58e2a07d4c",
+      "prompt_tokens": 617,
+      "response_tokens": 73,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/e737bbca8688acc619de8f73.json",
+      "source_sha256": "a33403574a3ab558325142c3f499ea160310d6ef18a602ab73c5851b6756d51c",
+      "task_id": "d7eee459ea85d558b37b8672"
+    },
+    {
+      "episode_id": "dcc1e8857b4987447cdee528",
+      "lesson_sha256": "e261beb169d862431f829f2dd5e08d4bec43a76ce7ca66ff183a52e9d93bd15c",
+      "partition": "development",
+      "prompt_sha256": "a02b41b312a32be0c8a6c4ea96a06dae270865d9b03462a5f755b8ee1c2bcf61",
+      "prompt_tokens": 590,
+      "response_tokens": 67,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/dcc1e8857b4987447cdee528.json",
+      "source_sha256": "bdb7f4c5303f0b03e05494340ae48ea101d4e6839ce69ce36773c22e406d1896",
+      "task_id": "56b55610b8b828f0558bfad4"
+    },
+    {
+      "episode_id": "cb754aa135b5da6786857755",
+      "lesson_sha256": "6fe8002e9dd119d721dfaf5f615e6b35477c1f88871404b21499b86f7b15fb40",
+      "partition": "development",
+      "prompt_sha256": "cc0471250542687158d8c5fc2c6f8383528c5f7a0e8bc9865d5b8d5af3a08519",
+      "prompt_tokens": 644,
+      "response_tokens": 74,
+      "source_path": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020/sources/cb754aa135b5da6786857755.json",
+      "source_sha256": "c67e27e75fcc29c1f4d029f93fd3ff1e068ab2668930c2c5e00229a1b533a6eb",
+      "task_id": "5ae4c3b369fcd31cd47ef846"
+    }
+  ],
+  "sources_directory": "/opt/scalable-hindsight-020/results/sources-balanced-qwen35-020",
+  "started_at": "2026-09-06T03:19:46.463116+00:00",
+  "status": "completed",
+  "work": {
+    "generation_sequences": 384,
+    "scoring_forwards": 8,
+    "student_optimizer_steps": 32,
+    "teacher_example_exposures": 0,
+    "teacher_optimizer_steps": 0
+  }
+}

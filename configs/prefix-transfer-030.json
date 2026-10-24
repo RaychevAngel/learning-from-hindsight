@@ -1,0 +1,25 @@
+{
+  "protocol_version": "prefix-transfer-old-development-030",
+  "model_name": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "enable_thinking": false,
+  "deterministic_execution": true,
+  "seed": 7301,
+  "source_tokens": 128,
+  "pi_tokens": 160,
+  "evaluation_tokens": 160,
+  "generation_batch_size": 8,
+  "student_steps": 16,
+  "learning_rate": 0.0001,
+  "max_context_tokens": 1536,
+  "max_teacher_context_tokens": 4096,
+  "absolute_deadline_utc": "2026-09-06T15:30:00+00:00",
+  "max_invocation_seconds": 900,
+  "additional_overnight_cost_cap_usd": 35,
+  "dataset_manifest_sha256": "f85e5db5387adcc58bf741422b22df48ed8e04593c8358e31de9fbb7457c13e0",
+  "batch_qualification": {
+    "path": "results/throughput-026/receipt.json",
+    "sha256": "12098b60486065ea3caa5717d9c5fc1822300b40707252ab25cab2713555e8b5"
+  },
+  "loss": "forward_kl"
+}

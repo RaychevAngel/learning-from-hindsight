@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="590" viewBox="0 0 1320 590" role="img" aria-labelledby="title desc">
+  <title id="title">Learn teaching value, then amortize its policy effect</title>
+  <desc id="desc">Outer training proposes source-derived privileged contexts, scores the original actions, applies matched student updates, and selects targets by validation without the context. A raw-experience teacher fits the selected distributions. The amortized path scores a new completed source with that learned teacher, detaches its targets and updates the causal student.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#17668B"/></marker>
+    <marker id="reward" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#AD5528"/></marker>
+    <style>
+      .box{fill:#F0F5F7;stroke:#8BACBC;stroke-width:1.5}
+      .heading{font:600 25px system-ui,-apple-system,sans-serif;fill:#183E53}
+      .body{font:21px system-ui,-apple-system,sans-serif;fill:#183E53;text-anchor:middle}
+      .note{font:17px system-ui,-apple-system,sans-serif;fill:#555F65}
+      .arrow{fill:none;stroke:#17668B;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1320" height="590" fill="white"/>
+  <text class="heading" x="28" y="36">Outer training: select and learn the teaching policy</text>
+  <rect class="box" x="28" y="70" width="370" height="92" rx="7"/>
+  <rect class="box" x="475" y="70" width="370" height="92" rx="7"/>
+  <rect class="box" x="922" y="70" width="370" height="92" rx="7"/>
+  <text class="body" x="213" y="108"><tspan x="213">Completed source</tspan><tspan x="213" dy="29">task, response, feedback</tspan></text>
+  <text class="body" x="660" y="108"><tspan x="660">Proposer generates</tspan><tspan x="660" dy="29">source-derived PI contexts</tspan></text>
+  <text class="body" x="1107" y="108"><tspan x="1107">PI-conditioned model</tspan><tspan x="1107" dy="29">scores original actions</tspan></text>
+  <path class="arrow" d="M398 116H475"/><path class="arrow" d="M845 116H922"/>
+  <rect class="box" x="28" y="235" width="370" height="92" rx="7"/>
+  <rect class="box" x="475" y="235" width="370" height="92" rx="7"/>
+  <rect class="box" x="922" y="235" width="370" height="92" rx="7"/>
+  <text class="body" x="1107" y="273"><tspan x="1107">Matched student clones</tspan><tspan x="1107" dy="29">learn from detached targets</tspan></text>
+  <text class="body" x="660" y="273"><tspan x="660">Validation selects PI targets</tspan><tspan x="660" dy="29">or the no-update reference</tspan></text>
+  <text class="body" x="213" y="273"><tspan x="213">Raw-experience teacher</tspan><tspan x="213" dy="29">fits selected distributions</tspan></text>
+  <path class="arrow" d="M1107 162V235"/><path class="arrow" d="M922 281H845"/><path class="arrow" d="M475 281H398"/>
+  <path d="M660 235V162" fill="none" stroke="#AD5528" stroke-width="2" marker-end="url(#reward)"/>
+  <text x="677" y="205" class="note" style="fill:#AD5528">learning reward</text>
+  <path class="arrow" stroke-dasharray="5 5" d="M213 162V235"/>
+  <text class="note" x="230" y="205">raw source</text>
+  <text class="note" x="28" y="367">Validation tests the updated student causally, with the PI absent.</text>
+  <text class="heading" x="28" y="425">Amortized application: no new teaching text or trajectory</text>
+  <rect class="box" x="28" y="459" width="370" height="92" rx="7"/>
+  <rect class="box" x="475" y="459" width="370" height="92" rx="7"/>
+  <rect class="box" x="922" y="459" width="370" height="92" rx="7"/>
+  <text class="body" x="213" y="497"><tspan x="213">A new completed</tspan><tspan x="213" dy="29">source experience</tspan></text>
+  <text class="body" x="660" y="497"><tspan x="660">Learned future-aware scorer</tspan><tspan x="660" dy="29">assigns detached targets</tspan></text>
+  <text class="body" x="1107" y="497"><tspan x="1107">Causal student update</tspan><tspan x="1107" dy="29">then solve different tasks</tspan></text>
+  <path class="arrow" d="M398 505H475"/><path class="arrow" d="M845 505H922"/>
+</svg>

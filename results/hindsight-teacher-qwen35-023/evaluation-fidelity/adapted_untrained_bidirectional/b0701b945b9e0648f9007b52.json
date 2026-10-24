@@ -1,0 +1,33 @@
+{
+  "pi_reference": {
+    "action_positions": 72,
+    "bidirectional_historical_mass_on_disagreement": 0.7202764749526978,
+    "bidirectional_historical_token_mass": 0.9500495195388794,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.3642485737800598,
+    "reference_disagreement_positions": 4,
+    "reference_historical_mass_on_disagreement": 0.16475680470466614,
+    "reference_historical_token_mass": 0.9446859359741211
+  },
+  "provenance": {
+    "derived_from": "post_update_V",
+    "episode_id": "b0701b945b9e0648f9007b52",
+    "family": "translation",
+    "identity_digest": "efd7267460fb5734d9c383c24112f4b59f4aaebf062b1a2f2ab56b4a41d56f32",
+    "partition": "development",
+    "reference_kind": "PI_teacher",
+    "selected_candidate": 0,
+    "source_digest": "423ecb8b343a46d996a84a11ac578b5bbc52631fe0774b4774c3fefcce47b5b1"
+  },
+  "selected_reference": {
+    "action_positions": 72,
+    "bidirectional_historical_mass_on_disagreement": 0.7202764749526978,
+    "bidirectional_historical_token_mass": 0.9500495195388794,
+    "disagreement_definition": "historical_token_probability_below_reference_maximum",
+    "forward_kl_reference_to_bidirectional": 0.3642485737800598,
+    "reference_disagreement_positions": 4,
+    "reference_historical_mass_on_disagreement": 0.16475680470466614,
+    "reference_historical_token_mass": 0.9446859359741211
+  },
+  "teacher_checkpoint_sha256": null
+}

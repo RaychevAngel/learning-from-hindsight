@@ -1,0 +1,32 @@
+Learning from hindsight
+Copyright 2026 Angel Raychev
+
+This public research package is curated from the private historical
+RaychevAngel/scalable-hindsight source archive at commit
+0116d67f869453c2ba4086b4be9db963284da3f8. The archive itself and its history are
+not redistributed. Provenance manifests distinguish exact copies from release
+documentation and verification additions.
+
+Third-party source included in this distribution:
+
+  third_party/reasoning_gym/arc_1d_tasks.py
+  Upstream: open-thought/reasoning-gym
+  Revision: 49b07130b3fcd12f2d064bba7c43869543a0e7e7
+  Original upstream path: reasoning_gym/arc/arc_1d_tasks.py
+  SHA256: 6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa
+  ReasoningGym wrapper license: Apache License 2.0
+  Original ARC-1D generators: MIT, Copyright (c) 2023 University of Toronto
+  Original project: https://github.com/optozorax/arc_1d
+  MIT license source revision: 268e5731038efbe647c881c9b478f9b51f9610d3
+
+The original upstream LICENSE and NOTICE.txt are retained verbatim in that
+directory. ARC1D-LICENSE-MIT.txt additionally retains the original ARC-1D
+permission and warranty notice required for the converted generators.
+The broad upstream NOTICE discusses other ReasoningGym components;
+this release vendors only the ARC-1D generator file identified above, not those
+other components. The local preview_exclusions.json is a list of canonical
+input/output hashes used to avoid overlap with inspected public examples.
+
+Model weights are not distributed. External software and downloaded models
+retain their own licenses and notices. Historical model identifiers and pinned
+revisions are provenance, not a grant of rights to those weights.

@@ -1,0 +1,113 @@
+{
+  "version": "arc1d-balanced-development-v1",
+  "protocol_version": "balanced-development-v1",
+  "seed": 202609061007,
+  "status": "development_only_outcome_blind",
+  "episodes": 8,
+  "tasks": 136,
+  "calibration_tasks": 0,
+  "partition_episodes": {
+    "development": 8
+  },
+  "role_counts": {
+    "source": 1,
+    "validation": 8,
+    "queries": 8
+  },
+  "declared_families": [
+    "translation",
+    "denoising",
+    "size_recoloring",
+    "gravity"
+  ],
+  "source_per_episode": 1,
+  "validation_per_episode": 8,
+  "queries_per_episode": 8,
+  "demonstrations_per_task": 4,
+  "aliases": {
+    "translation": "move_2pix_colorful_right",
+    "denoising": "block_and_noise_remove",
+    "size_recoloring": "recolor_blocks_by_size",
+    "gravity": "gravity_right"
+  },
+  "strata": {
+    "length": "short=16..19; long=20..24",
+    "translation": "small=nonzero block length <=7; large=>=8",
+    "denoising": "small=longest nonzero run <=7; large=>=8",
+    "size_recoloring": "small=longer block on left; large=longer block on right",
+    "gravity": "small=nonzero count <=10; large=>=11"
+  },
+  "tasks_per_role_per_stratum": 2,
+  "model_calls": 0,
+  "generator_revision": "49b07130b3fcd12f2d064bba7c43869543a0e7e7",
+  "generator_sha256": "6f5a06a909149e5eebe2b285eb334e79d3ca27a6f77e0f31fff9188f709688aa",
+  "parent_manifest_sha256": "9554c4a805967ed7f7fb52edbb94c5c246512a20c70ff673be6d812ca9552065",
+  "excluded_canonical_inputs": 13409,
+  "new_unique_inputs": 680,
+  "rejections": {
+    "canonical_input_overlap": 287,
+    "query_outside_predeclared_stratum": 175,
+    "empty_or_identity": 83,
+    "canonical_pair_overlap": 8
+  },
+  "assignment": "Common independent four-task pool per stratum; seeded 2V/2Q split",
+  "limitations": [
+    "Strata balance observable query features, not exact task difficulty.",
+    "Global uniqueness filtering means tasks are not strictly IID.",
+    "Separate development replication; not an untouched final test."
+  ],
+  "script_sha256": "7eaca611990d7a42fc641d4519f262736b4bcfdc4892d6a92898dd280024ec29",
+  "files": {
+    "tasks.public.jsonl": "c2669c58b240e9eedfa8cffdea1dd47e200f043417e0b934c6e490e7589b79d0",
+    "tasks.private.jsonl": "9feb8356bb331320d85e822ab3e2a9fa5eab1bb3724c41406bd73d030acc97b6",
+    "episodes.jsonl": "da64bced500881da0d124885e149af5c57b4ee8291fbb0daccf710c2045fb21d",
+    "assignment.jsonl": "b611c86eba7b5634468f33eed7ff13f09ffb76ad6f88a22d45f9e852894f15cd"
+  },
+  "additional_excluded_corpora": [
+    {
+      "manifest_sha256": "1194e1f8fb4a7d6c9c1391b9018b31040509326a84e80febf088bf905a767a96",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "f85e5db5387adcc58bf741422b22df48ed8e04593c8358e31de9fbb7457c13e0",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "233d9ad880c51596db517fcf101dc98a921bb58590d564fe5c8beacceac705bc",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "9efcd2d7dd739b3bc1fd8ccb4b6856578c97ab1e051cf2d73b1192f1e4b672db",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "f557e9ec17270c23452e98532fc74578cb7f9e21b389963bbbe7195cce122a9c",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "125af52a695056ee77e63eac359176f84afb243dad97101e9a08393d8c175f6a",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "b041c3c3cf6aea5de1e69ee0d9298e36c91fd77354f4bafee47e1488c238ac07",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "726334220e52d931b31aac514b7028a40c6332c3fc85e18dcc72b09a3a3b733b",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    },
+    {
+      "manifest_sha256": "4608a9f24cededb0dbfe304fc3af68a75c1a0f1405f4e82206060d6bfd68abe2",
+      "canonical_inputs": 680,
+      "newly_excluded_canonical_inputs": 680
+    }
+  ]
+}

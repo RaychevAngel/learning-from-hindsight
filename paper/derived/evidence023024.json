@@ -1,0 +1,249 @@
+{
+  "counts": {
+    "adapted_bidirectional/Q": {
+      "caps": 0,
+      "correct": 30,
+      "denominator": 64,
+      "malformed": 3,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 5,
+        "208831d7e726ae9462d2bb3a": 2,
+        "36e2d68fa834e3c42e64fee7": 7,
+        "807d250dfae0d05ec41bda0f": 3,
+        "b0701b945b9e0648f9007b52": 1,
+        "b3a7a8f892234e68d05c5e72": 6,
+        "b5146ba4da8c49d8068f68b6": 3,
+        "eb2e08ce9a30ca1da12fc3f8": 3
+      },
+      "sources": 8
+    },
+    "adapted_pi/Q": {
+      "caps": 0,
+      "correct": 30,
+      "denominator": 64,
+      "malformed": 1,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 7,
+        "208831d7e726ae9462d2bb3a": 1,
+        "36e2d68fa834e3c42e64fee7": 8,
+        "807d250dfae0d05ec41bda0f": 3,
+        "b0701b945b9e0648f9007b52": 1,
+        "b3a7a8f892234e68d05c5e72": 4,
+        "b5146ba4da8c49d8068f68b6": 3,
+        "eb2e08ce9a30ca1da12fc3f8": 3
+      },
+      "sources": 8
+    },
+    "adapted_pi/V": {
+      "caps": 0,
+      "correct": 44,
+      "denominator": 64,
+      "malformed": 0,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 8,
+        "208831d7e726ae9462d2bb3a": 5,
+        "36e2d68fa834e3c42e64fee7": 7,
+        "807d250dfae0d05ec41bda0f": 5,
+        "b0701b945b9e0648f9007b52": 4,
+        "b3a7a8f892234e68d05c5e72": 5,
+        "b5146ba4da8c49d8068f68b6": 3,
+        "eb2e08ce9a30ca1da12fc3f8": 7
+      },
+      "sources": 8
+    },
+    "adapted_raw_causal/Q": {
+      "caps": 0,
+      "correct": 26,
+      "denominator": 64,
+      "malformed": 0,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 7,
+        "208831d7e726ae9462d2bb3a": 3,
+        "36e2d68fa834e3c42e64fee7": 7,
+        "807d250dfae0d05ec41bda0f": 3,
+        "b0701b945b9e0648f9007b52": 0,
+        "b3a7a8f892234e68d05c5e72": 4,
+        "b5146ba4da8c49d8068f68b6": 0,
+        "eb2e08ce9a30ca1da12fc3f8": 2
+      },
+      "sources": 8
+    },
+    "adapted_replay/Q": {
+      "caps": 0,
+      "correct": 24,
+      "denominator": 64,
+      "malformed": 0,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 7,
+        "208831d7e726ae9462d2bb3a": 2,
+        "36e2d68fa834e3c42e64fee7": 6,
+        "807d250dfae0d05ec41bda0f": 1,
+        "b0701b945b9e0648f9007b52": 1,
+        "b3a7a8f892234e68d05c5e72": 3,
+        "b5146ba4da8c49d8068f68b6": 0,
+        "eb2e08ce9a30ca1da12fc3f8": 4
+      },
+      "sources": 8
+    },
+    "adapted_untrained_bidirectional/Q": {
+      "caps": 0,
+      "correct": 28,
+      "denominator": 64,
+      "malformed": 2,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 6,
+        "208831d7e726ae9462d2bb3a": 4,
+        "36e2d68fa834e3c42e64fee7": 8,
+        "807d250dfae0d05ec41bda0f": 3,
+        "b0701b945b9e0648f9007b52": 0,
+        "b3a7a8f892234e68d05c5e72": 4,
+        "b5146ba4da8c49d8068f68b6": 0,
+        "eb2e08ce9a30ca1da12fc3f8": 3
+      },
+      "sources": 8
+    },
+    "baseline/Q": {
+      "caps": 0,
+      "correct": 27,
+      "denominator": 64,
+      "malformed": 0,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 7,
+        "208831d7e726ae9462d2bb3a": 2,
+        "36e2d68fa834e3c42e64fee7": 8,
+        "807d250dfae0d05ec41bda0f": 2,
+        "b0701b945b9e0648f9007b52": 0,
+        "b3a7a8f892234e68d05c5e72": 4,
+        "b5146ba4da8c49d8068f68b6": 0,
+        "eb2e08ce9a30ca1da12fc3f8": 4
+      },
+      "sources": 8
+    },
+    "baseline/V": {
+      "caps": 0,
+      "correct": 24,
+      "denominator": 64,
+      "malformed": 0,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 8,
+        "208831d7e726ae9462d2bb3a": 1,
+        "36e2d68fa834e3c42e64fee7": 8,
+        "807d250dfae0d05ec41bda0f": 1,
+        "b0701b945b9e0648f9007b52": 0,
+        "b3a7a8f892234e68d05c5e72": 3,
+        "b5146ba4da8c49d8068f68b6": 0,
+        "eb2e08ce9a30ca1da12fc3f8": 3
+      },
+      "sources": 8
+    },
+    "direct_pi/Q": {
+      "caps": 0,
+      "correct": 42,
+      "denominator": 64,
+      "malformed": 2,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 7,
+        "208831d7e726ae9462d2bb3a": 5,
+        "36e2d68fa834e3c42e64fee7": 8,
+        "807d250dfae0d05ec41bda0f": 5,
+        "b0701b945b9e0648f9007b52": 4,
+        "b3a7a8f892234e68d05c5e72": 6,
+        "b5146ba4da8c49d8068f68b6": 3,
+        "eb2e08ce9a30ca1da12fc3f8": 4
+      },
+      "sources": 8
+    },
+    "direct_pi/V": {
+      "caps": 0,
+      "correct": 40,
+      "denominator": 64,
+      "malformed": 2,
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 8,
+        "208831d7e726ae9462d2bb3a": 4,
+        "36e2d68fa834e3c42e64fee7": 6,
+        "807d250dfae0d05ec41bda0f": 4,
+        "b0701b945b9e0648f9007b52": 4,
+        "b3a7a8f892234e68d05c5e72": 5,
+        "b5146ba4da8c49d8068f68b6": 4,
+        "eb2e08ce9a30ca1da12fc3f8": 5
+      },
+      "sources": 8
+    }
+  },
+  "direct_pi_minus_adapted_pi_Q": {
+    "gain_task_ids": [
+      "2d81224bae880b3d87b5e964",
+      "4b9611d3bea83c691059c1da",
+      "59eca83974ec43c6259bc6bc",
+      "8bc7f26c90ef472694c80f0d",
+      "969a49793c1bd6f67a409c97",
+      "a7eb5648e87c01bb6c253900",
+      "ae1e6f76008867b73b9b27a5",
+      "ba2a6770cdc359920283c271",
+      "daa657ab57bef85e544f2508",
+      "e20be6fbd15aeb1b62ef7d9a",
+      "ea6d81dff0dfefe5a40e42c9",
+      "f019bc1745c92d82544d8243"
+    ],
+    "loss_task_ids": []
+  },
+  "evidence_cutoff": "Figure1 contains completed023/024 only; later diagnostics excluded",
+  "fidelity_file_sha256": {
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/1f0ce06ab612b9becebf1c71.json": "3c2ff9f76399d5862367a365a9e2bf51d8c4d5c565f7a251ffd71e2c3ce25070",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/208831d7e726ae9462d2bb3a.json": "bdd062150d84b50d13ee350306750519faa4103f1d911fcf3336937b7df90738",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/36e2d68fa834e3c42e64fee7.json": "41174312738d23680426f52eba90ddfec2fb660a9c7c78d7c3c0621e10e28ad8",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/807d250dfae0d05ec41bda0f.json": "6e6fe9673de1225f102ac82d239efec308ea0002193cbdbbe4533c4b3d007d3c",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/b0701b945b9e0648f9007b52.json": "57e7a9c29d7935ebdabb97bd70791028d5d8241a066694b642cfcb023250cf06",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/b3a7a8f892234e68d05c5e72.json": "b15f2d40c1fcedc32da031a750806a91a710440a02998b0ca10ba6273c65f93a",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/b5146ba4da8c49d8068f68b6.json": "f972a992d2d38a2964617c18db820247ed6309fd9d69241fdb4d22be4e3f8792",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_bidirectional/eb2e08ce9a30ca1da12fc3f8.json": "b6166d315deaa6d1e894691366e7b036cf4e30e027a9b91a57530fa362bf4638",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/1f0ce06ab612b9becebf1c71.json": "3a7b30f935a85c4b6d9ec04a6c8d2af95db1a07759f4ecc6cd5be4d4eeb716f6",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/208831d7e726ae9462d2bb3a.json": "53ca499eca6eef2a80c766d360297ee7e171282e360b8b834091e432129e5e30",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/36e2d68fa834e3c42e64fee7.json": "d1f75ded2869cafe2ed4c4438f143ea118136de250844d0455c725f36d50415c",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/807d250dfae0d05ec41bda0f.json": "a0ec9c397bb9c2f919095b31318ab57fc55de6c4a99b83952f6f5302d6331bd5",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/b0701b945b9e0648f9007b52.json": "a5667803157ca108a6bd83d82b646f282361ff8c779c1f9a74ed5fc7d111b64f",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/b3a7a8f892234e68d05c5e72.json": "e929ab7c72395ae29e63f5b6fb169a76eae9c0fad87baf779501cf7c3e496be1",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/b5146ba4da8c49d8068f68b6.json": "73b06ee3902b22e4990b25c268c77983a7658e5ab9b9a0314e082ee0ba411b98",
+    "results/hindsight-teacher-qwen35-023/evaluation-fidelity/adapted_untrained_bidirectional/eb2e08ce9a30ca1da12fc3f8.json": "826b0c53fca6f86df9d086fbf6745870b4daf5debc32ffbca4760d46c7275aac"
+  },
+  "fresh_selected_fidelity": {
+    "adapted_bidirectional": {
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 0.019021091982722282,
+        "208831d7e726ae9462d2bb3a": 0.14979004859924316,
+        "36e2d68fa834e3c42e64fee7": 0.028574705123901367,
+        "807d250dfae0d05ec41bda0f": 0.12022867053747177,
+        "b0701b945b9e0648f9007b52": 0.04231711104512215,
+        "b3a7a8f892234e68d05c5e72": 0.040996525436639786,
+        "b5146ba4da8c49d8068f68b6": 0.023784663528203964,
+        "eb2e08ce9a30ca1da12fc3f8": 0.04138275235891342
+      },
+      "source_equal_mean": 0.05826194607652724
+    },
+    "adapted_untrained_bidirectional": {
+      "per_source": {
+        "1f0ce06ab612b9becebf1c71": 0.08978482335805893,
+        "208831d7e726ae9462d2bb3a": 0.4498218894004822,
+        "36e2d68fa834e3c42e64fee7": 0.09669149667024612,
+        "807d250dfae0d05ec41bda0f": 0.4414407014846802,
+        "b0701b945b9e0648f9007b52": 0.3642485737800598,
+        "b3a7a8f892234e68d05c5e72": 0.22023524343967438,
+        "b5146ba4da8c49d8068f68b6": 0.30322524905204773,
+        "eb2e08ce9a30ca1da12fc3f8": 0.26695317029953003
+      },
+      "source_equal_mean": 0.2790501434355974
+    }
+  },
+  "inputs": {
+    "generations024": {
+      "path": "results/order-and-pi-qwen35-024/generations.jsonl",
+      "sha256": "a7a611b7c0751cf43e7081e12faae437de275866ef86ab33bcf8d7f024e27996"
+    },
+    "observations023": {
+      "path": "results/hindsight-teacher-qwen35-023/observations.jsonl",
+      "sha256": "bcf190ecf0663408a5a1564f0412fb4ba31ee1b3d7ef7d7367597d5a09f947d1"
+    }
+  },
+  "limit": "Recounts saved grades and logged fidelity; does not regrade or execute models."
+}

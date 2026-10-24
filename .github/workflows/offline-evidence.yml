@@ -1,0 +1,51 @@
+name: Offline evidence and source checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      cpu_microtests:
+        description: 'Also install the scientific dependencies and run tiny CPU tests (no model downloads)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regrade compact historical evidence without model dependencies
+        run: python scripts/reproduce_evidence.py
+      - name: Test integrity and rejection paths
+        run: python -m unittest discover -s tests -p 'test_public_evidence.py'
+      - name: Compile research source without executing model code
+        run: python -m compileall -q src scripts examples tests
+
+  cpu-microtests:
+    if: github.event_name == 'workflow_dispatch' && inputs.cpu_microtests
+    runs-on: macos-latest
+    env:
+      HF_HUB_OFFLINE: '1'
+      TRANSFORMERS_OFFLINE: '1'
+      CUDA_VISIBLE_DEVICES: ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install the pinned scientific packages, not model weights
+        run: |
+          python -m pip install -r requirements-qwen35.lock
+          python -m pip install --no-deps -e .
+      - name: Exercise tiny random models and fake coordinators offline
+        run: python scripts/check_fresh_clone.py
+      - name: Run the standalone CPU API example
+        run: python examples/cpu_mechanism_demo.py
