@@ -1,0 +1,25 @@
+{
+  "schema": "hindsight-remote-verification-v1",
+  "verified_at_utc": "2026-10-24T08:29:57Z",
+  "code_commit": "faaa0f6ed18e8b78f0edfd40dabf5689d85ba397",
+  "workflow_url": "https://github.com/RaychevAngel/learning-from-hindsight/actions/runs/40078153773",
+  "conclusion": "success",
+  "evidence_job": {
+    "runner": "ubuntu-latest",
+    "python": "3.11",
+    "checks": ["saved evidence regrading", "six integrity rejection tests", "source compilation"]
+  },
+  "cpu_job": {
+    "runner": "macos-latest",
+    "python": "3.11",
+    "fresh_scientific_dependency_installation": true,
+    "installed_from": "requirements-qwen35.lock",
+    "editable_project_installation": true,
+    "tests_passed": 305,
+    "tests_intentionally_deselected": 4,
+    "standalone_CPU_mechanism_demo": "passed",
+    "model_downloads": false,
+    "provider_calls": false
+  },
+  "interpretation": "A clean remote checkout installs the specified packages and exercises tiny random CPU models and historical evidence analysis. This is not a new scientific result, a real-model rerun or a full-tensor audit. The separate local verification receipt remains a record of its original environment."
+}
