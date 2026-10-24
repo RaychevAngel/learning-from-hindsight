@@ -3,9 +3,11 @@
 import importlib.util
 from dataclasses import replace
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 import torch
+from test_model import TinyTokenizer
 
 from hindsight.data import Episode, Task
 from hindsight.experiment import read_json, rows, write_json
@@ -275,7 +277,9 @@ def test_failure_before_engine_preserves_receipt_without_extra_work(tmp_path):
 
 
 @pytest.mark.parametrize("indices", [[0, 2, 4, 6], list(range(8))])
-def test_manifest_cohort_admission_uses_only_declared_V_subset_and_fresh_partition(indices):
+def test_manifest_cohort_admission_uses_only_declared_V_subset_and_fresh_partition(
+    indices, monkeypatch
+):
     from hindsight.cohorts import load_cohort
 
     episodes, _ = load_cohort(ROOT / "data/overnight-v2")
@@ -316,6 +320,14 @@ def test_manifest_cohort_admission_uses_only_declared_V_subset_and_fresh_partiti
             {**config, "evaluation_partition": "confirmation"}, training, evaluation, episodes
         )
 
+    def forbidden_grade(*args, **kwargs):
+        pytest.fail("Structural preflight derived feedback before tokenizer admission")
+
+    monkeypatch.setattr(RUNNER, "grade", forbidden_grade)
+    assert len(RUNNER.admit(
+        config, training, evaluation, episodes, check_feedback=False
+    )) == 16
+
 
 def test_same_hindsight_information_is_present_in_fitted_causal_control(engine):
     from hindsight.shared import alignment
@@ -328,3 +340,56 @@ def test_same_hindsight_information_is_present_in_fitted_causal_control(engine):
     # Full observed attempt + feedback precede every causally scored action.
     prefix = engine.tokenizer.decode(raw["input_ids"][: raw["predecessor_positions"][0] + 1])
     assert example.generation.text in prefix and "incorrect" in prefix
+
+
+@pytest.mark.parametrize("corrupt_partition", ["training", "evaluation"])
+def test_custom_manifest_source_mismatch_is_rejected_before_any_fitting(
+    tmp_path, monkeypatch, corrupt_partition
+):
+    tokenizer = TinyTokenizer()
+    recipe = TeacherRecipe(student_steps=1, teacher_steps=1, teacher_batch_size=1)
+
+    def item(name):
+        text = "ab"
+        return TeachingExample(
+            name, Generation(name, [100], tokenizer.encode(text) + [1], text, False),
+            "incorrect", torch.zeros((3, 1)),
+            {"selection_recipe": recipe.selection_recipe(), "derived_from": "post_update_V"},
+        )
+
+    training, evaluation = [item("training")], [item("evaluation")]
+    corrupt = training if corrupt_partition == "training" else evaluation
+    corrupt[0] = replace(corrupt[0], generation=replace(corrupt[0].generation, text="different"))
+    episodes = [Episode(
+        "evaluation", "development", "toy", Task("s", "evaluation", (0,), "toy"), (),
+        (Task("q", "query", (0,), "toy"),),
+    )]
+    config = {
+        "recipe": {"student_steps": 1, "teacher_steps": 1, "teacher_batch_size": 1},
+        "seeds": [7], "model_name": "fake", "revision": "pinned",
+        "max_invocation_seconds": 60, "absolute_deadline_utc": "2099-01-01T00:00:00+00:00",
+        "max_context_tokens": 128, "max_teacher_context_tokens": 256,
+    }
+    fake = SimpleNamespace(
+        tokenizer=tokenizer, model_name="fake", revision="pinned",
+        counters=dict.fromkeys(planned_work(1, 1, 1, 1, recipe), 0),
+    )
+
+    def forbidden_work(*args, **kwargs):
+        pytest.fail("Inconsistent manifest reached model fitting/scoring/adaptation")
+
+    for name in ("fit_teacher_mode", "score", "adapt_shared", "grade"):
+        monkeypatch.setattr(RUNNER, name, forbidden_work)
+    constructed = []
+
+    def construct(**kwargs):
+        constructed.append(kwargs)
+        return fake
+
+    monkeypatch.setattr(RUNNER, "HFEngine", construct)
+    receipt = RUNNER.run(config, training, evaluation, episodes, tmp_path / "run", cohort=episodes)
+    assert len(constructed) == 1
+    assert receipt["status"] == "failed"
+    assert "tokenizer-decoded native response IDs" in receipt["error"]["message"]
+    assert not any(fake.counters.values()) and receipt["actual_generations"] == 0
+    assert not (tmp_path / "run/teacher-steps.jsonl").exists()

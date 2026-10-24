@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import dataclasses
 import hashlib
+import importlib.util
 import json
 import math
 import time
@@ -35,6 +36,12 @@ from hindsight.shared import (
     storage_map,
     tensor_digest,
 )
+
+SOURCE_SPEC = importlib.util.spec_from_file_location(
+    "shared_source_admission", Path(__file__).with_name("source_admission.py")
+)
+SOURCE_ADMISSION = importlib.util.module_from_spec(SOURCE_SPEC)
+SOURCE_SPEC.loader.exec_module(SOURCE_ADMISSION)
 
 
 def sha(path):
@@ -144,7 +151,8 @@ def load_teaching(manifest_path: Path, recipe: SharedRecipe):
     return examples, manifest
 
 
-def admit_cohort(examples, episodes, ids):
+def admit_cohort(examples, episodes, ids, *, check_feedback=True):
+    """Admit cohort structure; CLI defers grading until tokenizer admission."""
     admitted = {ep.episode_id: ep for ep in episodes}
     if len(ids) != 8 or len(set(ids)) != 8 or not set(ids) <= admitted.keys():
         raise ValueError("Initial E7 cut requires exactly eight known evaluation sources")
@@ -165,15 +173,16 @@ def admit_cohort(examples, episodes, ids):
             != {ep.validation[index].task_id for index in indices}
         ):
             raise ValueError("Teacher source/V provenance does not match this meta-train cohort")
-        actual_feedback = "The submitted answer was " + (
-            "correct." if grade(item.generation.text, ep.source)["success"] else "incorrect."
-        )
-        if item.feedback != actual_feedback:
-            raise ValueError("Teacher source feedback differs from its actual source grade")
+        if check_feedback:
+            actual_feedback = "The submitted answer was " + (
+                "correct." if grade(item.generation.text, ep.source)["success"] else "incorrect."
+            )
+            if item.feedback != actual_feedback:
+                raise ValueError("Teacher source feedback differs from its actual source grade")
     return [admitted[ep_id] for ep_id in ids]
 
 
-def run(config, examples, episodes, output: Path, *, engine=None):
+def run(config, examples, episodes, output: Path, *, engine=None, cohort=None):
     """Small callable runner; CLI additionally enforces the initial eight-source/two-seed cut."""
     output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
@@ -258,7 +267,7 @@ def run(config, examples, episodes, output: Path, *, engine=None):
         source_root / "src/hindsight" / name
         for name in ("shared.py", "model.py", "experiment.py", "data.py")
     ]
-    code_files.append(Path(__file__))
+    code_files += [Path(__file__), Path(SOURCE_ADMISSION.__file__)]
     identity = {
         "config": config,
         "recipe": dataclasses.asdict(recipe),
@@ -324,6 +333,8 @@ def run(config, examples, episodes, output: Path, *, engine=None):
             )
         generated = []
         for task, value in zip(tasks, values, strict=True):
+            if role == "S":
+                SOURCE_ADMISSION.validate_source_text(engine, value)
             record = {
                 "seed": seed,
                 "arm": arm,
@@ -362,6 +373,10 @@ def run(config, examples, episodes, output: Path, *, engine=None):
             raise ValueError("Shared comparison requires a fresh unused engine")
         if engine.model_name != config["model_name"] or engine.revision != config["revision"]:
             raise ValueError("Engine model identity differs from protocol")
+        for item in examples:
+            SOURCE_ADMISSION.validate_source_text(engine, item.generation)
+        if cohort is not None:
+            admit_cohort(examples, cohort, config["evaluation_episode_ids"])
         base = {
             name: value for name, value in engine.model.named_parameters() if "lora_" not in name
         }
@@ -591,7 +606,7 @@ def main():
     ids = config["evaluation_episode_ids"]
     if len(config["seeds"]) != 2:
         raise ValueError("Initial E7 cut requires exactly two seeds")
-    selected = admit_cohort(examples, episodes, ids)
+    selected = admit_cohort(examples, episodes, ids, check_feedback=False)
     if (
         teaching["model_name"] != config["model_name"]
         or teaching["revision"] != config["revision"]
@@ -599,7 +614,7 @@ def main():
     ):
         raise ValueError("Teaching model or evaluation corpus identity differs")
     config["teacher_manifest_sha256"] = sha(args.teacher_manifest)
-    result = run(config, examples, selected, args.output)
+    result = run(config, examples, selected, args.output, cohort=episodes)
     print(json.dumps({"status": result["status"], "work": result["work"]}))
     return 0 if result["status"] == "completed" else 1
 

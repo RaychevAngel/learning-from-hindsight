@@ -283,6 +283,13 @@ class FakeEngine:
         self.calls, self.proposals, self.scores, self.resets, self.updates = [], [], [], [], []
         self.student_choice, self.weight, self.proposer_version = None, 0, 0
         self.budget_check = lambda: None
+        self.tokenizer = SimpleNamespace(
+            encode=self.encode_prompt,
+            decode=lambda ids, *, skip_special_tokens=True: "".join(
+                chr(token) for token in ids if not skip_special_tokens or token != 1
+            ),
+            eos_token_id=1,
+        )
 
     def initialize_proposer(self, **kwargs):
         self.init_kwargs = kwargs
@@ -302,7 +309,9 @@ class FakeEngine:
             Generation(
                 prompt,
                 self.encode_prompt(prompt),
-                [10, 1],
+                self.tokenizer.encode(
+                    "FINAL: [1]" if success or "-S0" in prompt else "FINAL: [0]"
+                ) + [self.tokenizer.eos_token_id],
                 "FINAL: [1]" if success or "-S0" in prompt else "FINAL: [0]",
                 False,
             )
@@ -516,3 +525,72 @@ def test_batch_and_dataset_qualification_fail_before_model_work(cohort, defect):
     assert invoke(cohort, engine) == 1
     assert not any(engine.counters.values())
     assert read_json(cohort.output / "receipt.json")["status"] == "failed"
+
+
+@pytest.mark.parametrize("origin", ["saved", "generated"])
+def test_inconsistent_source_fails_before_feedback_proposals_scoring_or_adaptation(
+    cohort, tmp_path, monkeypatch, origin
+):
+    engine = FakeEngine(cohort)
+    sources = None
+    if origin == "saved":
+        sources = tmp_path / "prior"
+        for ep in cohort.episodes[:2]:
+            write_json(
+                sources / "sources" / f"{ep.episode_id}.json",
+                {
+                    "task_id": ep.source.task_id,
+                    "generation": dataclasses.asdict(
+                        Generation(
+                            ep.source.prompt,
+                            engine.encode_prompt(ep.source.prompt),
+                            engine.tokenizer.encode("FINAL: [0]") + [1],
+                            "FINAL: [1]",
+                            False,
+                        )
+                    ),
+                    "feedback": "The submitted answer was correct.",
+                },
+            )
+    else:
+        generate = engine.generate
+
+        def inconsistent(*args, **kwargs):
+            return [dataclasses.replace(value, text="FINAL: [0]")
+                    for value in generate(*args, **kwargs)]
+
+        monkeypatch.setattr(engine, "generate", inconsistent)
+
+    def forbidden_grade(*args, **kwargs):
+        pytest.fail("An inconsistent source reached feedback derivation")
+
+    monkeypatch.setattr(D, "grade", forbidden_grade)
+    assert invoke(cohort, engine, sources=sources) == 1
+    receipt = read_json(cohort.output / "receipt.json")
+    assert receipt["status"] == "failed" and receipt["actual_sources"] == 0
+    assert "tokenizer-decoded native response IDs" in receipt["error"]["message"]
+    assert not engine.proposals and not engine.scores and not engine.resets and not engine.updates
+    assert not (cohort.output / "sources").exists()
+    if origin == "saved":
+        assert not engine.calls and not any(engine.counters.values())
+
+
+def test_saved_source_eos_round_trip_retains_feedback_and_native_actions(cohort, tmp_path):
+    engine = FakeEngine(cohort)
+    ep = cohort.episodes[0]
+    source = Generation(
+        ep.source.prompt,
+        engine.encode_prompt(ep.source.prompt),
+        engine.tokenizer.encode("FINAL: [1]") + [engine.tokenizer.eos_token_id],
+        "FINAL: [1]",
+        False,
+    )
+    previous = tmp_path / "prior"
+    write_json(
+        previous / "sources" / f"{ep.episode_id}.json",
+        {"task_id": ep.source.task_id, "generation": dataclasses.asdict(source),
+         "feedback": "The submitted answer was correct."},
+    )
+    value, feedback = D.source_for(engine, ep, cohort.config, cohort.output, previous)
+    assert value == source and feedback == "The submitted answer was correct."
+    assert not engine.calls

@@ -39,7 +39,10 @@ RUN_DEADLINE='REPLACE_WITH_FUTURE_YYYY-MM-DDTHH:MM:SS+00:00'
 ```
 
 This only creates `throughput.json`. The bound applies per invocation, while the
-absolute deadline is common to all commands. It is not a dollar-budget controller:
+absolute deadline is common to all commands. Checks are cooperative; an in-flight
+model operation is not forcibly interrupted. Qualification honors this configured
+positive finite allowance, using 600 seconds only if it is absent.
+It is not a dollar-budget controller:
 you still own billing limits, process supervision, checkpoint backup and GPU shutdown.
 
 ## 2. Qualify a new generation schedule — GPU
@@ -107,6 +110,9 @@ V4 evidence and emits `manifest.json` plus native sources and selected FP32 targ
 Its neutral selection exports the causal no-update distribution. You may reuse native
 sources for a matched run using `train_proposer.py --sources PRIOR_OUTPUT`; do not
 regenerate or relabel them while claiming identical-source comparisons.
+The coordinator rejects saved text that differs from the active tokenizer's
+decoding of those native response IDs; it does not silently retokenize or normalize
+a contradictory attempt into a different one.
 
 ## 4. E1/E3: compare the candidate pool — GPU
 

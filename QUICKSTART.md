@@ -111,6 +111,11 @@ group has zero contrast. Inspect work counters and parameter differences; actual
 updates do not establish held-out benefit.
 
 **Operational boundary:** application timeouts do not end GPU billing. This
+includes qualification's configured per-invocation limit and shared absolute
+deadline: callbacks enforce them at execution boundaries, not by interrupting an
+arbitrary in-flight model operation. The default qualification allowance is 600
+seconds only when no explicit limit is supplied.
+This
 release contains no provider credentials or provider-control daemon. Arrange a
 shutdown bound independent of the client machine before unattended work, and
 store outputs on verified persistent storage. Do not use a local network-dependent

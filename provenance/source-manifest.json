@@ -32,10 +32,10 @@
       "sha256": "5d0af58e73269bcad37d1b7ff5578ed5e102905d6c7b3fd40679550e8bd1960e"
     },
     {
-      "bytes": 5666,
+      "bytes": 5958,
       "path": "QUICKSTART.md",
       "relation": "release edit",
-      "sha256": "5d40496d84e3808144bced817aaf551c8a5cd9553eb899c77ac123a2cbbb1813",
+      "sha256": "c50a69d19b19b68b02b696ed71260fb941ff124360a11f56842aa7f16ff92cb1",
       "source_sha256": "755c9faba329545c3a45033826fc820563bfe9947d687ab682a7d0878d433bd4"
     },
     {
@@ -647,10 +647,10 @@
       "sha256": "553d30b5e69665fa70d16da86260b2ba9fefd0951e985272088e9ff6a6b9d2ff"
     },
     {
-      "bytes": 13839,
+      "bytes": 14231,
       "path": "docs/reproduction.md",
       "relation": "release edit",
-      "sha256": "2f37d73427fb497a7630859b7a11970165965edbb85e1641edf5ab21ac9a342f",
+      "sha256": "f9a69cc0f91601236a6ffbd0928b6df8b1d471a02147f9ae562fdb4490e269b4",
       "source_sha256": "6d6af2f496e39fd4b85c1ec9da68d5a778b0814084eba0ae679a4977b779cea6"
     },
     {
@@ -1404,10 +1404,10 @@
       "source_sha256": "eb5840da145b1d9fa03a07985cf1b40c916827d92ab1dd605bb8433c7538d866"
     },
     {
-      "bytes": 2808,
+      "bytes": 2873,
       "path": "scripts/check_fresh_clone.py",
       "relation": "release edit",
-      "sha256": "67e8578ecd31a08383f41ae40664e3c304cfcec04596d810a208b91a0711070f",
+      "sha256": "94f24b2a9958cf6c2e5fc44e4dc4066d0e9592112b7e0fda4911b2f6d5fdf98c",
       "source_sha256": "5249af485f482c0b87586be7762e52326d48237b0acc5f2bb34f244a72939857"
     },
     {
@@ -1446,10 +1446,10 @@
       "source_sha256": "21dccd6a94eee8d324d68d946e05d5c3add9a04bf4c6ccf6ca4803d774075e34"
     },
     {
-      "bytes": 27678,
+      "bytes": 28492,
       "path": "scripts/check_shared_learning.py",
-      "relation": "unchanged",
-      "sha256": "ac222add8bf328908f4e0cd0c795a0a6b55b3418a2f1f757481e7a4e56c617c1",
+      "relation": "release edit",
+      "sha256": "b9bdd6a63140f790b0a27ae40f047945b7652fa4e7f83a291f3c3b656af3ece6",
       "source_sha256": "ac222add8bf328908f4e0cd0c795a0a6b55b3418a2f1f757481e7a4e56c617c1"
     },
     {
@@ -1460,10 +1460,10 @@
       "source_sha256": "baf221705d6c191b54642b754793b2fe05249785affe5f131d509c614fac44d8"
     },
     {
-      "bytes": 24693,
+      "bytes": 25336,
       "path": "scripts/check_teacher_controls.py",
-      "relation": "unchanged",
-      "sha256": "550e9a793a796b6f399fc574af7346a89b218c0f7bf0ad899fdb3c5e11e5c728",
+      "relation": "release edit",
+      "sha256": "6dd2276abf5b059873a1967281d64cb7850b745683f397d68b393ed04a88efff",
       "source_sha256": "550e9a793a796b6f399fc574af7346a89b218c0f7bf0ad899fdb3c5e11e5c728"
     },
     {
@@ -1474,10 +1474,10 @@
       "source_sha256": "e2ea4d5b530819ce574de36b7c4ba0cf05315cc093606274d863768ed986784c"
     },
     {
-      "bytes": 17399,
+      "bytes": 17451,
       "path": "scripts/compare_pi.py",
-      "relation": "unchanged",
-      "sha256": "1e931319cd6d9e15bf74f877d0348d192bed30dc06a8458b741a4748edc66b5d",
+      "relation": "release edit",
+      "sha256": "0eb59dff8671f74cb7f1bd857239c69eeb82240428a7a633539c98fc1fa6e3d3",
       "source_sha256": "1e931319cd6d9e15bf74f877d0348d192bed30dc06a8458b741a4748edc66b5d"
     },
     {
@@ -1509,10 +1509,10 @@
       "source_sha256": "27648f35011ef741d1c4c86d8b441c5e3566d8b55262b7f9dfb1af8e6a0da7b8"
     },
     {
-      "bytes": 5335,
+      "bytes": 6314,
       "path": "scripts/qualify_overnight_throughput.py",
-      "relation": "unchanged",
-      "sha256": "6791c7fe5cbb2f83b112a3a860114bf05256302f3b85ebbf30db5c59ae95f137",
+      "relation": "release edit",
+      "sha256": "8bd19275a7c8951064d1cd91e3a884729fee8b659e08fd4ca4d53f63e65460ff",
       "source_sha256": "6791c7fe5cbb2f83b112a3a860114bf05256302f3b85ebbf30db5c59ae95f137"
     },
     {
@@ -1543,10 +1543,16 @@
       "source_sha256": "420202f91e5178b89a1e09c6164c23e8b001e549251d16978f53a4e8c07f6aae"
     },
     {
-      "bytes": 28091,
+      "bytes": 881,
+      "path": "scripts/source_admission.py",
+      "relation": "release addition",
+      "sha256": "101565642c12e12d89d927a30611e8def10392e58635e3e9445536eca12e0f98"
+    },
+    {
+      "bytes": 28454,
       "path": "scripts/train_proposer.py",
-      "relation": "unchanged",
-      "sha256": "23eb523f597f9bf2205cfd9791efff0305a108e42324d60e7d54018eb744d7fe",
+      "relation": "release edit",
+      "sha256": "fef1a00fc473e071c59d40bb8d1bb35aace4387b16dd17de366611ab468f4c42",
       "source_sha256": "23eb523f597f9bf2205cfd9791efff0305a108e42324d60e7d54018eb744d7fe"
     },
     {
@@ -1752,10 +1758,10 @@
       "source_sha256": "2a82d18f212b69cb4b59e6b64128dd530ba962a185800fe88f68daab65c17bc6"
     },
     {
-      "bytes": 4066,
+      "bytes": 5545,
       "path": "tests/test_pi_comparison.py",
-      "relation": "unchanged",
-      "sha256": "422435ece44fed37694d52fff0172197b11b0bb6bc4d5b5620f6e8fd60c87771",
+      "relation": "release edit",
+      "sha256": "6b182f494874c6cf46c16dbbbc924190b998a7a29343130294b5944088341fd8",
       "source_sha256": "422435ece44fed37694d52fff0172197b11b0bb6bc4d5b5620f6e8fd60c87771"
     },
     {
@@ -1794,10 +1800,10 @@
       "source_sha256": "24f5f98b10af55d0222eeefc3225ff1228de6320641d4793f4da7720654c255b"
     },
     {
-      "bytes": 21162,
+      "bytes": 24388,
       "path": "tests/test_proposer_training.py",
-      "relation": "unchanged",
-      "sha256": "5153c0c73ba90ea5b4d72b4a11ddda30992927f639b65d8a8924810ed0ae745a",
+      "relation": "release edit",
+      "sha256": "ff70bf08709dff848af831c6752a945fbcf8a531693c1909903920ead616ef45",
       "source_sha256": "5153c0c73ba90ea5b4d72b4a11ddda30992927f639b65d8a8924810ed0ae745a"
     },
     {
@@ -1842,11 +1848,17 @@
       "source_sha256": "16a546879a908df3d2003ad6423c13c8ec89b18bcc248e8bd1377b4842c9da83"
     },
     {
-      "bytes": 16297,
+      "bytes": 20459,
       "path": "tests/test_shared_learning.py",
-      "relation": "unchanged",
-      "sha256": "736e865bdfeff0307dff8fa9c947f6a9d2aa6ad773a0fd1d112243081111efb8",
+      "relation": "release edit",
+      "sha256": "87eac53bf9123136ac536da0892bbe113dcc580dc41b36662d9de3b82e4f2997",
       "source_sha256": "736e865bdfeff0307dff8fa9c947f6a9d2aa6ad773a0fd1d112243081111efb8"
+    },
+    {
+      "bytes": 2004,
+      "path": "tests/test_source_admission.py",
+      "relation": "release addition",
+      "sha256": "562a54760907de12d5353842ad0c7e2a9d817d22467b227fc326c88b6bdbeac7"
     },
     {
       "bytes": 10501,
@@ -1856,11 +1868,17 @@
       "source_sha256": "495e67df02d6a6e63b17b6d7f8987306b5096612760ead60cba224b9f167203e"
     },
     {
-      "bytes": 14483,
+      "bytes": 17224,
       "path": "tests/test_teacher_controls.py",
-      "relation": "unchanged",
-      "sha256": "53d0a114fbbd537fa9a4c8d8b623e80e569c9d5ca750d7e7197c86797816cece",
+      "relation": "release edit",
+      "sha256": "fb06893d381f11fa1cccd26cb391528713739988572612d5e9a87c116ac4a621",
       "source_sha256": "53d0a114fbbd537fa9a4c8d8b623e80e569c9d5ca750d7e7197c86797816cece"
+    },
+    {
+      "bytes": 5591,
+      "path": "tests/test_throughput_budget.py",
+      "relation": "release addition",
+      "sha256": "b08a72d5991933dc6a9e52ee27282846a8c698e4e45c9e3ca8b2c304b5b6c331"
     },
     {
       "bytes": 6157,
@@ -1904,7 +1922,7 @@
       "source_sha256": "7ac2b93a8726fba63d48dc5e2f8f09f25ad771325b4d9a61f3863bfa62ade66b"
     }
   ],
-  "generated_at_utc": "2026-10-24T08:21:09.203100+00:00",
+  "generated_at_utc": "2026-10-24T10:12:43.365481+00:00",
   "historical_repository": "RaychevAngel/scalable-hindsight (private archive)",
   "historical_source_commit": "0116d67f869453c2ba4086b4be9db963284da3f8",
   "note": "Source commit pins tracked code; ignored historical results/data are separately SHA256-pinned.",

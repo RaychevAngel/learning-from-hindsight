@@ -46,7 +46,8 @@ SPEC.loader.exec_module(ADMISSION)
 sha = ADMISSION.sha
 
 
-def admit(config, training, evaluation, episodes):
+def admit(config, training, evaluation, episodes, *, check_feedback=True):
+    """Admit cohort structure; CLI defers grading until tokenizer admission."""
     admitted = {ep.episode_id: ep for ep in episodes}
     train_ids = [item.episode_id for item in training]
     eval_ids = [item.episode_id for item in evaluation]
@@ -65,9 +66,6 @@ def admit(config, training, evaluation, episodes):
         for item in values:
             ep = admitted[item.episode_id]
             indices = item.provenance["selection_validation_indices"]
-            feedback = "The submitted answer was " + (
-                "correct." if grade(item.generation.text, ep.source)["success"] else "incorrect."
-            )
             if (
                 ep.partition != expected_partition
                 or item.generation.prompt != ep.source.prompt
@@ -75,9 +73,16 @@ def admit(config, training, evaluation, episodes):
                 or len(ep.validation) != 8
                 or set(item.provenance["validation_task_ids"])
                 != {ep.validation[index].task_id for index in indices}
-                or item.feedback != feedback
             ):
                 raise ValueError("Source/V/feedback provenance differs from admitted cohort")
+            if check_feedback:
+                feedback = "The submitted answer was " + (
+                    "correct."
+                    if grade(item.generation.text, ep.source)["success"]
+                    else "incorrect."
+                )
+                if item.feedback != feedback:
+                    raise ValueError("Source/V/feedback provenance differs from admitted cohort")
     selected = [admitted[ep_id] for ep_id in eval_ids]
     sizes = Counter(ep.family for ep in selected)
     if len(sizes) != 4 or len(set(sizes.values())) != 1:
@@ -85,7 +90,7 @@ def admit(config, training, evaluation, episodes):
     return selected
 
 
-def run(config, training, evaluation, episodes, output: Path, *, engine=None):
+def run(config, training, evaluation, episodes, output: Path, *, engine=None, cohort=None):
     """No generation reuse: all seven arms answer every declared Q under one schedule."""
     output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
@@ -161,7 +166,11 @@ def run(config, training, evaluation, episodes, output: Path, *, engine=None):
                 "data.py",
                 "cohorts.py",
             )
-        ] + [Path(__file__), Path(__file__).with_name("check_shared_learning.py")]
+        ] + [
+            Path(__file__),
+            Path(__file__).with_name("check_shared_learning.py"),
+            Path(ADMISSION.SOURCE_ADMISSION.__file__),
+        ]
         if size != 1:
             declared = config["batch_qualification"]
             path = Path(declared["path"])
@@ -258,6 +267,10 @@ def run(config, training, evaluation, episodes, output: Path, *, engine=None):
             config["revision"],
         ):
             raise ValueError("Require a fresh engine matching the pinned model identity")
+        for item in training + evaluation:
+            ADMISSION.SOURCE_ADMISSION.validate_source_text(engine, item.generation)
+        if cohort is not None:
+            admit(config, training, evaluation, cohort)
         for item in training + evaluation:
             engine._validate_target(item.generation, item.target)
             alignment(engine, item.generation, item.feedback, "bidirectional")
@@ -520,7 +533,7 @@ def main():
         or sha(args.data / "manifest.json") != config["dataset_manifest_sha256"]
     ):
         raise ValueError("Manifest model/corpus identity differs from frozen protocol")
-    selected = admit(config, training, evaluation, episodes)
+    selected = admit(config, training, evaluation, episodes, check_feedback=False)
     config.update(
         training_manifest_sha256=sha(args.training_manifest),
         evaluation_manifest_sha256=sha(args.evaluation_manifest),
@@ -535,7 +548,7 @@ def main():
         for entry in manifest["examples"]:
             inputs.extend(path.parent / entry[key] for key in ("source_path", "target_path"))
     config["frozen_input_files"] = {str(path.resolve()): sha(path) for path in inputs}
-    result = run(config, training, evaluation, selected, args.output)
+    result = run(config, training, evaluation, selected, args.output, cohort=episodes)
     print(json.dumps({"status": result["status"], "work": result["work"]}))
     return 0 if result["status"] == "completed" else 1
 

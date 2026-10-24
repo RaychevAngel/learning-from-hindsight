@@ -1,0 +1,28 @@
+{
+  "schema": "hindsight-release-safety-verification-v1",
+  "verified_on_utc": "2026-10-24",
+  "purpose": "Narrow public-release coordinator repairs after independent contract review; no new scientific result",
+  "repairs": [
+    "Qualification honors positive finite max_invocation_seconds, retains the legacy 600-second default when absent, and enforces a timezone-aware absolute deadline",
+    "High-level source admission rejects text/native-token disagreement under the active tokenizer before feedback-derived teaching or fitting"
+  ],
+  "checks": {
+    "complete_offline_suite": {"passed": 511, "failed": 0},
+    "explicit_clone_local_cpu_proof": {"passed": 348, "intentionally_deselected": 4},
+    "independent_root_targeted_regressions": {"passed": 110, "failed": 0},
+    "saved_evaluation_records_regraded": 2848,
+    "historical_evidence_files": 137,
+    "original_scientific_modules_byte_identical": 10,
+    "ruff": "passed",
+    "diff_whitespace": "passed"
+  },
+  "evidence_files_digest_sha256": "78a83b3b945fdda5c6beca3b7f9641cfd5b01e45f78d920878104b77da7dcaf8",
+  "historical_private_archive_commit_unchanged": "0116d67f869453c2ba4086b4be9db963284da3f8",
+  "scope_limits": [
+    "Local scientific dependency environment was reused; the separate remote CI receipt records any clean remote installation",
+    "Timeout callbacks are cooperative and do not interrupt arbitrary in-flight model work or terminate provider billing",
+    "Admission occurs after tokenizer construction but before model fitting; invalid manifests need not be free of model-initialization cost",
+    "Synthetic/random-model and injected-engine tests establish implementation behavior, not real-model task improvement",
+    "No historical evidence, numeric result, original scientific module, paid model call or GPU experiment changed"
+  ]
+}

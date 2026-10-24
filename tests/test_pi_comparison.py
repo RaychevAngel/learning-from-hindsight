@@ -7,7 +7,7 @@ import torch
 from test_proposer_training import FakeEngine
 from test_proposer_training import cohort as proposer_cohort
 
-from hindsight.experiment import read_json, rows
+from hindsight.experiment import read_json, rows, write_json
 from hindsight.model import Generation
 
 SPEC = importlib.util.spec_from_file_location(
@@ -44,7 +44,8 @@ class Engine(FakeEngine):
                 Generation(
                     prompt,
                     self.encode_prompt(prompt),
-                    [10, 1],
+                    self.tokenizer.encode("FINAL: [1]" if success else "FINAL: [0]")
+                    + [self.tokenizer.eos_token_id],
                     "FINAL: [1]" if success else "FINAL: [0]",
                     False,
                 )
@@ -102,3 +103,35 @@ def test_bad_identity_or_budget_fails_before_generation(cohort, field, value):
         D.run(cohort.config, cohort.data, cohort.output, engine=engine)
     assert not engine.calls and not engine.proposals
     assert read_json(cohort.output / "receipt.json")["status"] == "failed"
+
+
+def test_reused_inconsistent_source_cannot_reach_comparison_or_teaching_manifest(
+    cohort, tmp_path, monkeypatch
+):
+    engine = Engine(cohort)
+    sources = tmp_path / "prior"
+    for ep in cohort.episodes:
+        write_json(
+            sources / "sources" / f"{ep.episode_id}.json",
+            {
+                "task_id": ep.source.task_id,
+                "generation": dataclasses.asdict(
+                    Generation(
+                        ep.source.prompt, engine.encode_prompt(ep.source.prompt),
+                        engine.tokenizer.encode("FINAL: [0]") + [1], "FINAL: [1]", False,
+                    )
+                ),
+                "feedback": "The submitted answer was correct.",
+            },
+        )
+
+    def forbidden_grade(*args, **kwargs):
+        pytest.fail("An inconsistent source reached feedback derivation")
+
+    monkeypatch.setattr(D.IO, "grade", forbidden_grade)
+    with pytest.raises(ValueError, match="tokenizer-decoded native response IDs"):
+        D.run(cohort.config, cohort.data, cohort.output, engine=engine, sources=sources)
+    assert not engine.calls and not engine.proposals and not engine.scores and not engine.resets
+    assert not any(engine.counters.values())
+    assert read_json(cohort.output / "receipt.json")["status"] == "failed"
+    assert not (cohort.output / "teaching.json").exists()

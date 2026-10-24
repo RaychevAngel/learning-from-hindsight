@@ -29,7 +29,9 @@ TESTS = (
     "test_representation.py",
     "test_representation_diagnostic.py",
     "test_shared_learning.py",
+    "test_source_admission.py",
     "test_teacher_controls.py",
+    "test_throughput_budget.py",
     "test_update_dose.py",
 )
 EXPRESSION = "not actual_cohort_admits and not manifest_cohort_admission"

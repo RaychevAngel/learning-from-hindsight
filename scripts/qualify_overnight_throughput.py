@@ -1,9 +1,14 @@
-"""Measure matched batch scheduling without assuming singleton output equivalence."""
+"""Measure matched batch scheduling without assuming singleton output equivalence.
+
+Configured execution bounds are cooperative callback checks, not a hard process
+interrupt or an independent GPU/provider billing shutdown mechanism.
+"""
 
 import argparse
 import dataclasses
 import hashlib
 import json
+import math
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,13 +22,26 @@ from hindsight.model import HFEngine, configure_deterministic_execution
 
 
 def run(config_path, data, output):
-    output.mkdir(parents=True, exist_ok=False)
     config = json.loads(config_path.read_text())
+    seconds = config.get("max_invocation_seconds", 600)
+    if (
+        isinstance(seconds, bool)
+        or not isinstance(seconds, (int, float))
+        or not math.isfinite(seconds)
+        or seconds <= 0
+    ):
+        raise ValueError("max_invocation_seconds must be a positive finite number")
+    try:
+        deadline = datetime.fromisoformat(config["absolute_deadline_utc"])
+    except (KeyError, TypeError, ValueError) as error:
+        raise ValueError("Require a timezone-aware absolute_deadline_utc") from error
+    if deadline.tzinfo is None or deadline.utcoffset() is None:
+        raise ValueError("Require a timezone-aware absolute_deadline_utc")
+    output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
-    deadline = datetime.fromisoformat(config["absolute_deadline_utc"])
 
     def check():
-        if datetime.now(timezone.utc) >= deadline or time.monotonic() - started > 600:
+        if datetime.now(timezone.utc) >= deadline or time.monotonic() - started >= seconds:
             raise TimeoutError("Throughput qualification deadline")
 
     configure_deterministic_execution(True)
@@ -35,6 +53,8 @@ def run(config_path, data, output):
         "status": "started",
         "started_at": datetime.now(timezone.utc).isoformat(),
         "planned_generations": 80,
+        "max_invocation_seconds": seconds,
+        "execution_bound": "Cooperative callback; not independent provider billing shutdown",
         "config": config,
         "dataset_sha256": hashlib.sha256((data / "manifest.json").read_bytes()).hexdigest(),
         "task_ids": [t.task_id for t in tasks],
@@ -43,6 +63,7 @@ def run(config_path, data, output):
     write_json(output / "receipt.json", receipt)
     engine = None
     try:
+        check()
         engine = HFEngine(
             model_name=config["model_name"],
             revision=config["revision"],
@@ -52,10 +73,12 @@ def run(config_path, data, output):
         )
         layouts = {}
         for batch_size, repeat in [(1, 0), (4, 0), (4, 1), (8, 0), (8, 1)]:
+            check()
             records = []
             torch.cuda.synchronize()
             start = time.monotonic()
             for offset in range(0, len(tasks), batch_size):
+                check()
                 group = tasks[offset : offset + batch_size]
                 generations = engine.generate([t.prompt for t in group], 160, False, 7301)
                 for task, generation in zip(group, generations, strict=True):
@@ -69,6 +92,7 @@ def run(config_path, data, output):
                     append_json(output / "observations.jsonl", row)
                     records.append(row)
             torch.cuda.synchronize()
+            check()
             elapsed = time.monotonic() - start
             layouts[(batch_size, repeat)] = records
             receipt["runs"].append(

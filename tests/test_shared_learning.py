@@ -3,9 +3,11 @@
 import importlib.util
 from dataclasses import asdict, replace
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 import torch
+from test_model import TinyTokenizer
 from test_model import engine as original_engine
 
 from hindsight.data import Episode, Task
@@ -349,7 +351,7 @@ def test_work_plan_and_distance_math():
 
 
 @pytest.mark.parametrize("indices", [[0, 2, 4, 6], list(range(8))])
-def test_actual_cohort_admits_declared_V4_or_V8_but_no_other_tasks(indices):
+def test_actual_cohort_admits_declared_V4_or_V8_but_no_other_tasks(indices, monkeypatch):
     from hindsight.cohorts import load_cohort
 
     episodes, _ = load_cohort(ROOT / "data/overnight-v2")
@@ -377,6 +379,14 @@ def test_actual_cohort_admits_declared_V4_or_V8_but_no_other_tasks(indices):
     with pytest.raises(ValueError, match="source grade"):
         RUNNER.admit_cohort([replace(example, feedback="a leaked answer")], episodes, evaluation)
 
+    def forbidden_grade(*args, **kwargs):
+        pytest.fail("Structural preflight derived feedback before tokenizer admission")
+
+    monkeypatch.setattr(RUNNER, "grade", forbidden_grade)
+    assert len(RUNNER.admit_cohort(
+        [example], episodes, evaluation, check_feedback=False
+    )) == 8
+
 
 def test_same_named_adapter_with_replaced_parameter_storage_is_rejected(engine):
     name, value = next(iter(engine._adapter_parameters("student").items()))
@@ -393,3 +403,87 @@ def test_same_named_adapter_with_replaced_parameter_storage_is_rejected(engine):
     finally:
         module._parameters[key] = value
     assert not evidence[0]["same_parameter_storage"]
+
+
+def test_custom_training_source_mismatch_is_rejected_before_scoring_or_fitting(
+    tmp_path, monkeypatch
+):
+    tokenizer = TinyTokenizer()
+    recipe = SharedRecipe(student_steps=1, teacher_steps=1, teacher_batch_size=1)
+    example = TeachingExample(
+        "training", Generation("training", [100], tokenizer.encode("ab") + [1], "different", False),
+        "incorrect", torch.zeros((3, 1)),
+        {"selection_recipe": recipe.selection_recipe(), "derived_from": "post_update_V"},
+    )
+    episodes = [Episode(
+        "evaluation", "development", "toy", Task("s", "evaluation", (0,), "toy"), (),
+        (Task("q", "query", (0,), "toy"),),
+    )]
+    config = {
+        "recipe": {"student_steps": 1, "teacher_steps": 1, "teacher_batch_size": 1},
+        "seeds": [7], "model_name": "fake", "revision": "pinned",
+        "max_invocation_seconds": 60, "absolute_deadline_utc": "2099-01-01T00:00:00+00:00",
+        "max_context_tokens": 128, "max_teacher_context_tokens": 256,
+    }
+    fake = SimpleNamespace(
+        tokenizer=tokenizer, model_name="fake", revision="pinned",
+        counters=dict.fromkeys(planned_work(1, 1, 1, 1, recipe), 0),
+    )
+
+    def forbidden_work(*args, **kwargs):
+        pytest.fail("Inconsistent manifest reached model fitting/scoring/adaptation")
+
+    for name in ("fit_shared", "score", "adapt_shared", "grade"):
+        monkeypatch.setattr(RUNNER, name, forbidden_work)
+    constructed = []
+
+    def construct(**kwargs):
+        constructed.append(kwargs)
+        return fake
+
+    monkeypatch.setattr(RUNNER, "HFEngine", construct)
+    receipt = RUNNER.run(config, [example], episodes, tmp_path / "run", cohort=episodes)
+    assert len(constructed) == 1
+    assert receipt["status"] == "failed"
+    assert "tokenizer-decoded native response IDs" in receipt["error"]["message"]
+    assert not any(fake.counters.values()) and receipt["actual_generations"] == 0
+
+
+def test_new_shared_evaluation_source_is_checked_before_feedback_and_teaching(
+    engine, tmp_path, monkeypatch
+):
+    recipe = SharedRecipe(student_steps=1, teacher_steps=1, teacher_batch_size=1)
+    examples = examples_for(engine, recipe, 1)
+    engine.counters = dict.fromkeys(engine.counters, 0)
+    episodes = [Episode(
+        "evaluation", "development", "toy", Task("s", "evaluation", (0,), "toy"), (),
+        (Task("q", "query", (0,), "toy"),),
+    )]
+    config = {
+        "recipe": {"student_steps": 1, "teacher_steps": 1, "teacher_batch_size": 1},
+        "seeds": [7], "model_name": engine.model_name, "revision": engine.revision,
+        "source_tokens": 2, "evaluation_tokens": 2,
+        "max_invocation_seconds": 120, "absolute_deadline_utc": "2099-01-01T00:00:00+00:00",
+    }
+    generate = engine.generate
+
+    def inconsistent(*args, **kwargs):
+        # Preserve actual tiny forward calls, but make the returned presentation
+        # contradict those actions, as an erroneous custom generator could.
+        return [
+            replace(value, text=value.text + "different")
+            for value in generate(*args, **kwargs)
+        ]
+
+    def forbidden_work(*args, **kwargs):
+        pytest.fail("Inconsistent new source reached grading or adaptation")
+
+    monkeypatch.setattr(engine, "generate", inconsistent)
+    monkeypatch.setattr(RUNNER, "grade", forbidden_work)
+    monkeypatch.setattr(RUNNER, "adapt_shared", forbidden_work)
+    receipt = RUNNER.run(config, examples, episodes, tmp_path / "run", engine=engine)
+    assert receipt["status"] == "failed"
+    assert "tokenizer-decoded native response IDs" in receipt["error"]["message"]
+    assert receipt["actual_generations"] == 0 and receipt["completed_cases"] == []
+    assert receipt["work"]["student_optimizer_steps"] == 0
+    assert not (tmp_path / "run/generations.jsonl").exists()

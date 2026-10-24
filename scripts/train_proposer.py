@@ -3,6 +3,7 @@
 import argparse
 import dataclasses
 import hashlib
+import importlib.util
 import math
 import time
 from datetime import datetime, timezone
@@ -20,6 +21,12 @@ from hindsight.experiment import (
 )
 from hindsight.model import Generation, configure_deterministic_execution
 from hindsight.proposer import PROPOSER_COUNTERS, ProposerEngine, usable_lesson
+
+SOURCE_SPEC = importlib.util.spec_from_file_location(
+    "proposer_source_admission", Path(__file__).with_name("source_admission.py")
+)
+SOURCE_ADMISSION = importlib.util.module_from_spec(SOURCE_SPEC)
+SOURCE_SPEC.loader.exec_module(SOURCE_ADMISSION)
 
 CORE_COUNTERS = (
     "generation_sequences",
@@ -99,6 +106,7 @@ def source_for(engine, ep, config, output, sources=None):
         or any(type(token) is not int or token < 0 for token in value.response_ids)
     ):
         raise ValueError("Source generation must retain exact prompt and native response IDs")
+    SOURCE_ADMISSION.validate_source_text(engine, value)
     result = grade(value.text, ep.source)
     feedback = "The submitted answer was " + ("correct." if result["success"] else "incorrect.")
     if path is not None and supplied["feedback"] != feedback:
@@ -456,7 +464,7 @@ def run(
             root / "src/hindsight" / name
             for name in ("model.py", "experiment.py", "data.py", "proposer.py")
         ]
-        paths += [Path(__file__)]
+        paths += [Path(__file__), Path(SOURCE_ADMISSION.__file__)]
         if (root / "src/hindsight/cohorts.py").exists():
             paths.append(root / "src/hindsight/cohorts.py")
         if sources is not None:

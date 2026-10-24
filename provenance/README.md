@@ -6,8 +6,9 @@ The public package is curated from the private historical
 visibility change or history rewrite of that archive.
 
 - `source-manifest.json` compares each exported file with its historical source.
-  Original scientific modules/runners remain byte-identical; release additions
-  provide documentation, dependency alignment, reanalysis, tests and CI.
+  All ten original `src/hindsight/` scientific modules remain byte-identical.
+  Five coordinator scripts have the release-only safety repairs described below;
+  additions provide documentation, dependency alignment, reanalysis, tests and CI.
 - `evidence-manifest.json` pins the selected compact data/result inputs by SHA256
   and size. Some were intentionally ignored by the original Git repository, so
   the source commit alone does not pin those historical artifacts.
@@ -40,6 +41,21 @@ run look like a reproduction.
 - A compact 7.2 × 5.4 inch print layout for the 025 localization figure matches
   the canonical report; the historical numeric inputs and screen layout stay
   unchanged.
+- Throughput qualification now honors a positive finite configured per-invocation
+  limit (600 seconds when absent), alongside its timezone-aware absolute deadline.
+  These are cooperative callback checks, not an external process or billing kill.
+- Reused source attempts must exactly match the active tokenizer's decoding of
+  their native response IDs before text-derived feedback or teaching is admitted.
+  The check is shared by the proposer/candidate comparison and teacher/shared
+  coordinators. Structural CLI preflight remains before model construction;
+  exact decoding and feedback admission occur once the tokenizer exists, before
+  fitting. Newly generated shared-mode sources are checked immediately afterward.
+  Low-level token-defined scoring/alignment APIs are unchanged.
+- Deterministic timeout/admission regressions and coherent fake tokenizers extend
+  the original tests. These repairs prevent inconsistent new runs; they do not
+  imply that historical model-generated attempts had contradictory text/tokens.
 
-No model outputs, stored scores, scientific algorithms or historical source
-texts were edited to improve a result. Publication did not rerun the experiments.
+No saved model outputs, stored scores, scientific numerical modules or historical
+evidence texts were edited to improve a result. The source manifest distinguishes
+each unchanged historical file, release edit and addition. Publication did not
+rerun the experiments.

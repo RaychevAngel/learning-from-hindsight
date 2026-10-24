@@ -143,6 +143,7 @@ def run(config, data, output, *, checkpoint=None, sources=None, engine=None):
             for p in (
                 Path(__file__),
                 Path(IO.__file__),
+                Path(IO.SOURCE_ADMISSION.__file__),
                 data / "manifest.json",
                 Path(qualified["path"]),
                 Path(__file__).parents[1] / "src/hindsight/proposer.py",
